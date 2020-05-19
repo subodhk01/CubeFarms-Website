@@ -19,13 +19,21 @@
         <section class="canvas-overlay">
             <div class="navigation">
                 <div class="nav">
-                    <a class="nav-item" href="#">Services</a>
+                    <a class="nav-item" onclick="servicesDropdown()"href="#">
+                        Services
+                        <div class="down-arrow">
+                            <svg width="13px" height="10px" viewBox="0 0 13 10">
+                                <path d="M1,5 L11,5"></path>
+                                <polyline points="8 1 12 5 8 9"></polyline>
+                            </svg>
+                        </div>
+                    </a>
                     <a class="nav-item" href="#">Blog</a>
                     <a class="nav-item" href="#">Outsource</a>
                     <a class="nav-item" href="#">About</a>
                     <a class="nav-item" href="#">Contact</a>
                 </div>
-                <div class="services-dropdown-container">
+                <div class="services-dropdown-container" id="serviceDropdown">
                     <!-- <ul>
                         <li>
                             Strategy

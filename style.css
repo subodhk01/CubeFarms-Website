@@ -3,12 +3,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+
+@import url('https://db.onlinewebfonts.com/c/9475d6a0b79c164f9f605673714e75d9?family=Circular+Std+Medium');
+
 html,body {
     height: 100%;
     width: 100%;
 }
-.canvas-container canvas {
+#particles-js {
     height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 3;
+}
+main {
+    position: relative;
+    top: 100%;
+}
+.canvas-container {
+    height: 100%;
+    width: 100%;
 }
 .canvas-overlay {
     position: absolute;
@@ -33,6 +48,9 @@ html,body {
     justify-content: flex-end;
     padding: 10px 20px;
 }
+.nav a {
+    z-index: 4;
+}
 .nav-item {
     padding: 20px 10px;
     color: black;
@@ -56,6 +74,7 @@ html,body {
     background: white;
     box-shadow: 0px 0px 2px 1px rgb(235, 233, 233);
     border-radius: 15px;
+    z-index: -1;
 }
 .dropdown-item-container {
     padding: 10px;
@@ -65,7 +84,7 @@ html,body {
     border: 1px solid rgba(0, 128, 128, 0.233);
     border-radius: 5px;
     padding: 20px 20px;
-    transition: 0.5s;
+    transition: 0.2s;
     text-align: left;
 }
 .item1{background: rgba(255,93,125,0.1);}
@@ -116,6 +135,9 @@ html,body {
     transform: rotate(90deg);
     transition: all .3s ease;
 }
+.nav-item-services:hover .down-arrow svg{
+    transform: rotate(0);
+}
 .item1:hover .arrow1 {transform: translateX(8px);}
 .item2:hover .arrow2 {transform: translateX(8px);}
 .item3:hover .arrow3 {transform: translateX(8px);}
@@ -125,12 +147,13 @@ html,body {
 }
 .overlay-heading {
     font-family: "Poiret One";
+    font-family: 'Circular Std Medium';
     font-size: 3.4rem;
     color: teal;
 }
 .overlay-subheading {
     font-size: 1.3rem;
-    font-family: "Raleway";
+    font-family: "Poppins";
     color: rgb(84, 100, 93);
     margin-bottom: 10px;
 }

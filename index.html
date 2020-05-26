@@ -13,13 +13,11 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <section class="canvas-container">
-            <canvas id="canvas"></canvas>
-        </section>
+        <div id="particles-js"></div>
         <section class="canvas-overlay">
             <div class="navigation">
                 <div class="nav">
-                    <a class="nav-item" onclick="servicesDropdown()"href="#">
+                    <a class="nav-item nav-item-services" onclick="servicesDropdown()"href="#">
                         Services
                         <div class="down-arrow">
                             <svg width="13px" height="10px" viewBox="0 0 13 10">
@@ -121,12 +119,20 @@
                 <div class="service4">Marketing Team</div>
             </div>
         </section>
-        <section class="temp">
+        <main>
+            <section class="temp">
 
-        </section>
+            </section>
+        </main>
         
 
-        <script src="background.js"></script>
+        <!-- <script src="background.js"></script> -->
+        <script src="particles.js"></script>
+        <script>
+            particlesJS.load('particles-js', 'assets/particles.json', function() {
+                console.log('particles.js loaded - callback');
+              });
+        </script>
         <script src="main.js"></script>
     </body>
 </html>

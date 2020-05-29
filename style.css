@@ -7,9 +7,31 @@
 
 @import url('https://db.onlinewebfonts.com/c/9475d6a0b79c164f9f605673714e75d9?family=Circular+Std+Medium');
 
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+.loaderContainer {
+    display: flex;
+    z-index: 10;
+    background-color: rgb(255, 255, 255);
+}
+.loader {
+    border: 7px solid #f3f3f3; /* Light grey */
+    border-top: 7px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 2s linear infinite;
+}
+
 html,body {
     height: 100%;
     width: 100%;
+}
+.bodyContainer {
+    width: 100%;
+    height: 100%;
 }
 #particles-js {
     height: 100%;

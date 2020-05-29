@@ -12,118 +12,125 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="style.css">
     </head>
-    <body>
-        <div id="particles-js"></div>
-        <section class="canvas-overlay">
-            <div class="navigation">
-                <div class="nav">
-                    <a class="nav-item nav-item-services" onclick="servicesDropdown()"href="#">
-                        Services
-                        <div class="down-arrow">
-                            <svg width="13px" height="10px" viewBox="0 0 13 10">
-                                <path d="M1,5 L11,5"></path>
-                                <polyline points="8 1 12 5 8 9"></polyline>
-                            </svg>
-                        </div>
-                    </a>
-                    <a class="nav-item" href="#">Blog</a>
-                    <a class="nav-item" href="#">Outsource</a>
-                    <a class="nav-item" href="#">About</a>
-                    <a class="nav-item" href="#">Contact</a>
-                </div>
-                <div class="services-dropdown-container" id="serviceDropdown">
-                    <!-- <ul>
-                        <li>
-                            Strategy
-                          <span></span><span></span><span></span><span></span>
-                        </li>
-                        <li>
-                            Design
-                          <span></span><span></span><span></span><span></span>
-                        </li>
-                        <li>
-                          Content
-                          <span></span><span></span><span></span><span></span>
-                        </li>
-                        <li>
-                            Technology
-                          <span></span><span></span><span></span><span></span>
-                        </li>
-                      </ul> -->
-                    <div class="row">
-                        <div class="col-6 dropdown-item-container">
-                            <a href="#">
-                                <div class="dropdown-item item1">
-                                    <div class="item-heading">Strategy</div>
-                                    <div class="item-des">The path toward creating a superior product</div>
-                                    <div class="item-arrow arrow1">
-                                        <svg width="13px" height="10px" viewBox="0 0 13 10">
-                                            <path d="M1,5 L11,5"></path>
-                                            <polyline points="8 1 12 5 8 9"></polyline>
-                                        </svg>
+    <body onload="stopLoader()">
+        <div class="loaderContainer w-100 h-100 position-fixed justify-content-center align-items-center">
+            <div class="loader">
+
+            </div>
+        </div>
+        <div class="bodyContainer">
+            <div id="particles-js"></div>
+            <section class="canvas-overlay">
+                <div class="navigation">
+                    <div class="nav">
+                        <a class="nav-item nav-item-services" onclick="servicesDropdown()"href="#">
+                            Services
+                            <div class="down-arrow">
+                                <svg width="13px" height="10px" viewBox="0 0 13 10">
+                                    <path d="M1,5 L11,5"></path>
+                                    <polyline points="8 1 12 5 8 9"></polyline>
+                                </svg>
+                            </div>
+                        </a>
+                        <a class="nav-item" href="#">Blog</a>
+                        <a class="nav-item" href="#">Outsource</a>
+                        <a class="nav-item" href="#">About</a>
+                        <a class="nav-item" href="#">Contact</a>
+                    </div>
+                    <div class="services-dropdown-container" id="serviceDropdown">
+                        <!-- <ul>
+                            <li>
+                                Strategy
+                            <span></span><span></span><span></span><span></span>
+                            </li>
+                            <li>
+                                Design
+                            <span></span><span></span><span></span><span></span>
+                            </li>
+                            <li>
+                            Content
+                            <span></span><span></span><span></span><span></span>
+                            </li>
+                            <li>
+                                Technology
+                            <span></span><span></span><span></span><span></span>
+                            </li>
+                        </ul> -->
+                        <div class="row">
+                            <div class="col-6 dropdown-item-container">
+                                <a href="#">
+                                    <div class="dropdown-item item1">
+                                        <div class="item-heading">Strategy</div>
+                                        <div class="item-des">The path toward creating a superior product</div>
+                                        <div class="item-arrow arrow1">
+                                            <svg width="13px" height="10px" viewBox="0 0 13 10">
+                                                <path d="M1,5 L11,5"></path>
+                                                <polyline points="8 1 12 5 8 9"></polyline>
+                                            </svg>
+                                        </div>
                                     </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-6 dropdown-item-container">
-                            <a href="#">
-                                <div class="dropdown-item item2">
-                                    <div class="item-heading">Design</div>
-                                    <div class="item-des">The path toward creating a superior product</div>
-                                    <div class="item-arrow arrow2">
-                                        <svg width="13px" height="10px" viewBox="0 0 13 10">
-                                            <path d="M1,5 L11,5"></path>
-                                            <polyline points="8 1 12 5 8 9"></polyline>
-                                        </svg>
+                                </a>
+                            </div>
+                            <div class="col-6 dropdown-item-container">
+                                <a href="#">
+                                    <div class="dropdown-item item2">
+                                        <div class="item-heading">Design</div>
+                                        <div class="item-des">The path toward creating a superior product</div>
+                                        <div class="item-arrow arrow2">
+                                            <svg width="13px" height="10px" viewBox="0 0 13 10">
+                                                <path d="M1,5 L11,5"></path>
+                                                <polyline points="8 1 12 5 8 9"></polyline>
+                                            </svg>
+                                        </div>
                                     </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-6 dropdown-item-container">
-                            <a href="#">
-                                <div class="dropdown-item item3">
-                                    <div class="item-heading">Content</div>
-                                    <div class="item-des">Telling the story of your brand isn't enough</div>
-                                    <div class="item-arrow arrow3">
-                                        <svg width="13px" height="10px" viewBox="0 0 13 10">
-                                            <path d="M1,5 L11,5"></path>
-                                            <polyline points="8 1 12 5 8 9"></polyline>
-                                        </svg>
+                                </a>
+                            </div>
+                            <div class="col-6 dropdown-item-container">
+                                <a href="#">
+                                    <div class="dropdown-item item3">
+                                        <div class="item-heading">Content</div>
+                                        <div class="item-des">Telling the story of your brand isn't enough</div>
+                                        <div class="item-arrow arrow3">
+                                            <svg width="13px" height="10px" viewBox="0 0 13 10">
+                                                <path d="M1,5 L11,5"></path>
+                                                <polyline points="8 1 12 5 8 9"></polyline>
+                                            </svg>
+                                        </div>
                                     </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-6 dropdown-item-container">
-                            <a href="#">
-                                <div class="dropdown-item item4">
-                                    <div class="item-heading">Technology</div>
-                                    <div class="item-des">Adaptability and growth, all at one place</div>
-                                    <div class="item-arrow arrow4">
-                                        <svg width="13px" height="10px" viewBox="0 0 13 10">
-                                            <path d="M1,5 L11,5"></path>
-                                            <polyline points="8 1 12 5 8 9"></polyline>
-                                        </svg>
+                                </a>
+                            </div>
+                            <div class="col-6 dropdown-item-container">
+                                <a href="#">
+                                    <div class="dropdown-item item4">
+                                        <div class="item-heading">Technology</div>
+                                        <div class="item-des">Adaptability and growth, all at one place</div>
+                                        <div class="item-arrow arrow4">
+                                            <svg width="13px" height="10px" viewBox="0 0 13 10">
+                                                <path d="M1,5 L11,5"></path>
+                                                <polyline points="8 1 12 5 8 9"></polyline>
+                                            </svg>
+                                        </div>
                                     </div>
-                                </div>
-                            </a>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="overlay-heading">Welcome to CubeFarms</div>
-            <div class="overlay-subheading">We are your on demand</div>
-            <div class="overlay-services">
-                <div class="service1">Co-Workers</div>
-                <div class="service2">Design Team</div>
-                <div class="service3">Tech Team</div>
-                <div class="service4">Marketing Team</div>
-            </div>
-        </section>
-        <main>
-            <section class="temp">
-
+                <div class="overlay-heading">Welcome to CubeFarms</div>
+                <div class="overlay-subheading">We are your on demand</div>
+                <div class="overlay-services">
+                    <div class="service1">Co-Workers</div>
+                    <div class="service2">Design Team</div>
+                    <div class="service3">Tech Team</div>
+                    <div class="service4">Marketing Team</div>
+                </div>
             </section>
-        </main>
+            <main>
+                <section class="temp">
+
+                </section>
+            </main>
+        </div>
         
 
         <!-- <script src="background.js"></script> -->

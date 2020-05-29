@@ -1,4 +1,11 @@
-var display = 0;
+var deBug = true;
+var timeout = deBug ? 0 : 500;
+function stopLoader(){
+    setTimeout(function(){
+        $('.loaderContainer').fadeOut();
+    }, timeout);
+}
+
 function servicesDropdown(){
     dropdown = $("#serviceDropdown");
     if( dropdown.css("opacity")=="0" ){
@@ -28,4 +35,4 @@ window.onclick = function(event) {
             }, 300);
         }
     }
-  }
+}

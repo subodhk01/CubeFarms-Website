@@ -7,7 +7,7 @@ import JoinUs from './pages/JoinUs'
 function App() {
     return (
         <Switch>
-            <Route exact path="/" component={JoinUs} />
+            <Route exact path="/joinus" component={JoinUs} />
         </Switch>
     );
 }

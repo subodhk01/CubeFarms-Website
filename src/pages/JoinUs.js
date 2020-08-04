@@ -28,10 +28,14 @@ const Container = styled.div`
         color: white;
         font-size: 1.8rem;
         text-shadow: 0px 0px 5px rgba(0,0,0,0.4);
-        font-weight: bold;
     }
     .form {
         background: linear-gradient(to bottom,${PRIMARY}, ${PRIMARY_DARK})
+    }
+    @media(min-width: 992px){
+        .outerContainer {
+            height: 100%;
+        }
     }
 `
 
@@ -39,16 +43,20 @@ export default function JoinUs(){
     return (
         <Container>
             <Header />
-            <div className="row no-gutters h-100">
-                <div className="col-12 col-md-6 hero p-2 p-md-5 d-flex flex-column align-items-center justify-content-center">
-                    <div className="subheading">Work someplace Awesome</div>
-                    <div className="heading">Work at Cubefarms</div>
+            <div className="row no-gutters outerContainer">
+                <div className="col-12 col-lg-6 hero px-2 px-md-5 py-5">
+                    <div className="py-5 h-100 d-flex flex-column align-items-center justify-content-center">
+                        <div className="subheading">Work someplace Awesome</div>
+                        <div className="heading">Work at Cubefarms</div>
+                    </div>
                 </div>
-                <div className="col-12 col-md-6 form p-2 p-md-5 d-flex flex-column align-items-center justify-content-center">
-                    <div className="subheadingWhite">
+                <div className="col-12 col-lg-6 form p-2 p-md-5 d-flex flex-column position-relative">
+                    <div className="subheadingWhite w-100">
                         Let's get to know you!
                     </div>
-                    <JoinUsForm />
+                    <div className="w-100 joinusform h-100">
+                        <JoinUsForm />
+                    </div>
                 </div>
             </div>
         </Container>

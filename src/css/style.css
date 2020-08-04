@@ -1,0 +1,38 @@
+.font-11 { font-size: 1.1rem; }
+.font-12 { font-size: 1.2rem; }
+.font-13 { font-size: 1.3rem; }
+.font-14 { font-size: 1.4rem; }
+.font-15 { font-size: 1.5rem; }
+.font-16 { font-size: 1.6rem; }
+.font-17 { font-size: 1.7rem; }
+.font-18 { font-size: 1.8rem; }
+.font-19 { font-size: 1.9rem; }
+.font-20, .font-2 { font-size: 2rem; }
+.font-21 { font-size: 2.1rem; }
+.font-22 { font-size: 2.2rem; }
+.font-23 { font-size: 2.3rem; }
+.font-24 { font-size: 2.4rem; }
+.font-25 { font-size: 2.5rem; }
+.font-26 { font-size: 2.6rem; }
+.font-27 { font-size: 2.7rem; }
+.font-28 { font-size: 2.8rem; }
+.font-29 { font-size: 2.9rem; }
+.font-30, .font-3 { font-size: 3rem; }
+
+.input-bottom-border {
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid white;
+    padding: 0px 10px;
+    color: white;
+    outline: none;
+    width: auto;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.joinusform > div, .joinusform > div > div, .joinusform > div > div > div {
+    height: 100%;
+}

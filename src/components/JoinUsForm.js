@@ -23,10 +23,12 @@ export default function JoinUsForm() {
     }
 
     return (
-        <StepWizard initialStep={3} className="h-100">
+        <StepWizard initialStep={4} className="h-100">
             <Step1 />
             <Step2 />
             <Step3 handleCv={handleCv} cvText={cvText} />
+            <Step4 />
+            <Step5 />
         </StepWizard>
     )
 }
@@ -115,7 +117,7 @@ function Step3(props){
             </div>
             <div className="font-14 py-2 py-md-4">
                 This is my CV &nbsp;<input id="cv" className="input-file" type="file" onChange={props.handleCv} />
-                <label htmlFor="cv" className="input-file-label">Attach File</label>
+                <label htmlFor="cv" className="input-file-label font-11">Attach File</label>
                 { props.cvText && 
                     <>
                         <span className="input-bottom-border">
@@ -126,6 +128,52 @@ function Step3(props){
                         </span>
                     </>
                 }
+            </div>
+            <div className="position-absolute w-100 font-18 d-flex align-items-center justify-content-between" style={{bottom: 0}}>
+                <div onClick={props.previousStep} className="cursor-pointer">
+                    <BsArrowLeftShort color="white" /> Back 
+                </div>
+                <div onClick={props.nextStep} className="cursor-pointer">
+                    Next <BsArrowRightShort color="white" />
+                </div>
+            </div>
+        </div>
+    )
+}
+
+function Step4(props){
+    return(
+        <div className="text-white h-100 d-flex flex-column justify-content-center">
+            <div className="font-14 py-2 py-md-4">
+                Describe youself in less than 100 words.... <br />
+                <textarea className="form-control mt-2" type="text" rows="6" />
+            </div>
+            <div className="font-14 py-2 py-md-4">
+                Share details of your most brilliant work here.... <br />
+                <textarea className="form-control mt-2" type="text" rows="6" />
+            </div>
+            <div className="position-absolute w-100 font-18 d-flex align-items-center justify-content-between" style={{bottom: 0}}>
+                <div onClick={props.previousStep} className="cursor-pointer">
+                    <BsArrowLeftShort color="white" /> Back 
+                </div>
+                <div onClick={props.nextStep} className="cursor-pointer">
+                    Next <BsArrowRightShort color="white" />
+                </div>
+            </div>
+        </div>
+    )
+}
+
+function Step5(props){
+    return(
+        <div className="text-white h-100 d-flex flex-column justify-content-center">
+            <div className="font-14 py-2 py-md-4">
+                What do you think are factors critical to be successful while working remotely with clients.... <br />
+                <textarea className="form-control mt-2" type="text" rows="6" />
+            </div>
+            <div className="font-14 py-2 py-md-4">
+                Where did you hear about Cubefarms.... <br />
+                <textarea className="form-control mt-2" type="text" rows="6" />
             </div>
             <div className="position-absolute w-100 font-18 d-flex align-items-center justify-content-between" style={{bottom: 0}}>
                 <div onClick={props.previousStep} className="cursor-pointer">

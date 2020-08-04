@@ -4,6 +4,7 @@ import { propTypes } from 'react-bootstrap/esm/Image';
 import { BsArrowRightShort, BsArrowLeftShort } from 'react-icons/bs'
 import { AiFillCloseCircle } from 'react-icons/ai'
 import TagRadio from './Form/TagRadio';
+import { PRIMARY_DARK } from '../utils/Colors';
 
 export default function JoinUsForm() {
     const [ name, setName ] = React.useState("")
@@ -23,12 +24,13 @@ export default function JoinUsForm() {
     }
 
     return (
-        <StepWizard initialStep={4} className="h-100">
+        <StepWizard initialStep={1} className="h-100">
             <Step1 />
             <Step2 />
             <Step3 handleCv={handleCv} cvText={cvText} />
             <Step4 />
             <Step5 />
+            <Step6 />
         </StepWizard>
     )
 }
@@ -183,6 +185,40 @@ function Step5(props){
                     Next <BsArrowRightShort color="white" />
                 </div>
             </div>
+        </div>
+    )
+}
+
+function Step6(props){
+    return(
+        <div className="text-white h-100 d-flex flex-column justify-content-center">
+            <div className="font-14 py-2 py-md-4">
+                Almost there kk! Now do you have any questions for us? <br />
+                <textarea className="form-control mt-2" type="text" rows="8" />
+            </div>
+            <div className="position-absolute w-100 font-18 d-flex align-items-center justify-content-between" style={{bottom: 0}}>
+                <div onClick={props.previousStep} className="cursor-pointer">
+                    <BsArrowLeftShort color="white" /> Back 
+                </div>
+                <div className="cursor-pointer font-11 btn btn-white-border">
+                    SUBMIT
+                </div>
+            </div>
+            <style jsx>{`
+                .btn-white-border{
+                    padding: 0.4rem 1.4rem;
+                    border: 2px solid white;
+                    background: transparent;
+                    color: white;
+                    font-weight: bold;
+                    border-radius: 50px;
+                    transition: 0.3s;
+                }
+                .btn-white-border:hover{
+                    background: white;
+                    color: ${PRIMARY_DARK};
+                }
+            `}</style>
         </div>
     )
 }

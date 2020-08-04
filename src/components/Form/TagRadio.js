@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { PRIMARY, PRIMARY_DARK } from '../../utils/Colors'
+import { PRIMARY_DARK } from '../../utils/Colors'
 
 const Radio = styled.div`
     padding: 5px;
@@ -24,7 +24,7 @@ export default function TagRadio(props){
     return (
         <Radio>
             <input id={props.id} name={props.name} type="radio" />
-            <label for={props.id}>{props.label}</label>
+            <label htmlFor={props.id}>{props.label}</label>
         </Radio>
     )
 }

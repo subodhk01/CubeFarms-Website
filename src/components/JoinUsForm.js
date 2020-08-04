@@ -2,18 +2,31 @@ import React from 'react'
 import StepWizard from 'react-step-wizard';
 import { propTypes } from 'react-bootstrap/esm/Image';
 import { BsArrowRightShort, BsArrowLeftShort } from 'react-icons/bs'
+import { AiFillCloseCircle } from 'react-icons/ai'
 import TagRadio from './Form/TagRadio';
 
 export default function JoinUsForm() {
     const [ name, setName ] = React.useState("")
     const [ email, setEmail ] = React.useState("")
     const [ phone, setPhone ] = React.useState("")
-    const [ CV, setCV ] = React.useState()
+    const [ Cv, setcV ] = React.useState()
+    const [ cvText, setCvText ] = React.useState("")
+
+    const handleCv = (event) => {
+        if(event.target.files){
+            setcV(event.target.files[0])
+            setCvText(event.target.files[0].name)
+        }else{
+            setcV()
+            setCvText("")
+        }
+    }
+
     return (
         <StepWizard initialStep={3} className="h-100">
             <Step1 />
             <Step2 />
-            <Step3 />
+            <Step3 handleCv={handleCv} cvText={cvText} />
         </StepWizard>
     )
 }
@@ -101,8 +114,18 @@ function Step3(props){
                 URL to linkedin Profile &nbsp;<input className="input-bottom-border" type="text" />
             </div>
             <div className="font-14 py-2 py-md-4">
-                This is my CV &nbsp;<input id="cv" className="input-file" type="file" />
-                <label for="cv" className="input-file-label">Attach File</label>
+                This is my CV &nbsp;<input id="cv" className="input-file" type="file" onChange={props.handleCv} />
+                <label htmlFor="cv" className="input-file-label">Attach File</label>
+                { props.cvText && 
+                    <>
+                        <span className="input-bottom-border">
+                            {props.cvText} 
+                        </span> 
+                        <span onClick={props.handleCv} className="cursor-pointer">
+                            <AiFillCloseCircle color="white" />
+                        </span>
+                    </>
+                }
             </div>
             <div className="position-absolute w-100 font-18 d-flex align-items-center justify-content-between" style={{bottom: 0}}>
                 <div onClick={props.previousStep} className="cursor-pointer">

@@ -29,6 +29,19 @@
     width: auto;
 }
 
+.input-file {
+    display: none;
+}
+
+.input-file-label {
+    color: #0a3f92;
+    background-color: white;
+    padding: 0.4rem 1.2rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.1s;
+}
+
 .cursor-pointer {
     cursor: pointer;
 }

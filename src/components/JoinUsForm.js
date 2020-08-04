@@ -8,10 +8,12 @@ export default function JoinUsForm() {
     const [ name, setName ] = React.useState("")
     const [ email, setEmail ] = React.useState("")
     const [ phone, setPhone ] = React.useState("")
+    const [ CV, setCV ] = React.useState()
     return (
-        <StepWizard initialStep={2} className="h-100">
+        <StepWizard initialStep={3} className="h-100">
             <Step1 />
             <Step2 />
+            <Step3 />
         </StepWizard>
     )
 }
@@ -46,6 +48,7 @@ function Step1(props){
         </div>
     )
 }
+
 function Step2(props){
     return(
         <div className="text-white h-100 d-flex flex-column justify-content-center">
@@ -65,6 +68,41 @@ function Step2(props){
                     <TagRadio name="association" id="partTime" label={`Part Time`} />
                     <TagRadio name="association" id="internship" label={`Internship`} />
                 </div>
+            </div>
+            <div className="position-absolute w-100 font-18 d-flex align-items-center justify-content-between" style={{bottom: 0}}>
+                <div onClick={props.previousStep} className="cursor-pointer">
+                    <BsArrowLeftShort color="white" /> Back 
+                </div>
+                <div onClick={props.nextStep} className="cursor-pointer">
+                    Next <BsArrowRightShort color="white" />
+                </div>
+            </div>
+        </div>
+    )
+}
+
+function Step3(props){
+    return(
+        <div className="text-white h-100 d-flex flex-column justify-content-center">
+            <div className="text-left py-2 py-md-4">
+                <div className="font-23">Apply for work</div>
+                <div className="py-2 py-md-4 d-flex flex-wrap">
+                    <TagRadio name="work" id="digitalmarketing" label={`Digital Marketing`} />
+                    <TagRadio name="work" id="creativewriter" label={`Creative Writer`} />
+                    <TagRadio name="work" id="webdevelopment" label={`Web Development`} />
+                    <TagRadio name="work" id="graphicdesigner" label={`Graphic Designer`} />
+                    <TagRadio name="work" id="businessdevelopment" label={`Business Development`} />
+                </div>
+            </div>
+            <div className="font-14 py-2 py-md-4">
+                What are montly Salary Expectations &nbsp;<input className="input-bottom-border" type="text" />
+            </div>
+            <div className="font-14 py-2 py-md-4">
+                URL to linkedin Profile &nbsp;<input className="input-bottom-border" type="text" />
+            </div>
+            <div className="font-14 py-2 py-md-4">
+                This is my CV &nbsp;<input id="cv" className="input-file" type="file" />
+                <label for="cv" className="input-file-label">Attach File</label>
             </div>
             <div className="position-absolute w-100 font-18 d-flex align-items-center justify-content-between" style={{bottom: 0}}>
                 <div onClick={props.previousStep} className="cursor-pointer">

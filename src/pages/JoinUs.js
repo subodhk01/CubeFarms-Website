@@ -30,6 +30,7 @@ const Container = styled.div`
         text-shadow: 0px 0px 5px rgba(0,0,0,0.4);
     }
     .form {
+        overflow: hidden;
         background: linear-gradient(to bottom,${PRIMARY}, ${PRIMARY_DARK})
     }
     @media(min-width: 992px){

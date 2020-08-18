@@ -1,7 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
-import Header from '../components/Header'
+import Header from '../components/Header/Header'
 import JoinUsForm from '../components/JoinUsForm'
+import StepScroll from '../components/StepScroll'
 
 import { PRIMARY, PRIMARY_DARK } from '../utils/Colors'
 import background from '../assets/cubeBackground.png'
@@ -54,6 +55,9 @@ export default function JoinUs(){
                 <div className="col-12 col-lg-6 form p-2 p-md-5 d-flex flex-column position-relative">
                     <div className="subheadingWhite w-100">
                         Let's get to know you!
+                    </div>
+                    <div className="subheadingWhite w-100">
+                        <StepScroll />
                     </div>
                     <div className="w-100 joinusform h-100">
                         <JoinUsForm />

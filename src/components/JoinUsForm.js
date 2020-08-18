@@ -1,6 +1,5 @@
 import React from 'react'
 import StepWizard from 'react-step-wizard';
-import { propTypes } from 'react-bootstrap/esm/Image';
 import { BsArrowRightShort, BsArrowLeftShort } from 'react-icons/bs'
 import { AiFillCloseCircle } from 'react-icons/ai'
 import TagRadio from './Form/TagRadio';

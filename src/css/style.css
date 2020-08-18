@@ -19,6 +19,18 @@
 .font-28 { font-size: 2.8rem; }
 .font-29 { font-size: 2.9rem; }
 .font-30, .font-3 { font-size: 3rem; }
+.font-31 { font-size: 3.1rem; }
+.font-32 { font-size: 3.2rem; }
+.font-33 { font-size: 3.3rem; }
+.font-34 { font-size: 3.4rem; }
+.font-35 { font-size: 3.5rem; }
+.font-36 { font-size: 3.6rem; }
+.font-37 { font-size: 3.7rem; }
+.font-38 { font-size: 3.8rem; }
+.font-39 { font-size: 3.9rem; }
+.font-40, .font-4 { font-size: 4rem; }
+.color-primary { color: #377eeb }
+.color-primary-dark { color: #0a3f92 }
 
 .input-bottom-border {
     background: transparent;
@@ -49,4 +61,8 @@
 
 .joinusform > div, .joinusform > div > div, .joinusform > div > div > div {
     height: 100%;
+}
+
+.heading {
+    font-family: "madetommy-light";
 }

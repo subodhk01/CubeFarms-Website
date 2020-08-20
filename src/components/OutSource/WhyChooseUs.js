@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
-import image from '../../assets/choose.png'
+
+const image = '/static/choose.png'
 
 const data = [
     "We provide one-month free support and train you to tackle your new digital tool.",
@@ -10,20 +11,10 @@ const data = [
 ]
 
 const Container = styled.div`
-    .choose-item {
-        background: #191622;
-        border-radius: 10px;
-        font-family: "helvetica-regular";
-        padding: 10px 20px;
-    }
-    .choose-item img {
-        border-radius: 10px;
-        max-height: 170px;
-        max-width: 100%;
     }
 `
 
-export default function() {
+export default function WhyChooseUs() {
     return (
         <div className="container">
             <Container>
@@ -34,7 +25,7 @@ export default function() {
                     <div className="row no-gutters">
                         {data.map((item,index) => 
                             <div key={index} className="col-md-6 p-2">
-                                <div className="choose-item">
+                                <div className="custom-block1">
                                     <div className="row no-gutters align-items-center">
                                         <div className="col-4">
                                             <img src={image} />

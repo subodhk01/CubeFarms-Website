@@ -5,7 +5,9 @@ import JoinUsForm from '../components/JoinUsForm'
 import StepScroll from '../components/StepScroll'
 
 import { PRIMARY, PRIMARY_DARK } from '../utils/Colors'
-import background from '../assets/cubeBackground.png'
+
+
+const background = '/static/cubeBackground.png'
 
 const Container = styled.div`
     height: 100%;

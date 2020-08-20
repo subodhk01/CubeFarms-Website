@@ -1,8 +1,8 @@
 @font-face {
     font-family: 'madetommy-light';
-    src: url('../assets/fonts/madetommy/mt-light.ttf')  format('truetype')
+    src: url('/static/fonts/madetommy/mt-light.ttf')  format('truetype')
 }
 @font-face {
     font-family: 'helvetica-regular';
-    src: url('../assets/fonts/helvetica/helvetica-regular.ttf')  format('truetype')
+    src: url('/static/fonts/helvetica/helvetica-regular.ttf')  format('truetype')
 }

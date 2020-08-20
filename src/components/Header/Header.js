@@ -1,7 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
-import logo from '../../assets/logoWhite.png'
 import { PRIMARY } from '../../utils/Colors'
+
+const logoWhite = '/static/logoWhite.png'
+const logoBlack = '/static/logoBlack.png'
 
 const Container = styled.div`
     div {
@@ -53,7 +55,7 @@ export default function Header(props){
         <Container white={props.white}>
             <div className={`d-flex align-items-center p-2 position-fixed ${props.full ? "container justify-content-between" : ""}`}>
                 <div>
-                    <img src={logo} alt="Cubefarms" />
+                    <img src={`${props.white ? logoWhite : logoBlack}`} alt="Cubefarms" />
                 </div>
                 <div className="d-flex align-items-center">
                     { HEADER_ITEMS.map((item, index) => 

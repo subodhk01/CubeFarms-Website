@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
-import image from '../../assets/standard.png'
+
+const image = '/static/standard.png'
 
 const data = [
     "design Excellence",
@@ -12,17 +13,7 @@ const data = [
 ]
 
 const Container = styled.div`
-    .choose-item {
-        background: #191622;
-        border-radius: 10px;
-        font-family: "helvetica-regular";
-        padding: 10px 20px;
-    }
-    .choose-item img {
-        border-radius: 10px;
-        max-height: 170px;
-        max-width: 100%;
-    }
+    
 `
 
 export default function() {
@@ -36,7 +27,7 @@ export default function() {
                     <div className="row no-gutters">
                         {data.map((item,index) => 
                             <div key={index} className="col-md-4 p-2 p-md-3">
-                                <div className="choose-item">
+                                <div className="custom-block1">
                                     <div className="text-center py-4">
                                         <div>
                                             <img src={image} />

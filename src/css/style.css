@@ -66,3 +66,15 @@
 .heading {
     font-family: "madetommy-light";
 }
+
+.custom-block1 {
+    background: #191622;
+    border-radius: 10px;
+    font-family: "helvetica-regular";
+    padding: 10px 20px;
+}
+.custom-block1 img {
+    border-radius: 10px;
+    max-height: 170px;
+    max-width: 100%;
+}

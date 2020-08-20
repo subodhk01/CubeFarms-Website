@@ -50,8 +50,8 @@ export default function() {
                 </h2>
                 <div>
                     <div className="row no-gutters">
-                        <div className="col-12 col-md-6 p-3">
-                            <div className="item p-2 p-md-5">
+                        <div className="col-12 col-md-6 p-2 p-md-3">
+                            <div className="item p-4 p-md-5">
                                 <div className="position-relative">
                                     <div className="pb-4">
                                         <h3 className="title">
@@ -67,8 +67,8 @@ export default function() {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-12 col-md-6 p-3">
-                            <div className="item p-2 p-md-5">
+                        <div className="col-12 col-md-6 p-2 p-md-3">
+                            <div className="item p-4 p-md-5">
                                 <div className="position-relative">
                                     <div className="pb-4">
                                         <h3 className="title">

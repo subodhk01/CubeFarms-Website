@@ -11,6 +11,8 @@ const data = [
 ]
 
 const Container = styled.div`
+    @media(max-width: 576px){
+        font-size: 0.81rem;
     }
 `
 

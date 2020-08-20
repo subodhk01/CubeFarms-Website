@@ -44,6 +44,11 @@ const Container = styled.div`
     .service-block {
         height: 200px;
     }
+    @media(min-width: 1200px){
+        .content-container {
+            padding-top: 120px;
+        }
+    }
     .content-box {
         max-width: 430px;
         font-family: "helvetica-regular";
@@ -89,7 +94,7 @@ export default function OurProcess() {
                         {/* <div className="middle-black-box">
 
                         </div> */}
-                        <div style={{paddingTop: "120px"}}>
+                        <div className="content-container">
                             {data.map((item,index) => 
                                 <div key={index} className="service-block p-2">
                                     <div className="">

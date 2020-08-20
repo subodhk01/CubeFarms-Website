@@ -14,6 +14,7 @@ const Container = styled.div`
         align-items: center;
         justify-content: center;
         color: white;
+        padding: 40px 0px;
     }
     .heading {
         font-size: 2.3rem;

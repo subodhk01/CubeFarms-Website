@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import Header from '../components/Header/Header'
 import WhyChooseUs from '../components/OutSource/WhyChooseUs'
 import OurStandards from '../components/OutSource/OurStandards'
+import OurServices from '../components/OutSource/OurProcess'
 
 const Container = styled.div`
     background: black;
@@ -48,6 +49,9 @@ export default function Outsource(){
                 </div>
                 <div className="hero-container">
                     <OurStandards />
+                </div>
+                <div className="hero-container">
+                    <OurServices />
                 </div>
             </div>
         </Container>

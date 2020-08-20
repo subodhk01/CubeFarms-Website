@@ -4,6 +4,7 @@ import Header from '../components/Header/Header'
 import WhyChooseUs from '../components/OutSource/WhyChooseUs'
 import OurStandards from '../components/OutSource/OurStandards'
 import OurServices from '../components/OutSource/OurProcess'
+import LookingForSomethingElse from '../components/OutSource/LookingForSomethingElse'
 
 const Container = styled.div`
     background: black;
@@ -52,6 +53,9 @@ export default function Outsource(){
                 </div>
                 <div className="hero-container">
                     <OurServices />
+                </div>
+                <div className="hero-container" style={{background: "#fafeff"}}>
+                    <LookingForSomethingElse />
                 </div>
             </div>
         </Container>

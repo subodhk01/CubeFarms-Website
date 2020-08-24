@@ -18,7 +18,7 @@ const Container = styled.div`
 
 export default function WhyChooseUs() {
     return (
-        <div className="container">
+        <div className="px-3 px-md-5">
             <Container>
                 <h2 className="heading mb-5">
                     Why choose us?
@@ -27,7 +27,7 @@ export default function WhyChooseUs() {
                     <div className="row no-gutters">
                         {data.map((item,index) => 
                             <div key={index} className="col-md-6 p-2">
-                                <div className="custom-block1">
+                                <div data-aos="fade-up" data-aos-delay={index*190} className="custom-block1">
                                     <div className="row no-gutters align-items-center">
                                         <div className="col-4">
                                             <img src={image} />
@@ -36,7 +36,7 @@ export default function WhyChooseUs() {
                                             {item}
                                         </div>
                                     </div>
-                                </div>
+                                </div> 
                             </div>
                         )}
                     </div>

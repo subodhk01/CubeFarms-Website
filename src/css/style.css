@@ -32,6 +32,8 @@
 .color-primary { color: #377eeb }
 .color-primary-dark { color: #0a3f92 }
 
+.invisible {opacity: 0;}
+
 .input-bottom-border {
     background: transparent;
     border: none;

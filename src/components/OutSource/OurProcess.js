@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import VisibSensor from 'react-visibility-sensor'
 
 const image = '/static/choose.png'
 
@@ -44,10 +45,9 @@ const Container = styled.div`
     .service-block {
         height: 200px;
     }
-    @media(min-width: 1200px){
-        .content-container {
-            padding-top: 120px;
-        }
+    .content-container {
+        position: relative;
+        top: -60px;
     }
     .content-box {
         max-width: 430px;
@@ -70,16 +70,22 @@ const Container = styled.div`
     }
     .middle-black-box {
         position: sticky;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        width: 500px;
-        height: 400px;
-        background: white;
+        left: 50%;
+        transform: translateX(-50%);
+        top: calc(100vh - 200px);
+        width: 300px;
+        height: 200px;
+        background: black;
     }
 `
 
 export default function OurProcess() {
+    const [ isVisible, setIsVisible ] = React.useState(true)
+    const handleBlackBox = (isVisible) => {
+        if(isVisible){
+            setIsVisible(!isVisible)
+        }
+    }
     return (
         <div className="container-lg">
             <Container>
@@ -87,16 +93,16 @@ export default function OurProcess() {
                     Our Process
                 </h2>
                 <div>
-                    <div className="position-relative">
+                    <div className="position-relative pt-5 pt-xl-0">
                         <div className="middle-image-box d-none d-xl-block">
                             <img src={line} />
                         </div>
-                        {/* <div className="middle-black-box">
+                        <div className={`middle-black-box d-none d-xl-block ${isVisible ? "" : "invisible"}`}>
 
-                        </div> */}
+                        </div>
                         <div className="content-container">
                             {data.map((item,index) => 
-                                <div key={index} className="service-block p-2">
+                                <div data-aos="fade-up" data-aos-delay={200} key={index} className="service-block p-2">
                                     <div className="">
                                         <div className={`content-box ${index%2 ? "ml-auto" : "mr-auto"}`}>
                                             <div className="content-title">
@@ -110,6 +116,11 @@ export default function OurProcess() {
                                 </div>
                             )}
                         </div>
+                        <VisibSensor onChange={handleBlackBox}>
+                            <div style={{height: "70px"}}>
+
+                            </div>
+                        </VisibSensor>
                     </div>
                 </div>
             </Container>

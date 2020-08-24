@@ -6,6 +6,7 @@ import OurStandards from '../components/OutSource/OurStandards'
 import OurServices from '../components/OutSource/OurProcess'
 import LookingForSomethingElse from '../components/OutSource/LookingForSomethingElse'
 
+import AOS from 'aos';
 import { AnimatedBg, Transition } from 'scroll-background';
 
 const Container = styled.div`
@@ -24,6 +25,13 @@ const Container = styled.div`
 `
 
 export default function Outsource(){
+    React.useEffect(() => {
+        if(window){
+            AOS.init({
+                duration: 1400,
+            })
+        }
+    } ,[])
     return (
         <Container>
             <div className="container">

@@ -18,25 +18,38 @@ const Container = styled.div`
 
 export default function() {
     return (
-        <div className="container">
+        <div className="px-3 px-md-5">
             <Container>
                 <h2 className="heading mb-5">
-                    Why choose us?
+                    Our Standards
                 </h2>
                 <div>
                     <div className="row no-gutters">
                         {data.map((item,index) => 
                             <div key={index} className="col-md-4 p-2 p-md-3">
-                                <div className="custom-block1">
-                                    <div className="text-center py-4">
-                                        <div>
-                                            <img src={image} />
+                                { index < 3 ?
+                                    <div data-aos="fade-up" data-aos-delay={0} className="custom-block1">
+                                        <div className="text-center py-4">
+                                            <div>
+                                                <img src={image} />
+                                            </div>
+                                            <div className="font-11">
+                                                {item}
+                                            </div>
                                         </div>
-                                        <div className="font-11">
-                                            {item}
+                                    </div> 
+                                    :
+                                    <div data-aos="fade-up" data-aos-delay={300} className="custom-block1">
+                                        <div className="text-center py-4">
+                                            <div>
+                                                <img src={image} />
+                                            </div>
+                                            <div className="font-11">
+                                                {item}
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
+                                }
                             </div>
                         )}
                     </div>

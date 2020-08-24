@@ -19,10 +19,87 @@ const Container = styled.div`
         padding: 40px 0px;
     }
     .heading {
-        font-size: 2.3rem;
-        color
+        font-size: 2.6rem;
     }
 `
+const whyChooseUsData = [
+    {
+        image: "/static/choose.png",
+        content: "We provide one-month free support and train you to tackle your new digital tool."
+    },
+    {
+        image: "/static/choose.png",
+        content: "We use open source scripts and libraries so that you can keep full ownership of the project."
+    },
+    {
+        image: "/static/choose.png",
+        content: "Our development team uses the best technologies to create high-performance, cost-efficient, flexible web experience."
+    },
+    {
+        image: "/static/choose.png",
+        content: "We also provide `maintenance and security pack` at an affordable rate so that you have a fast optimised and secure website 24*7"
+    },
+]
+const ourStandardsData = [
+    {
+        image: "/static/standard.png",
+        content: "Design Excellence",
+    },
+    {
+        image: "/static/standard.png",
+        content: "Build-in SEO.",
+    },
+    {
+        image: "/static/standard.png",
+        content: "100% responsive",
+    },
+    {
+        image: "/static/standard.png",
+        content: "Cross-browser compatibility",
+    },
+    {
+        image: "/static/standard.png",
+        content: "CMS enabled",
+    },
+    {
+        image: "/static/standard.png",
+        content: "1-month support after delivery"
+    },
+]
+const ourProcessData = [
+    {
+        title: "UX",
+        content: "We also provide `maintenance and security pack` at an affordable rate so that you have a fast optimised and secure website 24*7"
+    },
+    {
+        title: "WIREFRAMING",
+        content: "We also provide `maintenance and security pack` at an affordable rate so that you have a fast optimised and secure website 24*7"
+    },
+    {
+        title: "DESIGNING",
+        content: "We also provide `maintenance and security pack` at an affordable rate so that you have a fast optimised and secure website 24*7"
+    },
+    {
+        title: "DEVELOPING",
+        content: "We also provide `maintenance and security pack` at an affordable rate so that you have a fast optimised and secure website 24*7"
+    },
+    {
+        title: "TESTING",
+        content: "We also provide `maintenance and security pack` at an affordable rate so that you have a fast optimised and secure website 24*7"
+    },
+    {
+        title: "HOSTING",
+        content: "We also provide `maintenance and security pack` at an affordable rate so that you have a fast optimised and secure website 24*7"
+    },
+    {
+        title: "LAUNCH",
+        content: "We also provide `maintenance and security pack` at an affordable rate so that you have a fast optimised and secure website 24*7"
+    },
+    {
+        title: "MAINTENANCE",
+        content: "We also provide `maintenance and security pack` at an affordable rate so that you have a fast optimised and secure website 24*7"
+    },
+]
 
 export default function Outsource(){
     React.useEffect(() => {
@@ -57,13 +134,13 @@ export default function Outsource(){
                         </div>
                     </div>
                     <div className="hero-container">
-                        <WhyChooseUs />
+                        <WhyChooseUs data={whyChooseUsData} heading="Why Choose Us?" />
                     </div>
                     <div className="hero-container">
-                        <OurStandards />
+                        <OurStandards data={ourStandardsData} heading="Our Standards" />
                     </div>
                     <div className="hero-container">
-                        <OurServices />
+                        <OurServices data={ourProcessData} heading="Our Process" />
                     </div>
                     <Transition height="100px" from="#000000" to="#ffffff" />
                     <div className="hero-container">

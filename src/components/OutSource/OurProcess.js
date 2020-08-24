@@ -2,43 +2,6 @@ import React from 'react'
 import styled from 'styled-components'
 import VisibSensor from 'react-visibility-sensor'
 
-const image = '/static/choose.png'
-
-const data = [
-    {
-        title: "UX",
-        content: "We also provide `maintenance and security pack` at an affordable rate so that you have a fast optimised and secure website 24*7"
-    },
-    {
-        title: "WIREFRAMING",
-        content: "We also provide `maintenance and security pack` at an affordable rate so that you have a fast optimised and secure website 24*7"
-    },
-    {
-        title: "DESIGNING",
-        content: "We also provide `maintenance and security pack` at an affordable rate so that you have a fast optimised and secure website 24*7"
-    },
-    {
-        title: "DEVELOPING",
-        content: "We also provide `maintenance and security pack` at an affordable rate so that you have a fast optimised and secure website 24*7"
-    },
-    {
-        title: "TESTING",
-        content: "We also provide `maintenance and security pack` at an affordable rate so that you have a fast optimised and secure website 24*7"
-    },
-    {
-        title: "HOSTING",
-        content: "We also provide `maintenance and security pack` at an affordable rate so that you have a fast optimised and secure website 24*7"
-    },
-    {
-        title: "LAUNCH",
-        content: "We also provide `maintenance and security pack` at an affordable rate so that you have a fast optimised and secure website 24*7"
-    },
-    {
-        title: "MAINTENANCE",
-        content: "We also provide `maintenance and security pack` at an affordable rate so that you have a fast optimised and secure website 24*7"
-    },
-]
-
 const line = '/static/lineBlue.png'
 
 const Container = styled.div`
@@ -79,7 +42,7 @@ const Container = styled.div`
     }
 `
 
-export default function OurProcess() {
+export default function OurProcess(props) {
     const [ isVisible, setIsVisible ] = React.useState(true)
     const handleBlackBox = (isVisible) => {
         if(isVisible){
@@ -90,7 +53,7 @@ export default function OurProcess() {
         <div className="container-lg">
             <Container>
                 <h2 className="heading mb-5">
-                    Our Process
+                    {props.heading}
                 </h2>
                 <div>
                     <div className="position-relative pt-5 pt-xl-0">
@@ -101,7 +64,7 @@ export default function OurProcess() {
 
                         </div>
                         <div className="content-container">
-                            {data.map((item,index) => 
+                            {props.data.map((item,index) => 
                                 <div data-aos="fade-up" data-aos-delay={200} key={index} className="service-block p-2">
                                     <div className="">
                                         <div className={`content-box ${index%2 ? "ml-auto" : "mr-auto"}`}>

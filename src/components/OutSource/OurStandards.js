@@ -1,40 +1,29 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const image = '/static/standard.png'
-
-const data = [
-    "design Excellence",
-    "Build-in SEO.",
-    "100% responsive",
-    "Cross-browser compatibility",
-    "CMS enabled",
-    "1-month support after delivery"
-]
-
 const Container = styled.div`
     
 `
 
-export default function() {
+export default function(props) {
     return (
         <div className="px-3 px-md-5">
             <Container>
                 <h2 className="heading mb-5">
-                    Our Standards
+                    {props.heading}
                 </h2>
                 <div>
                     <div className="row no-gutters">
-                        {data.map((item,index) => 
+                        {props.data.map((item,index) => 
                             <div key={index} className="col-md-4 p-2 p-md-3">
                                 { index < 3 ?
                                     <div data-aos="fade-up" data-aos-delay={0} className="custom-block1">
                                         <div className="text-center py-4">
                                             <div>
-                                                <img src={image} />
+                                                <img src={item.image} />
                                             </div>
                                             <div className="font-11">
-                                                {item}
+                                                {item.content}
                                             </div>
                                         </div>
                                     </div> 
@@ -42,10 +31,10 @@ export default function() {
                                     <div data-aos="fade-up" data-aos-delay={300} className="custom-block1">
                                         <div className="text-center py-4">
                                             <div>
-                                                <img src={image} />
+                                                <img src={item.image} />
                                             </div>
                                             <div className="font-11">
-                                                {item}
+                                                {item.content}
                                             </div>
                                         </div>
                                     </div>

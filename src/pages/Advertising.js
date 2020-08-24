@@ -111,8 +111,10 @@ export default function Outsource(){
     } ,[])
     return (
         <Container>
-            <div className="container">
-                <Header white full />
+            <div className="bg-black">
+                <div className="container">
+                    <Header white full />
+                </div>
             </div>
             <div>
                 <AnimatedBg>

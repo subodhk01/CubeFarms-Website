@@ -54,8 +54,8 @@ export default function JoinUs(){
                         <div className="heading">Work at Cubefarms</div>
                     </div>
                 </div>
-                <div className="col-12 col-lg-6 form p-2 p-md-5 d-flex flex-column position-relative">
-                    <div className="subheadingWhite w-100">
+                <div className="col-12 col-lg-6 form p-3 p-md-5 d-flex flex-column position-relative">
+                    <div className="subheadingWhite w-100 py-md-2">
                         Let's get to know you!
                     </div>
                     <div className="subheadingWhite w-100">

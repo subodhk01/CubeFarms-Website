@@ -6,6 +6,16 @@ const logoWhite = '/static/logoWhite.png'
 const logoBlack = '/static/logoBlack.png'
 
 const Container = styled.div`
+    ${props => props.white ?
+        `
+            height: 76px;
+            background: black;
+        `
+        :
+        `
+            background: transparent;
+        `
+    }
     div {
         z-index: 3;
     }
@@ -41,8 +51,8 @@ const HEADER_ITEMS = [
         path: "/outsource"
     },
     {
-        title: "Join Us",
-        path: "/joinus"
+        title: "Carrier",
+        path: "/carrier"
     },
     {
         title: "Blog",
@@ -68,6 +78,9 @@ export default function Header(props){
                             </a>
                         </div>
                     )}
+                    <div>
+
+                    </div>
                 </div>
             </div>
         </Container>

@@ -85,6 +85,11 @@
     font-family: "madetommy-light";
 }
 
+.heading-bold {
+    font-family: "madetommy-bold";
+    font-size: 2.5rem;
+}
+
 .custom-block1 {
     background: #191622;
     border-radius: 10px;

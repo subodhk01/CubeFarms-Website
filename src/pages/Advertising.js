@@ -4,6 +4,7 @@ import Header from '../components/Header/Header'
 import WhyChooseUs from '../components/OutSource/WhyChooseUs'
 import OurStandards from '../components/OutSource/OurStandards'
 import OurServices from '../components/OutSource/OurProcess'
+import StaticSidePanelSection from '../components/StaticSidePanelSection'
 import LookingForSomethingElse from '../components/OutSource/LookingForSomethingElse'
 
 import AOS from 'aos';
@@ -144,6 +145,9 @@ export default function Outsource(){
                         <OurServices data={ourProcessData} heading="Our Process" />
                     </div>
                     <Transition height="100px" from="#000000" to="#ffffff" />
+                    <div className="hero-container">
+                        <StaticSidePanelSection />
+                    </div>
                     <div className="hero-container">
                         <LookingForSomethingElse />
                     </div>

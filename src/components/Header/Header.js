@@ -8,7 +8,6 @@ const logoBlack = '/static/logoBlack.png'
 const Container = styled.div`
     ${props => props.white ?
         `
-            height: 76px;
             background: black;
         `
         :

@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import Header from '../components/Header/Header'
+import Footer from '../components/Footer/Footer'
 import WhyChooseUs from '../components/OutSource/WhyChooseUs'
 import OurStandards from '../components/OutSource/OurStandards'
 import OurServices from '../components/OutSource/OurProcess'
@@ -8,6 +9,7 @@ import LookingForSomethingElse from '../components/OutSource/LookingForSomething
 
 import AOS from 'aos';
 import { AnimatedBg, Transition } from 'scroll-background';
+import Layout from '../components/UI/Layout'
 
 const Container = styled.div`
     .hero-container {
@@ -111,43 +113,42 @@ export default function Outsource(){
     } ,[])
     return (
         <Container>
-            <div className="container">
-                <Header white full />
-            </div>
-            <div>
-                <AnimatedBg>
-                    <div className="hero-container">
-                        <div className="container">
-                            <div className="p-3" style={{maxWidth: "600px"}}>
-                                <h1 className="font-39 text-white">
-                                    WEB STUDIO
-                                </h1>
-                                <div className="color-primary font-14">
-                                    Websites promote you 24/7. No employee will do that.
-                                </div>
-                                <div className="font-13" style={{color: "rgba(245,245,245,0.83)"}}>
-                                    We design and develop with a belief that every website deserves to 
-                                    have its own voice. We build each and every website from scratch 
-                                    combining function, content structure, and beauty in a single package.
+            <Layout header={{white:true}}>
+                <div>
+                    <AnimatedBg>
+                        <div className="hero-container">
+                            <div className="container">
+                                <div className="p-3" style={{maxWidth: "600px"}}>
+                                    <h1 className="font-39 text-white">
+                                        WEB STUDIO
+                                    </h1>
+                                    <div className="color-primary font-14">
+                                        Websites promote you 24/7. No employee will do that.
+                                    </div>
+                                    <div className="font-13" style={{color: "rgba(245,245,245,0.83)"}}>
+                                        We design and develop with a belief that every website deserves to 
+                                        have its own voice. We build each and every website from scratch 
+                                        combining function, content structure, and beauty in a single package.
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div className="hero-container">
-                        <WhyChooseUs data={whyChooseUsData} heading="Why Choose Us?" />
-                    </div>
-                    <div className="hero-container">
-                        <OurStandards data={ourStandardsData} heading="Our Standards" />
-                    </div>
-                    <div className="hero-container">
-                        <OurServices data={ourProcessData} heading="Our Process" />
-                    </div>
-                    <Transition height="100px" from="#000000" to="#ffffff" />
-                    <div className="hero-container">
-                        <LookingForSomethingElse />
-                    </div>
-                </AnimatedBg>
-            </div>
+                        <div className="hero-container">
+                            <WhyChooseUs data={whyChooseUsData} heading="Why Choose Us?" />
+                        </div>
+                        <div className="hero-container">
+                            <OurStandards data={ourStandardsData} heading="Our Standards" />
+                        </div>
+                        <div className="hero-container">
+                            <OurServices data={ourProcessData} heading="Our Process" />
+                        </div>
+                        <Transition height="100px" from="#000000" to="#ffffff" />
+                        <div className="hero-container">
+                            <LookingForSomethingElse />
+                        </div>
+                    </AnimatedBg>
+                </div>
+            </Layout>
         </Container>
     )
 }

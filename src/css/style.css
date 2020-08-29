@@ -52,6 +52,7 @@ html {
 
 .invisible {opacity: 0;}
 .bg-black{background-color: black;}
+.text-black{color: black;}
 
 .input-bottom-border {
     background: transparent;
@@ -86,6 +87,14 @@ html {
 
 .container-lg {
     max-width: 1500px;
+}
+
+.hero-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 0px;
 }
 
 .heading {

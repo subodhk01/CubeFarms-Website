@@ -11,14 +11,6 @@ import AOS from 'aos';
 import { AnimatedBg, Transition } from 'scroll-background';
 
 const Container = styled.div`
-    .hero-container {
-        min-height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: white;
-        padding: 40px 0px;
-    }
     .heading {
         font-size: 2.6rem;
     }

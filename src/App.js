@@ -6,6 +6,7 @@ import "./css/font.css"
 import "./css/style.css"
 import 'aos/dist/aos.css';
 
+import Homepage from './pages/Homepage'
 import JoinUs from './pages/JoinUs'
 import Outsource from './pages/Outsource'
 import Advertising from './pages/Advertising'
@@ -16,6 +17,7 @@ function App() {
             <Route exact path="/joinus" component={JoinUs} />
             <Route exact path="/outsource" component={Outsource} />
             <Route exact path="/advertising" component={Advertising} />
+            <Route exact path="/" component={Homepage} />
         </Switch>
     );
 }

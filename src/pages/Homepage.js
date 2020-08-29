@@ -51,13 +51,12 @@ export default function Outsource(){
                                 </h1>
                                 <div className="font-13" style={{color: "rgba(245,245,245,0.83)", fontFamily: "madetommy-light"}}>
                                     We design and develop with a belief that every website deserves to 
-                                    have its own voice. We build each and every website from scratch 
-                                    combining function, content structure, and beauty in a single package.
+                                    have its own voice.
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div className="bg-white py-5">
+                    <div className="bg-white py-3 py-lg-5">
                         <div className="row no-gutters align-items-center justify-content-around container-lg mx-auto">
                             <div className="col-12 col-lg-6 p-3 text-muted font-14 heading">
                                 Cubefarms is a full stack digital agency working remotely with clients to provide compelling solutions through
@@ -69,14 +68,14 @@ export default function Outsource(){
                         </div>
                     </div>
                     <div>
-                        <div className="py-5 px-3 px-lg-5">
+                        <div className="py-3 py-lg-5 px-3 px-lg-5">
                             <div className="font-21 heading text-white">
                                 Why choose Us?
                             </div>
                         </div>
                     </div>
                     <div className="hero-container bg-white text-black">
-                        <div className="py-5">
+                        <div className="py-3 py-lg-5">
                             <div className="row no-gutters">
                                 <div className="col-12 col-lg-6 p-3">
 
@@ -91,7 +90,7 @@ export default function Outsource(){
                                     <div className="text-muted font-weight-bold">
                                         <div className="grey-dash"></div> Corporate Design, Logo Design, Professional Motion Graphics, Product label Design
                                     </div>
-                                    <div className="py-5">
+                                    <div className="py-3 py-lg-5">
                                         <div>
                                             Explore
                                         </div>
@@ -101,7 +100,7 @@ export default function Outsource(){
                         </div>
                     </div>
                     <div className="hero-container">
-                        <div className="py-5">
+                        <div className="py-3 py-lg-5">
                             <div className="row no-gutters">
                                 <div className="col-12 col-lg-6 p-3">
 
@@ -116,7 +115,7 @@ export default function Outsource(){
                                     <div className="text-muted font-weight-bold">
                                         <div className="grey-dash"></div> Corporate Design, Logo Design, Professional Motion Graphics, Product label Design
                                     </div>
-                                    <div className="py-5">
+                                    <div className="py-3 py-lg-5">
                                         <div>
                                             Explore
                                         </div>
@@ -126,7 +125,7 @@ export default function Outsource(){
                         </div>
                     </div>
                     <div className="hero-container bg-white text-black">
-                        <div className="py-5">
+                        <div className="py-3 py-lg-5">
                             <div className="row no-gutters">
                                 <div className="col-12 col-lg-6 p-3">
 
@@ -141,7 +140,7 @@ export default function Outsource(){
                                     <div className="text-muted font-weight-bold">
                                         <div className="grey-dash"></div> Corporate Design, Logo Design, Professional Motion Graphics, Product label Design
                                     </div>
-                                    <div className="py-5">
+                                    <div className="py-3 py-lg-5">
                                         <div>
                                             Explore
                                         </div>
@@ -151,7 +150,7 @@ export default function Outsource(){
                         </div>
                     </div>
                     <div className="hero-container">
-                        <div className="py-5">
+                        <div className="py-3 py-lg-5">
                             <div className="row no-gutters">
                                 <div className="col-12 col-lg-6 p-3">
 
@@ -166,7 +165,7 @@ export default function Outsource(){
                                     <div className="text-muted font-weight-bold">
                                         <div className="grey-dash"></div> Corporate Design, Logo Design, Professional Motion Graphics, Product label Design
                                     </div>
-                                    <div className="py-5">
+                                    <div className="py-3 py-lg-5">
                                         <div>
                                             Explore
                                         </div>
@@ -176,13 +175,13 @@ export default function Outsource(){
                         </div>
                     </div>
                     <div className="hero-container bg-white text-black">
-                        <div className="py-5 heading">
+                        <div className="py-3 py-lg-5 px-3 heading">
                             <div style={{maxWidth: "1000px"}}>
                                 <div className="font-3 heading-bold">
                                     Inspiring the<br />
                                     <span style={{color: PRIMARY}}>remote working culture</span>
                                 </div>
-                                <div className="py-5 font-2">
+                                <div className="py-3 py-lg-5 font-2">
                                     Here at Cubefarms we are making work from home a reality. All you need is laptop, Wi-Fi and sheer dedication towards your job
                                 </div>
                                 <div className="font-weight-bold font-15">
@@ -197,21 +196,21 @@ export default function Outsource(){
                         </div>
                     </div>
                     <div className="hero-container text-white">
-                        <div className="py-5 heading text-center">
+                        <div className="py-3 py-lg-5 px-3 heading text-center">
                             <div style={{maxWidth: "1000px"}}>
                                 <div className="font-3 heading-bold">
                                     Our client stories
                                 </div>
-                                <div className="py-5">
+                                <div className="py-3 py-lg-5">
                                     <FaQuoteLeft size="76" color={PRIMARY_DARK} />
                                 </div>
-                                <div className="py-5 font-18">
+                                <div className="py-3 py-lg-5 font-18">
                                     Here at Cubefarms we are making work from home a reality. All you need is laptop, Wi-Fi and sheer dedication towards your job
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <Transition height="0px" from="#000000" to="#ffffff" />
+                    <Transition height="100px" from="#000000" to="#ffffff" />
                 </AnimatedBg>
             </div>
             <div>

@@ -52,7 +52,7 @@ html {
 
 .invisible {opacity: 0;}
 .bg-black{background-color: black;}
-.text-black{color: black;}
+.text-black{color: black !important;}
 
 .input-bottom-border {
     background: transparent;
@@ -94,6 +94,7 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
+    color: white;
     padding: 40px 0px;
 }
 

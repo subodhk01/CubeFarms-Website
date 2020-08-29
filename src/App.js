@@ -10,13 +10,15 @@ import Homepage from './pages/Homepage'
 import JoinUs from './pages/JoinUs'
 import Outsource from './pages/Outsource'
 import Advertising from './pages/Advertising'
+import Creative from './pages/Creative'
 
 function App() {
     return (
         <Switch>
             <Route exact path="/joinus" component={JoinUs} />
-            <Route exact path="/outsource" component={Outsource} />
+            <Route exact path="/web" component={Outsource} />
             <Route exact path="/advertising" component={Advertising} />
+            <Route exact path="/creative" component={Creative} />
             <Route exact path="/" component={Homepage} />
         </Switch>
     );

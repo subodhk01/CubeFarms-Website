@@ -24,6 +24,9 @@ const Container = styled.div`
         border-radius: 3px;
         background: grey;
     }
+    .background-fade>div {
+        transition: background-color 1s ease;
+    }
 `
 
 export default function Outsource(){
@@ -41,7 +44,7 @@ export default function Outsource(){
                     <Header white full />
                 </div>
             </div>
-            <div>
+            <div className="background-fade">
                 <AnimatedBg>
                     <div className="hero-container">
                         <div className="container">
@@ -110,7 +113,7 @@ export default function Outsource(){
                             </div>
                         </div>
                     </div>
-                    <Transition height="200px" from="#000000" to="#ffffff" />
+                    <Transition height="100px" from="#000000" to="#ffffff" />
                     <div className="mini-hero-container container-lg text-black">
                         <div className="py-3 py-lg-5">
                             <div className="row no-gutters">
@@ -136,7 +139,7 @@ export default function Outsource(){
                             </div>
                         </div>
                     </div>
-                    <Transition height="200px" from="#ffffff" to="#000000" />
+                    <Transition height="100px" from="#ffffff" to="#000000" />
                     <div className="mini-hero-container container-lg">
                         <div className="py-3 py-lg-5">
                             <div className="row no-gutters">
@@ -162,7 +165,7 @@ export default function Outsource(){
                             </div>
                         </div>
                     </div>
-                    <Transition height="200px" from="#000000" to="#ffffff" />
+                    <Transition height="100px" from="#000000" to="#ffffff" />
                     <div className="mini-hero-container container-lg text-black">
                         <div className="py-3 py-lg-5">
                             <div className="row no-gutters">
@@ -188,7 +191,7 @@ export default function Outsource(){
                             </div>
                         </div>
                     </div>
-                    <Transition height="200px" from="#ffffff" to={PRIMARY_DARK} />
+                    <Transition height="100px" from="#ffffff" to={PRIMARY_DARK} />
                     <div className="mini-hero-container text-black">
                         <div className="py-3 py-lg-5 px-3 heading">
                             <div style={{maxWidth: "1000px"}}>
@@ -210,7 +213,7 @@ export default function Outsource(){
                             </div>
                         </div>
                     </div>
-                    <Transition height="200px" from={PRIMARY_DARK} to={PRIMARY_DARK} />
+                    <Transition height="100px" from={PRIMARY_DARK} to={PRIMARY_DARK} />
                     <div className="mini-hero-container text-black bg-white">
                         <div className="py-3 py-lg-5 px-3 heading text-center">
                             <div style={{maxWidth: "1000px"}}>

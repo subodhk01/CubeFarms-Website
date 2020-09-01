@@ -52,14 +52,12 @@ export default function Outsource(){
                                 <h1 data-aos="fade-up" className="font-5 text-white">
                                     We are<br />
                                     your on Demand<br />
-                                    <Typing loop={true}>
-                                        <span style={{color: PRIMARY_DARK}}>Creative</span> Team
-                                        <Typing.Backspace count={14} delay={300} speed={30} />
-                                        <span style={{color: PRIMARY_DARK}}>Web</span> Team
-                                        <Typing.Backspace count={9} delay={300} speed={30} />
-                                        <span style={{color: PRIMARY_DARK}}>Marketing</span> Team
-                                        <Typing.Backspace count={16} delay={300} speed={30} />
-                                    </Typing>
+                                    <TextLoop interval={1700}>
+                                        <span style={{color: PRIMARY_DARK}}>Creative</span>
+                                        <span style={{color: PRIMARY_DARK}}>Web</span>
+                                        <span style={{color: PRIMARY_DARK}}>Marketing</span>
+                                    </TextLoop>{" "}
+                                    Team
                                 </h1>
                             </div>
                         </div>
@@ -71,12 +69,21 @@ export default function Outsource(){
                             </div>
                             <div className="col-12 col-lg-5 p-3 d-flex justify-content-center heading-bold font-39" style={{color: PRIMARY}}>
                                 <div className="text-left" style={{minWidth: "340px"}}>
-                                    <TextLoop interval={1700}>
+                                    
+                                    <Typing loop={true} speed={100}>
                                         <span>Strategy</span>
+                                        <Typing.Backspace count={9} delay={300} speed={30} />
+                                        <Typing.Speed ms={100} />
                                         <span>Design</span>
+                                        <Typing.Backspace count={8} delay={300} speed={30} />
+                                        <Typing.Speed ms={100} />
                                         <span>Content</span>
+                                        <Typing.Backspace count={8} delay={300} speed={30} />
+                                        <Typing.Speed ms={100} />
                                         <span>Technology</span>
-                                    </TextLoop>
+                                        <Typing.Backspace count={13} delay={300} speed={30} />
+                                        <Typing.Speed ms={100} />
+                                    </Typing>
                                 </div>
                             </div>
                         </div>

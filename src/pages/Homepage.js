@@ -9,6 +9,7 @@ import LookingForSomethingElse from '../components/OutSource/LookingForSomething
 
 import AOS from 'aos';
 import TextLoop from "react-text-loop";
+import Typing from 'react-typing-animation';
 import { AnimatedBg, Transition } from 'scroll-background';
 import { PRIMARY, PRIMARY_DARK } from '../utils/Colors'
 import { FaQuoteLeft } from 'react-icons/fa'
@@ -45,26 +46,35 @@ export default function Outsource(){
                     <div className="hero-container">
                         <div className="container">
                             <div className="p-3" style={{maxWidth: "600px"}}>
-                                <h1 className="font-4 text-white">
+                                <h1 data-aos="fade-up" className="font-5 text-white">
                                     We are<br />
                                     your on Demand<br />
-                                    <TextLoop interval="1500">
-                                        <span><span style={{color: PRIMARY_DARK}}>Creative</span> Team</span>
-                                        <span><span style={{color: PRIMARY_DARK}}>Web</span> Studio</span>
-                                        <span><span style={{color: PRIMARY_DARK}}>Marketing</span> Team</span>
-                                    </TextLoop>
+                                    <Typing loop={true}>
+                                        <span style={{color: PRIMARY_DARK}}>Creative</span> Team
+                                        <Typing.Backspace count={14} delay={300} speed={30} />
+                                        <span style={{color: PRIMARY_DARK}}>Web</span> Team
+                                        <Typing.Backspace count={9} delay={300} speed={30} />
+                                        <span style={{color: PRIMARY_DARK}}>Marketing</span> Team
+                                        <Typing.Backspace count={16} delay={300} speed={30} />
+                                    </Typing>
                                 </h1>
                             </div>
                         </div>
                     </div>
                     <div className="bg-white py-3 py-lg-5">
-                        <div className="row no-gutters align-items-center justify-content-around container-lg mx-auto">
+                        <div data-aos="fade-up" className="row no-gutters align-items-center justify-content-around container-lg mx-auto">
                             <div className="col-12 col-lg-6 p-3 text-muted font-14 heading">
                                 Cubefarms is a full stack digital agency working remotely with clients to provide compelling solutions through
                             </div>
-                            <div className="col-12 col-lg-5 p-3 font-2 text-right heading-bold" style={{color: PRIMARY}}>
-                                Strategy. Design.<br />
-                                Content. Technology.
+                            <div className="col-12 col-lg-5 p-3 d-flex justify-content-center heading-bold font-39" style={{color: PRIMARY}}>
+                                <div className="text-left" style={{minWidth: "340px"}}>
+                                    <TextLoop interval={1700}>
+                                        <span>Strategy</span>
+                                        <span>Design</span>
+                                        <span>Content</span>
+                                        <span>Technology</span>
+                                    </TextLoop>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -75,23 +85,23 @@ export default function Outsource(){
                             </div>
                         </div>
                     </div>
-                    <div className="hero-container bg-white text-black">
+                    <div className="mini-hero-container container-lg">
                         <div className="py-3 py-lg-5">
                             <div className="row no-gutters">
                                 <div className="col-12 col-lg-6 p-3">
 
                                 </div>
                                 <div className="col-12 col-lg-6 p-3">
-                                    <div className="heading font-32">
+                                    <div data-aos="fade-left" className="heading font-32">
                                         Creative Services
                                     </div>
-                                    <div className="heading font-18 text-muted py-3">
+                                    <div data-aos="fade-left" data-aos-delay={400} className="heading font-18 text-muted py-3">
                                         Good design is good business. Out team of expert creative directors deliver high end designs which complement your brand, product and services.
                                     </div>
-                                    <div className="text-muted font-weight-bold">
+                                    <div data-aos="fade-left" data-aos-delay={800} className="text-muted font-weight-bold">
                                         <div className="grey-dash"></div> Corporate Design, Logo Design, Professional Motion Graphics, Product label Design
                                     </div>
-                                    <div className="py-3 py-lg-5">
+                                    <div data-aos="fade-left" data-aos-delay={1200} className="py-3 py-lg-5">
                                         <div>
                                             Explore
                                         </div>
@@ -100,48 +110,50 @@ export default function Outsource(){
                             </div>
                         </div>
                     </div>
-                    <div className="hero-container">
+                    <Transition height="200px" from="#000000" to="#ffffff" />
+                    <div className="mini-hero-container container-lg text-black">
                         <div className="py-3 py-lg-5">
                             <div className="row no-gutters">
                                 <div className="col-12 col-lg-6 p-3">
-
-                                </div>
-                                <div className="col-12 col-lg-6 p-3">
-                                    <div className="heading font-32 text-white">
+                                    <div data-aos="fade-right" className="heading font-32 text-black">
                                         Web Studio
                                     </div>
-                                    <div className="heading font-18 text-muted py-3">
+                                    <div data-aos="fade-right" data-aos-delay={400} className="heading font-18 text-muted py-3">
                                         The internet is a virtual world. We help business to design, develop and manage websites that stand out and communicate clearly in this virtual world.
                                     </div>
-                                    <div className="text-muted font-weight-bold">
+                                    <div data-aos="fade-right" data-aos-delay={800} className="text-muted font-weight-bold">
                                         <div className="grey-dash"></div> Corporate Design, Logo Design, Professional Motion Graphics, Product label Design
                                     </div>
-                                    <div className="py-3 py-lg-5">
+                                    <div data-aos="fade-right" data-aos-delay={1200} className="py-3 py-lg-5">
                                         <div>
                                             Explore
                                         </div>
                                     </div>
                                 </div>
+                                <div className="col-12 col-lg-6 p-3">
+
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div className="hero-container bg-white text-black">
+                    <Transition height="200px" from="#ffffff" to="#000000" />
+                    <div className="mini-hero-container container-lg">
                         <div className="py-3 py-lg-5">
                             <div className="row no-gutters">
                                 <div className="col-12 col-lg-6 p-3">
 
                                 </div>
                                 <div className="col-12 col-lg-6 p-3">
-                                    <div className="heading font-32">
+                                    <div data-aos="fade-left"className="heading font-32">
                                         Digita Advertising
                                     </div>
-                                    <div className="heading font-18 text-muted py-3">
+                                    <div data-aos="fade-left" data-aos-delay={400} className="heading font-18 text-muted py-3">
                                         We use a data driven transparent approach to achieve your online objectives. Our digital branding services have proven to increase traggic, conversions and revenue.
                                     </div>
-                                    <div className="text-muted font-weight-bold">
+                                    <div data-aos="fade-left" data-aos-delay={800} className="text-muted font-weight-bold">
                                         <div className="grey-dash"></div> Corporate Design, Logo Design, Professional Motion Graphics, Product label Design
                                     </div>
-                                    <div className="py-3 py-lg-5">
+                                    <div data-aos="fade-left" data-aos-delay={1200} className="py-3 py-lg-5">
                                         <div>
                                             Explore
                                         </div>
@@ -150,37 +162,39 @@ export default function Outsource(){
                             </div>
                         </div>
                     </div>
-                    <div className="hero-container">
+                    <Transition height="200px" from="#000000" to="#ffffff" />
+                    <div className="mini-hero-container container-lg text-black">
                         <div className="py-3 py-lg-5">
                             <div className="row no-gutters">
                                 <div className="col-12 col-lg-6 p-3">
-
-                                </div>
-                                <div className="col-12 col-lg-6 p-3">
-                                    <div className="heading font-32  text-white">
+                                    <div data-aos="fade-right" className="heading font-32  text-black">
                                         Product design
                                     </div>
-                                    <div className="heading font-18 text-muted py-3">
+                                    <div data-aos="fade-right" data-aos-delay={400} className="heading font-18 text-muted py-3">
                                         We work with startups and brands to create amazing MVPs, app prototypes and custom apps. Pair with our expert product designers for a user centric product.
                                     </div>
-                                    <div className="text-muted font-weight-bold">
+                                    <div data-aos="fade-right" data-aos-delay={800} className="text-muted font-weight-bold">
                                         <div className="grey-dash"></div> Corporate Design, Logo Design, Professional Motion Graphics, Product label Design
                                     </div>
-                                    <div className="py-3 py-lg-5">
+                                    <div data-aos="fade-right" data-aos-delay={1200} className="py-3 py-lg-5">
                                         <div>
                                             Explore
                                         </div>
                                     </div>
                                 </div>
+                                <div className="col-12 col-lg-6 p-3">
+
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div className="hero-container bg-white text-black">
+                    <Transition height="200px" from="#ffffff" to={PRIMARY_DARK} />
+                    <div className="mini-hero-container text-black">
                         <div className="py-3 py-lg-5 px-3 heading">
                             <div style={{maxWidth: "1000px"}}>
                                 <div className="font-3 heading-bold">
                                     Inspiring the<br />
-                                    <span style={{color: PRIMARY}}>remote working culture</span>
+                                    <span style={{color: "white"}}>remote working culture</span>
                                 </div>
                                 <div className="py-3 py-lg-5 font-2">
                                     Here at Cubefarms we are making work from home a reality. All you need is laptop, Wi-Fi and sheer dedication towards your job
@@ -196,7 +210,8 @@ export default function Outsource(){
                             </div>
                         </div>
                     </div>
-                    <div className="hero-container text-white">
+                    <Transition height="200px" from={PRIMARY_DARK} to={PRIMARY_DARK} />
+                    <div className="mini-hero-container text-black bg-white">
                         <div className="py-3 py-lg-5 px-3 heading text-center">
                             <div style={{maxWidth: "1000px"}}>
                                 <div className="font-3 heading-bold">
@@ -211,7 +226,6 @@ export default function Outsource(){
                             </div>
                         </div>
                     </div>
-                    <Transition height="100px" from="#000000" to="#ffffff" />
                 </AnimatedBg>
             </div>
             <div>

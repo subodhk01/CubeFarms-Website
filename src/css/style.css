@@ -36,6 +36,16 @@ html {
 .font-38 { font-size: 3.8rem; }
 .font-39 { font-size: 3.9rem; }
 .font-40, .font-4 { font-size: 4rem; }
+.font-41 { font-size: 4.1rem; }
+.font-42 { font-size: 4.2rem; }
+.font-43 { font-size: 4.3rem; }
+.font-44 { font-size: 4.4rem; }
+.font-45 { font-size: 4.5rem; }
+.font-46 { font-size: 4.6rem; }
+.font-47 { font-size: 4.7rem; }
+.font-48 { font-size: 4.8rem; }
+.font-49 { font-size: 4.9rem; }
+.font-50, .font-5 { font-size: 5rem; }
 .color-primary { color: #377eeb }
 .color-primary-dark { color: #0a3f92 }
 
@@ -102,6 +112,13 @@ html {
     color: white;
     padding: 40px 0px;
 }
+.mini-hero-container {
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
 
 .heading {
     font-family: "madetommy-light";
@@ -109,7 +126,6 @@ html {
 
 .heading-bold {
     font-family: "madetommy-bold";
-    font-size: 2.5rem;
 }
 
 .custom-block1 {

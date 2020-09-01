@@ -86,7 +86,12 @@ html {
 }
 
 .container-lg {
-    max-width: 1500px;
+    max-width: 90vw;
+}
+@media(max-width: 576px){
+    .container-lg {
+        max-width: 100vw;
+    }
 }
 
 .hero-container {

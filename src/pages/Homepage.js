@@ -8,6 +8,7 @@ import StaticSidePanelSection from '../components/StaticSidePanelSection'
 import LookingForSomethingElse from '../components/OutSource/LookingForSomethingElse'
 
 import AOS from 'aos';
+import TextLoop from "react-text-loop";
 import { AnimatedBg, Transition } from 'scroll-background';
 import { PRIMARY, PRIMARY_DARK } from '../utils/Colors'
 import { FaQuoteLeft } from 'react-icons/fa'
@@ -44,15 +45,15 @@ export default function Outsource(){
                     <div className="hero-container">
                         <div className="container">
                             <div className="p-3" style={{maxWidth: "600px"}}>
-                                <h1 className="font-39 text-white">
+                                <h1 className="font-4 text-white">
                                     We are<br />
                                     your on Demand<br />
-                                    <span style={{color: PRIMARY_DARK}}>Creative</span> Team
+                                    <TextLoop interval="1500">
+                                        <span><span style={{color: PRIMARY_DARK}}>Creative</span> Team</span>
+                                        <span><span style={{color: PRIMARY_DARK}}>Web</span> Studio</span>
+                                        <span><span style={{color: PRIMARY_DARK}}>Marketing</span> Team</span>
+                                    </TextLoop>
                                 </h1>
-                                <div className="font-13" style={{color: "rgba(245,245,245,0.83)", fontFamily: "madetommy-light"}}>
-                                    We design and develop with a belief that every website deserves to 
-                                    have its own voice.
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -61,7 +62,7 @@ export default function Outsource(){
                             <div className="col-12 col-lg-6 p-3 text-muted font-14 heading">
                                 Cubefarms is a full stack digital agency working remotely with clients to provide compelling solutions through
                             </div>
-                            <div className="col-12 col-lg-5 p-3 font-2 text-left  heading-bold" style={{color: PRIMARY}}>
+                            <div className="col-12 col-lg-5 p-3 font-2 text-right heading-bold" style={{color: PRIMARY}}>
                                 Strategy. Design.<br />
                                 Content. Technology.
                             </div>

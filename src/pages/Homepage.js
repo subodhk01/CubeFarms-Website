@@ -225,7 +225,7 @@ export default function Outsource(){
                                 </div>
                                 <div className="col-12 col-lg-6 p-3">
                                     <div data-aos="fade-left"className="heading font-32">
-                                        Digita Advertising
+                                        Digital Advertising
                                     </div>
                                     <div data-aos="fade-left" data-aos-delay={400} className="heading font-18 text-muted py-3">
                                         We use a data driven transparent approach to achieve your online objectives. Our digital branding services have proven to increase traggic, conversions and revenue.

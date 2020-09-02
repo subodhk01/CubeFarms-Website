@@ -15,6 +15,8 @@ import { AnimatedBg, Transition } from 'scroll-background';
 import { PRIMARY, PRIMARY_DARK } from '../utils/Colors'
 import { FaQuoteLeft } from 'react-icons/fa'
 import Footer from '../components/Footer/Footer'
+import CustomButton1 from '../components/Buttons/CustomButton1'
+import SingleArrowButton from '../components/Buttons/SingleArrowButton'
 
 const widths = {
     zero: { width: "0px", transition: {duration: 0.7, type: "tween" } },
@@ -183,7 +185,9 @@ export default function Outsource(){
                                     </div>
                                     <div data-aos="fade-left" data-aos-delay={1200} className="py-3 py-lg-5">
                                         <div>
-                                            Explore
+                                            <CustomButton1 white>
+                                                Explore
+                                            </CustomButton1>
                                         </div>
                                     </div>
                                 </div>
@@ -206,7 +210,9 @@ export default function Outsource(){
                                     </div>
                                     <div data-aos="fade-right" data-aos-delay={1200} className="py-3 py-lg-5">
                                         <div>
-                                            Explore
+                                            <CustomButton1>
+                                                Explore
+                                            </CustomButton1>
                                         </div>
                                     </div>
                                 </div>
@@ -235,7 +241,9 @@ export default function Outsource(){
                                     </div>
                                     <div data-aos="fade-left" data-aos-delay={1200} className="py-3 py-lg-5">
                                         <div>
-                                            Explore
+                                            <CustomButton1 white>
+                                                Explore
+                                            </CustomButton1>
                                         </div>
                                     </div>
                                 </div>
@@ -258,7 +266,9 @@ export default function Outsource(){
                                     </div>
                                     <div data-aos="fade-right" data-aos-delay={1200} className="py-3 py-lg-5">
                                         <div>
-                                            Explore
+                                            <CustomButton1>
+                                                Explore
+                                            </CustomButton1>
                                         </div>
                                     </div>
                                 </div>
@@ -282,9 +292,11 @@ export default function Outsource(){
                                 <div className="font-weight-bold font-15">
                                     The future of work is here
                                 </div>
-                                <div className="">
-                                    <div>
-                                        Join us
+                                <div className="pt-3">
+                                    <div style={{fontFamily: "madetommy-bold"}}>
+                                        <SingleArrowButton>
+                                            JOIN US
+                                        </SingleArrowButton>
                                     </div>
                                 </div>
                             </div>

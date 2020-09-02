@@ -190,7 +190,7 @@ const Container = styled.div`
 `
 
 export default function Header(props){
-    const [ mobileNav, setMobileNav ] = React.useState(true)
+    const [ mobileNav, setMobileNav ] = React.useState(false)
     const [ mobileDropdown, setMobileDropdown ] = React.useState("")
     const handleDropdown = (item) => {
         if(mobileDropdown == item.title){

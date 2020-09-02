@@ -76,13 +76,16 @@ a, a:hover {
 .bg-black{background-color: black;}
 .text-black{color: black !important;}
 
-.btn-arrow {
-    padding: 0.8rem 2.5rem;
+.btn-round-blue {
+    padding: 0.63rem 1.7rem;
     background: #377eeb;
     border: none;
-    border-radius: 50px;
+    border-radius: 100px;
     color: white;
     font-size: 0.8rem;
+}
+.btn-round-blue:hover {
+    color: white;
 }
 
 .input-bottom-border {

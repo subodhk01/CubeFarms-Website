@@ -6,6 +6,7 @@ import { FaChevronDown } from 'react-icons/fa'
 import { RiMenu3Line } from 'react-icons/ri'
 import { MdClose } from 'react-icons/md'
 import { Collapse } from 'react-bootstrap'
+import SingleArrowButton from '../Buttons/SingleArrowButton'
 
 const logoWhite = '/static/logoWhite.png'
 const logoBlack = '/static/logoBlack.png'
@@ -245,9 +246,9 @@ export default function Header(props){
                                     }
                                     {item.button &&
                                         <div className="text-center py-4">
-                                            <div className="btn btn-arrow ml-3">
+                                            <SingleArrowButton>
                                                 {item.title}
-                                            </div>
+                                            </SingleArrowButton>
                                         </div>
                                     }
                                 </>
@@ -291,7 +292,9 @@ export default function Header(props){
                             {item.button &&
                                 <div>
                                     <div className="btn btn-arrow ml-3">
-                                        {item.title}
+                                        <SingleArrowButton>
+                                            {item.title}
+                                        </SingleArrowButton>
                                     </div>
                                 </div>
                             }

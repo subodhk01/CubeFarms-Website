@@ -4,7 +4,19 @@ html::-webkit-scrollbar {
 html {
     -ms-overflow-style: none;
 }
+a, a:hover {
+    text-decoration: none;
+}
 
+.font-01 { font-size: 0.1rem; }
+.font-02 { font-size: 0.2rem; }
+.font-03 { font-size: 0.3rem; }
+.font-04 { font-size: 0.4rem; }
+.font-05 { font-size: 0.5rem; }
+.font-06 { font-size: 0.6rem; }
+.font-07 { font-size: 0.7rem; }
+.font-08 { font-size: 0.8rem; }
+.font-09 { font-size: 0.9rem; }
 .font-10, .font1 { font-size: 1rem; }
 .font-11 { font-size: 1.1rem; }
 .font-12 { font-size: 1.2rem; }
@@ -63,6 +75,15 @@ html {
 .invisible {opacity: 0;}
 .bg-black{background-color: black;}
 .text-black{color: black !important;}
+
+.btn-arrow {
+    padding: 0.8rem 2.5rem;
+    background: #377eeb;
+    border: none;
+    border-radius: 50px;
+    color: white;
+    font-size: 0.8rem;
+}
 
 .input-bottom-border {
     background: transparent;

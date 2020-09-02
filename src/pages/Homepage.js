@@ -38,6 +38,14 @@ const Container = styled.div`
         display: inline-block;
         color: ${PRIMARY_DARK};
     }
+    .home-heading {
+        font-size: 4.5rem;
+    }
+    @media(max-width: 991px){
+        .home-heading {
+            font-size: 2rem;
+        }
+    }
 `
 
 export default function Outsource(){
@@ -104,17 +112,15 @@ export default function Outsource(){
     } ,[])
     return (
         <Container>
-            <div className="bg-black">
-                <div className="container">
-                    <Header white full />
-                </div>
+            <div>
+                <Header white full />
             </div>
             <div className="background-fade">
                 <AnimatedBg>
                     <div className="hero-container">
                         <div className="container">
                             <div className="p-3">
-                                <h1 data-aos="fade-up" className="font-5 text-white">
+                                <h1 data-aos="fade-up" className="text-white home-heading">
                                     We are<br />
                                     your on Demand<br />
                                     <motion.div animate={web} variants={widths} initial={"zero"} className="home-span">Web</motion.div>

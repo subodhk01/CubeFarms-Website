@@ -108,7 +108,7 @@ export default function StaticSidePanelSection() {
                                         <div className="pt-3 pb-5">
                                             Single Page responsive websites designed with conversion goals in mind.
                                         </div>
-                                        <div className="row gutters">
+                                        <div className="row no-gutters">
                                             <div className="col-6">
                                                 <div className="py-4"><strong>Recommended Settings: </strong></div>
                                                 <ul>
@@ -139,7 +139,7 @@ export default function StaticSidePanelSection() {
                                         <div className="pt-3 pb-5">
                                             Single Page responsive websites designed with conversion goals in mind.
                                         </div>
-                                        <div className="row gutters">
+                                        <div className="row no-gutters">
                                             <div className="col-6">
                                                 <div className="py-4"><strong>Recommended Settings: </strong></div>
                                                 <ul>
@@ -170,7 +170,7 @@ export default function StaticSidePanelSection() {
                                         <div className="pt-3 pb-5">
                                             Single Page responsive websites designed with conversion goals in mind.
                                         </div>
-                                        <div className="row gutters">
+                                        <div className="row no-gutters">
                                             <div className="col-6">
                                                 <div className="py-4"><strong>Recommended Settings: </strong></div>
                                                 <ul>
@@ -201,7 +201,7 @@ export default function StaticSidePanelSection() {
                                         <div className="pt-3 pb-5">
                                             Single Page responsive websites designed with conversion goals in mind.
                                         </div>
-                                        <div className="row gutters">
+                                        <div className="row no-gutters">
                                             <div className="col-6">
                                                 <div className="py-4"><strong>Recommended Settings: </strong></div>
                                                 <ul>

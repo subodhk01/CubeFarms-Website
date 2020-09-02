@@ -9,11 +9,17 @@ import LookingForSomethingElse from '../components/OutSource/LookingForSomething
 
 import AOS from 'aos';
 import TextLoop from "react-text-loop";
+import { motion, useAnimation } from "framer-motion"
 import Typing from 'react-typing-animation';
 import { AnimatedBg, Transition } from 'scroll-background';
 import { PRIMARY, PRIMARY_DARK } from '../utils/Colors'
 import { FaQuoteLeft } from 'react-icons/fa'
 import Footer from '../components/Footer/Footer'
+
+const widths = {
+    zero: { width: "0px", transition: {duration: 0.7, type: "tween" } },
+    full: { width: "auto", transition: {duration: 0.9, type: "tween" } }
+}
 
 const Container = styled.div`
     .grey-dash {
@@ -27,15 +33,74 @@ const Container = styled.div`
     .background-fade>div {
         transition: background-color 1s ease;
     }
+    .home-span {
+        overflow: hidden;
+        display: inline-block;
+        color: ${PRIMARY_DARK};
+    }
 `
 
 export default function Outsource(){
+    const web = useAnimation()
+    const product = useAnimation()
+    const creative = useAnimation()
+    const advertising = useAnimation()
     React.useEffect(() => {
         if(window){
             AOS.init({
                 duration: 1400,
             })
         }
+        setTimeout(() => {
+            web.start("full")
+        } ,800)
+        setTimeout(() => {
+            web.start("zero")
+        } ,2400)
+        setTimeout(() => {
+            product.start("full")
+        } ,3200)
+        setTimeout(() => {
+            product.start("zero")
+        } ,4800)
+        setTimeout(() => {
+            creative.start("full")
+        } ,5600)
+        setTimeout(() => {
+            creative.start("zero")
+        } ,7200)
+        setTimeout(() => {
+            advertising.start("full")
+        } ,8000)
+        setTimeout(() => {
+            advertising.start("zero")
+        } ,9600)
+        setInterval(() => {
+            setTimeout(() => {
+                web.start("full")
+            } ,800)
+            setTimeout(() => {
+                web.start("zero")
+            } ,2400)
+            setTimeout(() => {
+                product.start("full")
+            } ,3200)
+            setTimeout(() => {
+                product.start("zero")
+            } ,4800)
+            setTimeout(() => {
+                creative.start("full")
+            } ,5600)
+            setTimeout(() => {
+                creative.start("zero")
+            } ,7200)
+            setTimeout(() => {
+                advertising.start("full")
+            } ,8000)
+            setTimeout(() => {
+                advertising.start("zero")
+            } ,9600)
+        } ,9600)
     } ,[])
     return (
         <Container>
@@ -48,16 +113,15 @@ export default function Outsource(){
                 <AnimatedBg>
                     <div className="hero-container">
                         <div className="container">
-                            <div className="p-3" style={{maxWidth: "600px"}}>
+                            <div className="p-3">
                                 <h1 data-aos="fade-up" className="font-5 text-white">
                                     We are<br />
                                     your on Demand<br />
-                                    <TextLoop interval={1700}>
-                                        <span style={{color: PRIMARY_DARK}}>Creative</span>
-                                        <span style={{color: PRIMARY_DARK}}>Web</span>
-                                        <span style={{color: PRIMARY_DARK}}>Marketing</span>
-                                    </TextLoop>{" "}
-                                    Team
+                                    <motion.div animate={web} variants={widths} initial={"zero"} className="home-span">Web</motion.div>
+                                    <motion.div animate={product} variants={widths} initial={"zero"} className="home-span">Product</motion.div>
+                                    <motion.div animate={creative} variants={widths} initial={"zero"} className="home-span">Creative</motion.div>
+                                    <motion.div animate={advertising} variants={widths} initial={"zero"} className="home-span">Advertising</motion.div>
+                                    <div className="home-span text-white">{" "}<Cursor /> Team</div>
                                 </h1>
                             </div>
                         </div>
@@ -198,13 +262,13 @@ export default function Outsource(){
                             </div>
                         </div>
                     </div>
-                    <Transition height="100px" from="#ffffff" to={PRIMARY_DARK} />
+                    <Transition height="100px" from="#ffffff" to="#f3f5fa" />
                     <div className="mini-hero-container text-black">
                         <div className="py-3 py-lg-5 px-3 heading">
                             <div style={{maxWidth: "1000px"}}>
                                 <div className="font-3 heading-bold">
                                     Inspiring the<br />
-                                    <span style={{color: "white"}}>remote working culture</span>
+                                    <span style={{color: PRIMARY_DARK}}>remote working culture</span>
                                 </div>
                                 <div className="py-3 py-lg-5 font-2">
                                     Here at Cubefarms we are making work from home a reality. All you need is laptop, Wi-Fi and sheer dedication towards your job
@@ -220,7 +284,7 @@ export default function Outsource(){
                             </div>
                         </div>
                     </div>
-                    <Transition height="100px" from={PRIMARY_DARK} to={PRIMARY_DARK} />
+                    <Transition height="100px" from="#f3f5fa" to="#f3f5fa" />
                     <div className="mini-hero-container text-black bg-white">
                         <div className="py-3 py-lg-5 px-3 heading text-center">
                             <div style={{maxWidth: "1000px"}}>
@@ -242,5 +306,13 @@ export default function Outsource(){
                 <Footer />
             </div>
         </Container>
+    )
+}
+
+function Cursor() {
+    return (
+        <span style={{width: "5px", height: "40px", background: "white", padding: "2px"}} className="mr-3 ml-1">
+            
+        </span>
     )
 }

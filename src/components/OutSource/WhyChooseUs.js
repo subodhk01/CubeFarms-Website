@@ -9,9 +9,9 @@ const Container = styled.div`
 
 export default function WhyChooseUs(props) {
     return (
-        <div className="px-3 px-md-5">
+        <div className="px-3 px-md-0 container-lg">
             <Container>
-                <h2 className="heading mb-5">
+                <h2 className="heading mb-5 px-1 px-md-3">
                     {props.heading}
                 </h2>
                 <div>

@@ -114,7 +114,7 @@ export default function Footer(){
                     </div>
                 </div>
                 { footerData.map((item, index) =>
-                    <div className={`${item.link ? "col-4" : "col-6"} col-md-auto p-2 p-md-0`}>
+                    <div key={index} className={`${item.link ? "col-4" : "col-6"} col-md-auto p-2 p-md-0`}>
                         <div>
                             { item.link ?
                                 <Link to={item.link}>
@@ -123,15 +123,15 @@ export default function Footer(){
                                 :
                                 <h5 className="heading-bold">{item.title}</h5>
                             }
-                            <p className="pt-2">
+                            <div className="pt-2">
                                 { item.content && item.content.map((subitem, index) => 
-                                    <Link to={subitem.link}>
+                                    <Link to={subitem.link} key={index}>
                                         <div className="py-2">
                                             {subitem.label}
                                         </div>
                                     </Link>
                                 )}
-                            </p>
+                            </div>
                         </div>
                     </div>
                 )}

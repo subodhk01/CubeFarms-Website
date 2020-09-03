@@ -71,6 +71,11 @@ a, a:hover {
 .pb-8 {padding-bottom: 4.5rem;}
 .pb-9 {padding-bottom: 5rem;}
 .pb-10 {padding-bottom: 5.5rem;}
+.py-6 {padding: 3.5rem 0rem;}
+.py-7 {padding: 4rem 0rem;}
+.py-8 {padding: 4.5rem 0rem;}
+.py-9 {padding: 5rem 0rem;}
+.py-10 {padding: 5.5rem 0rem;}
 
 .invisible {opacity: 0;}
 .bg-black{background-color: black;}
@@ -113,6 +118,10 @@ a, a:hover {
 
 .cursor-pointer {
     cursor: pointer;
+}
+
+.background-fade>div {
+    transition: background-color 1s ease;
 }
 
 .joinusform > div, .joinusform > div > div, .joinusform > div > div > div {

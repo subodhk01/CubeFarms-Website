@@ -15,11 +15,11 @@ import Creative from './pages/Creative'
 function App() {
     return (
         <Switch>
-            <Route exact path="/joinus" component={JoinUs} />
-            <Route exact path="/web" component={Outsource} />
-            <Route exact path="/advertising" component={Advertising} />
-            <Route exact path="/creative" component={Creative} />
-            <Route exact path="/" component={Homepage} />
+            <Route path="/joinus" component={JoinUs} />
+            <Route path="/web" component={Outsource} />
+            <Route path="/advertising" component={Advertising} />
+            <Route path="/creative" component={Creative} />
+            <Route path="/" component={Homepage} />
         </Switch>
     );
 }

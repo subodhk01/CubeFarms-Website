@@ -18,17 +18,17 @@ const HEADER_ITEMS = [
             {
                 title: "About",
                 content: "Lorem ipsum lorem ipsum lorem ipsum really lorem ipsum",
-                link: "/about"
+                path: "/about"
             },
             {
                 title: "Approach",
                 content: "Lorem ipsum lorem ipsum lorem ipsum really lorem ipsum",
-                link: "/approach"
+                path: "/approach"
             },
             {
                 title: "Outsource",
                 content: "Lorem ipsum lorem ipsum lorem ipsum really lorem ipsum",
-                link: "/outsource"
+                path: "/outsource"
             }
         ]
     },
@@ -39,22 +39,22 @@ const HEADER_ITEMS = [
             {
                 title: "Web",
                 content: "Lorem ipsum lorem ipsum lorem ipsum really lorem ipsum",
-                link: "/web"
+                path: "/web"
             },
             {
                 title: "Product",
                 content: "Lorem ipsum lorem ipsum lorem ipsum really lorem ipsum",
-                link: "/product"
+                path: "/product"
             },
             {
                 title: "Creative",
                 content: "Lorem ipsum lorem ipsum lorem ipsum really lorem ipsum",
-                link: "/creative"
+                path: "/creative"
             },
             {
                 title: "Advertising",
                 content: "Lorem ipsum lorem ipsum lorem ipsum really lorem ipsum",
-                link: "/advertising"
+                path: "/advertising"
             },
         ]
     },
@@ -222,9 +222,9 @@ export default function Header(props){
                                 <MdClose size="30" color="white" />
                             </div>
                             { HEADER_ITEMS.map((item, index1) => 
-                                <>
+                                <React.Fragment key={index1}>
                                     {item.path && 
-                                        <div key={index1} className="py-2">
+                                        <div className="py-2">
                                             <Link to={item.path}>
                                                 <div className={`position-relative ${ window.location.pathname == item.path ? "active" : "" }`}>
                                                     {item.title}
@@ -241,8 +241,8 @@ export default function Header(props){
                                             <Collapse in={mobileDropdown == item.title}>
                                                 <div>
                                                     {item.items && item.items.map((child, index2) => 
-                                                        <Link to="/">
-                                                            <div key={index2} className="dropdown-item-mobile">
+                                                        <Link to={child.path} key={index2}>
+                                                            <div className="dropdown-item-mobile">
                                                                 <div className="heading-bold font-12 text-white">{child.title}</div>
                                                             </div>
                                                         </Link>
@@ -258,16 +258,16 @@ export default function Header(props){
                                             </SingleArrowButton>
                                         </div>
                                     }
-                                </>
+                                </React.Fragment>
                             )}
                         </div>
                     </div>
                 </div>
                 <div className="d-none d-lg-flex align-items-center">
                     { HEADER_ITEMS.map((item, index1) => 
-                        <>
+                        <React.Fragment key={index1}>
                             {item.path && 
-                                <div key={index1}>
+                                <div>
                                     <a 
                                         href={item.path} 
                                         className={`menu-item position-relative ${ window.location.pathname == item.path ? "active" : "" }`}
@@ -285,11 +285,11 @@ export default function Header(props){
                                     <div className="dropdown-container" style={{width: 220*item.items.length, left: -110*item.items.length + 55}}>
                                         <div className="dropdown d-flex align-items-center justify-content-center">
                                             {item.items && item.items.map((child, index2) => 
-                                                <Link to="/">
-                                                    <a key={index2} className="dropdown-item">
+                                                <Link to={child.path} key={index2}>
+                                                    <div className="dropdown-item">
                                                         <div className="heading-bold font-12">{child.title}</div>
                                                         <div className="content font-08">{child.content}</div>
-                                                    </a>
+                                                    </div>
                                                 </Link>
                                             )}
                                         </div>
@@ -305,7 +305,7 @@ export default function Header(props){
                                     </div>
                                 </div>
                             }
-                        </>
+                        </React.Fragment>
                     )}
                     <div>
 

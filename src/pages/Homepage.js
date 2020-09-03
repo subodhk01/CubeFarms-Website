@@ -1,11 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 import Header from '../components/Header/Header'
-import WhyChooseUs from '../components/OutSource/WhyChooseUs'
-import OurStandards from '../components/OutSource/OurStandards'
-import OurServices from '../components/OutSource/OurProcess'
-import StaticSidePanelSection from '../components/StaticSidePanelSection'
-import LookingForSomethingElse from '../components/OutSource/LookingForSomethingElse'
 
 import AOS from 'aos';
 import TextLoop from "react-text-loop";
@@ -31,9 +26,6 @@ const Container = styled.div`
         margin-bottom: 3px;
         border-radius: 3px;
         background: grey;
-    }
-    .background-fade>div {
-        transition: background-color 1s ease;
     }
     .home-span {
         overflow: hidden;
@@ -193,7 +185,7 @@ export default function Outsource(){
                             </div>
                         </div>
                     </div>
-                    <Transition height="100px" from="#000000" to="#ffffff" />
+                    <Transition key={1} height="100px" from="#000000" to="#ffffff" />
                     <div className="mini-hero-container container-lg text-black">
                         <div className="py-3 py-lg-5">
                             <div className="row no-gutters">
@@ -221,7 +213,7 @@ export default function Outsource(){
                             </div>
                         </div>
                     </div>
-                    <Transition height="100px" from="#ffffff" to="#000000" />
+                    <Transition key={2} height="100px" from="#ffffff" to="#000000" />
                     <div className="mini-hero-container container-lg">
                         <div className="py-3 py-lg-5">
                             <div className="row no-gutters">
@@ -249,7 +241,7 @@ export default function Outsource(){
                             </div>
                         </div>
                     </div>
-                    <Transition height="100px" from="#000000" to="#ffffff" />
+                    <Transition key={3} height="100px" from="#000000" to="#ffffff" />
                     <div className="mini-hero-container container-lg text-black">
                         <div className="py-3 py-lg-5">
                             <div className="row no-gutters">
@@ -277,7 +269,7 @@ export default function Outsource(){
                             </div>
                         </div>
                     </div>
-                    <Transition height="100px" from="#ffffff" to="#f3f5fa" />
+                    <Transition key={4} height="100px" from="#ffffff" to="#f3f5fa" />
                     <div className="mini-hero-container text-black">
                         <div className="py-3 py-lg-5 px-3 heading">
                             <div style={{maxWidth: "1000px"}}>
@@ -301,7 +293,7 @@ export default function Outsource(){
                             </div>
                         </div>
                     </div>
-                    <Transition height="100px" from="#f3f5fa" to="#f3f5fa" />
+                    <Transition key={5} height="100px" from="#f3f5fa" to="#f3f5fa" />
                     <div className="mini-hero-container text-black bg-white">
                         <div className="py-3 py-lg-5 px-3 heading text-center">
                             <div style={{maxWidth: "1000px"}}>

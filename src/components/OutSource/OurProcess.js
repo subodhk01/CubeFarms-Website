@@ -43,12 +43,6 @@ const Container = styled.div`
 `
 
 export default function OurProcess(props) {
-    const [ isVisible, setIsVisible ] = React.useState(true)
-    const handleBlackBox = (isVisible) => {
-        if(isVisible){
-            setIsVisible(!isVisible)
-        }
-    }
     return (
         <div className="container-lg">
             <Container>
@@ -60,7 +54,7 @@ export default function OurProcess(props) {
                         <div className="middle-image-box d-none d-xl-block">
                             <img src={line} />
                         </div>
-                        <div className={`middle-black-box d-none d-xl-block ${isVisible ? "" : "invisible"}`}>
+                        <div className={`middle-black-box d-none d-xl-block`}>
 
                         </div>
                         <div className="content-container">
@@ -79,11 +73,9 @@ export default function OurProcess(props) {
                                 </div>
                             )}
                         </div>
-                        <VisibSensor onChange={handleBlackBox}>
-                            <div style={{height: "70px"}}>
-
-                            </div>
-                        </VisibSensor>
+                        <div style={{height: "60px"}}>
+                            
+                        </div>
                     </div>
                 </div>
             </Container>

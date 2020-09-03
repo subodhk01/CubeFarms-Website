@@ -83,7 +83,7 @@ const Container = styled.div`
         `
         :
         `
-            background: transparent;
+            background: white;
         `
     }
     position: fixed;
@@ -206,6 +206,7 @@ export default function Header(props){
             setMobileDropdown(item.title)
         }
     }
+    console.log(props)
     return (
         <Container white={props.white}>
             <div className={`d-flex align-items-center ${props.full ? "full" : "container justify-content-between"}`}>
@@ -214,7 +215,7 @@ export default function Header(props){
                 </div>
                 <div className="d-block d-lg-none">
                     <div className="p-3 cursor-pointer" onClick={() => setMobileNav(true)}>
-                        <RiMenu3Line size="26" color="white" />
+                        <RiMenu3Line size="26" color={props.white ? "white" : "black"} />
                     </div>
                     <div className={`mobile-nav-container font-12 ${mobileNav ? "show-nav" : "hide-nav"}`}>
                         <div className="mobile-nav">
@@ -252,7 +253,7 @@ export default function Header(props){
                                         </div>
                                     }
                                     {item.button &&
-                                        <div className="text-center py-4">
+                                        <div className="text-center py-4 position-relative" style={{left: "-20px"}}>
                                             <SingleArrowButton>
                                                 {item.title}
                                             </SingleArrowButton>

@@ -168,8 +168,17 @@ a, a:hover {
     font-family: "helvetica-regular";
     padding: 10px 20px;
 }
+.block-light {
+    background: #ecf0f7;
+}
 .custom-block1 img {
     border-radius: 10px;
     max-height: 170px;
     max-width: 100%;
+}
+
+.item-shadow {
+    border-radius: 10px;
+    background: white;
+    box-shadow: 0px 0px 30px 6px #ecf0f7;
 }

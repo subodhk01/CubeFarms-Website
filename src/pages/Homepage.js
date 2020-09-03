@@ -135,13 +135,12 @@ export default function Outsource(){
                         </div>
                     </div>
                     <div className="bg-white py-3 py-lg-5">
-                        <div data-aos="fade-up" className="row no-gutters align-items-center justify-content-around container-lg mx-auto">
-                            <div className="col-12 col-lg-6 p-3 text-muted font-14 heading">
+                        <div data-aos="fade-up" className="row no-gutters align-items-center justify-content-between container-lg mx-auto p-0">
+                            <div className="col-12 col-lg-6 p-2 text-muted font-14 heading">
                                 Cubefarms is a full stack digital agency working remotely with clients to provide compelling solutions through
                             </div>
-                            <div className="col-12 col-lg-5 p-3 d-flex justify-content-center heading-bold font-39" style={{color: PRIMARY}}>
-                                <div className="text-left" style={{minWidth: "340px"}}>
-                                    
+                            <div className="col-12 col-lg-5 p-2 d-flex justify-content-center heading-bold font-39" style={{color: PRIMARY}}>
+                                <div className="text-left" style={{minWidth: "340px"}}>         
                                     <Typing loop={true} speed={100}>
                                         <span>Strategy</span>
                                         <Typing.Backspace count={9} delay={300} speed={30} />
@@ -161,7 +160,7 @@ export default function Outsource(){
                         </div>
                     </div>
                     <div>
-                        <div className="py-3 py-lg-5 px-3 px-lg-5">
+                        <div className="py-3 py-lg-5 px-3 px-lg-2 container-lg">
                             <div className="font-21 heading text-white">
                                 Why choose Us?
                             </div>
@@ -173,7 +172,7 @@ export default function Outsource(){
                                 <div className="col-12 col-lg-6 p-3">
 
                                 </div>
-                                <div className="col-12 col-lg-6 p-3">
+                                <div className="col-12 col-lg-6 p-3 px-lg-0">
                                     <div data-aos="fade-left" className="heading font-32">
                                         Creative Services
                                     </div>
@@ -198,7 +197,7 @@ export default function Outsource(){
                     <div className="mini-hero-container container-lg text-black">
                         <div className="py-3 py-lg-5">
                             <div className="row no-gutters">
-                                <div className="col-12 col-lg-6 p-3">
+                                <div className="col-12 col-lg-6 p-3 px-lg-0">
                                     <div data-aos="fade-right" className="heading font-32 text-black">
                                         Web Studio
                                     </div>
@@ -229,7 +228,7 @@ export default function Outsource(){
                                 <div className="col-12 col-lg-6 p-3">
 
                                 </div>
-                                <div className="col-12 col-lg-6 p-3">
+                                <div className="col-12 col-lg-6 p-3 px-lg-0">
                                     <div data-aos="fade-left"className="heading font-32">
                                         Digital Advertising
                                     </div>
@@ -254,7 +253,7 @@ export default function Outsource(){
                     <div className="mini-hero-container container-lg text-black">
                         <div className="py-3 py-lg-5">
                             <div className="row no-gutters">
-                                <div className="col-12 col-lg-6 p-3">
+                                <div className="col-12 col-lg-6 p-3 px-lg-0">
                                     <div data-aos="fade-right" className="heading font-32  text-black">
                                         Product design
                                     </div>

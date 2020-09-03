@@ -2,26 +2,31 @@ import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaDribbble, FaTwitter } from 'react-icons/fa'
+import SingleArrowButton from "../Buttons/SingleArrowButton";
+const logoBlack = '/static/logoBlack.png'
 
 const Container = styled.div`
-    background-color: black;
+    background-color: white;
     font-family: "helvetica-regular";
-    color: white;
+    color: black;
     position: relative;
 
+    img {
+        max-height: 70px;
+    }
     .col-md-auto{
         flex: auto;
     }
     .heading-bold {
-        font-size: 1rem;
-        color: white;
+        color: black;
     }
     a {
-        color: rgba(255,255,255,0.7);
+        font-family: "madetommy-light";
+        color: rgba(0,0,0,0.7);
         transition: 0.3s;
     }
     a:hover {
-        color: white;
+        color: black;
         text-decoration: none;
     }
     .social-container {
@@ -38,12 +43,16 @@ const footerData = [
         title: "Company",
         content:[
             {
-                label: "About",
+                label: "About Us",
                 link: "/about"
             },
             {
-                label: "Team",
-                link: "/team"
+                label: "Approach",
+                link: "/approach"
+            },
+            {
+                label: "Outsource",
+                link: "/outsource"
             },
         ]
     },
@@ -51,27 +60,26 @@ const footerData = [
         title: "Services",
         content:[
             {
-                label: "Graphic Design",
-                link: "/design"
+                label: "Product Design",
+                link: "/product"
             },
             {
-                label: "We Studio",
+                label: "We, Studio",
                 link: "/web"
             },
             {
-                label: "Online Advertising",
+                label: "Creative Studio",
+                link: "/design"
+            },
+            {
+                label: "Digital Advertising",
                 link: "/advertising"
             },
         ]
     },
     {
-        title: "Outsource",
-        link: "/outsource",
-        content:[]
-    },
-    {
-        title: "Carrier",
-        link: "/carrier",
+        title: "Join Us",
+        link: "/joinus",
         content:[]
     },
     {
@@ -79,19 +87,34 @@ const footerData = [
         link: "/blog",
         content:[]
     },
+    {
+        title: "Contact",
+        link: "/contact",
+        content:[]
+    },
 ]
 
 export default function Footer(){
     return(
         <Container>
-            <div className="row no-gutters py-5">
+            <div className="row no-gutters py-5 container-lg mx-auto">
                 <div className="col-12 col-md-4">
-                    <div className="text-center heading-bold">
-                        Got a new idea? Let's talk
+                    <div className="heading font-15">
+                        <div>
+                            <img src={logoBlack} alt="Cubefarms" /><br />
+                        </div>
+                        <div>
+                            Got a new idea? Let's talk
+                        </div>
+                        <div className="py-3">
+                            <SingleArrowButton>
+                                Let's Talk
+                            </SingleArrowButton>
+                        </div>
                     </div>
                 </div>
                 { footerData.map((item, index) =>
-                    <div className={`${item.link ? "col-4" : "col-6"} col-md-auto p-5 p-md-0`}>
+                    <div className={`${item.link ? "col-4" : "col-6"} col-md-auto p-2 p-md-0`}>
                         <div>
                             { item.link ?
                                 <Link to={item.link}>
@@ -101,9 +124,11 @@ export default function Footer(){
                                 <h5 className="heading-bold">{item.title}</h5>
                             }
                             <p className="pt-2">
-                                { item.content.map((subitem, index) => 
+                                { item.content && item.content.map((subitem, index) => 
                                     <Link to={subitem.link}>
-                                        <div>{subitem.label}</div>
+                                        <div className="py-2">
+                                            {subitem.label}
+                                        </div>
                                     </Link>
                                 )}
                             </p>
@@ -111,32 +136,32 @@ export default function Footer(){
                     </div>
                 )}
             </div>
-            <div className="row no-gutters pb-5 py-md-5 px-2 px-md-5">
+            <div className="row no-gutters pb-5 py-md-5 px-2 px-md-5 align-items-end">
                 <div className="col-12 col-md-6 p-4 text-center text-md-left">
-                    All Rights Reserved
+                    All Rights Reserved All Wrong Reserved
                 </div>
                 <div className="col-12 col-md-6 p-4 text-center text-md-right">
+                    <div className="social-container p-2">
+                        <div className="d-flex justify-content-end">
+                            <a href="" className="social-item">
+                                <FaFacebookF size="19" />
+                            </a>
+                            <a href="" className="social-item">
+                                <FaLinkedinIn size="19" />
+                            </a>
+                            <a href="" className="social-item">
+                                <FaInstagram size="19"/>
+                            </a>
+                            <a href="" className="social-item">
+                                <FaDribbble size="19" />
+                            </a>
+                            <a href="" className="social-item">
+                                <FaTwitter size="19" />
+                            </a>
+                        </div>
+                    </div>
                     2020-travostel hospitality private limited<br />
                     <span className="heading-bold">Proudly Made in India</span>
-                </div>
-            </div>
-            <div className="social-container position-absolute p-2">
-                <div className="d-flex flex-column">
-                    <a className="social-item">
-                        <FaFacebookF size="19" />
-                    </a>
-                    <a className="social-item">
-                        <FaLinkedinIn size="19" />
-                    </a>
-                    <a className="social-item">
-                        <FaInstagram size="19"/>
-                    </a>
-                    <a className="social-item">
-                        <FaDribbble size="19" />
-                    </a>
-                    <a className="social-item">
-                        <FaTwitter size="19" />
-                    </a>
                 </div>
             </div>
         </Container>

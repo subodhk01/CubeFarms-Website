@@ -17,15 +17,18 @@ const HEADER_ITEMS = [
         items: [
             {
                 title: "About",
-                content: "Lorem ipsum lorem ipsum lorem ipsum really lorem ipsum"
+                content: "Lorem ipsum lorem ipsum lorem ipsum really lorem ipsum",
+                link: "/about"
             },
             {
                 title: "Approach",
-                content: "Lorem ipsum lorem ipsum lorem ipsum really lorem ipsum"
+                content: "Lorem ipsum lorem ipsum lorem ipsum really lorem ipsum",
+                link: "/approach"
             },
             {
                 title: "Outsource",
-                content: "Lorem ipsum lorem ipsum lorem ipsum really lorem ipsum"
+                content: "Lorem ipsum lorem ipsum lorem ipsum really lorem ipsum",
+                link: "/outsource"
             }
         ]
     },
@@ -35,20 +38,24 @@ const HEADER_ITEMS = [
         items: [
             {
                 title: "Web",
-                content: "Lorem ipsum lorem ipsum lorem ipsum really lorem ipsum"
-            },
-            {
-                title: "Creative",
-                content: "Lorem ipsum lorem ipsum lorem ipsum really lorem ipsum"
-            },
-            {
-                title: "Marketing",
-                content: "Lorem ipsum lorem ipsum lorem ipsum really lorem ipsum"
+                content: "Lorem ipsum lorem ipsum lorem ipsum really lorem ipsum",
+                link: "/web"
             },
             {
                 title: "Product",
-                content: "Lorem ipsum lorem ipsum lorem ipsum really lorem ipsum"
-            }
+                content: "Lorem ipsum lorem ipsum lorem ipsum really lorem ipsum",
+                link: "/product"
+            },
+            {
+                title: "Creative",
+                content: "Lorem ipsum lorem ipsum lorem ipsum really lorem ipsum",
+                link: "/creative"
+            },
+            {
+                title: "Advertising",
+                content: "Lorem ipsum lorem ipsum lorem ipsum really lorem ipsum",
+                link: "/advertising"
+            },
         ]
     },
     {
@@ -175,7 +182,7 @@ const Container = styled.div`
         left: 0;
         height: 100vh;
         width: 100vw;
-        padding: 0px 50px;
+        padding-left: 50px;
         transition: 0.4s;
     }
     .show-nav {
@@ -211,7 +218,7 @@ export default function Header(props){
                     </div>
                     <div className={`mobile-nav-container font-12 ${mobileNav ? "show-nav" : "hide-nav"}`}>
                         <div className="mobile-nav">
-                            <div className="mobile-nav-close text-right p-4 cursor-pointer" onClick={() => setMobileNav(false)}>
+                            <div className="mobile-nav-close text-right py-3 px-4 mr-2 cursor-pointer" onClick={() => setMobileNav(false)}>
                                 <MdClose size="30" color="white" />
                             </div>
                             { HEADER_ITEMS.map((item, index1) => 

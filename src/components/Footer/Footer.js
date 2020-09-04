@@ -6,9 +6,9 @@ import SingleArrowButton from "../Buttons/SingleArrowButton";
 const logoBlack = '/static/logoBlack.png'
 
 const Container = styled.div`
-    background-color: white;
+    background-color: ${props => props.black ? "black" : "white"};
     font-family: "helvetica-regular";
-    color: black;
+    color: ${props => props.black ? "white" : "black"};
     position: relative;
 
     img {
@@ -18,15 +18,15 @@ const Container = styled.div`
         flex: auto;
     }
     .heading-bold {
-        color: black;
+        color: ${props => props.black ? "white" : "black"};
     }
     a {
         font-family: "madetommy-light";
-        color: rgba(0,0,0,0.7);
+        color: ${props => props.black ? "rgba(255,255,255,0.7)" : "rgba(0,0,0,0.7)"};
         transition: 0.3s;
     }
     a:hover {
-        color: black;
+        color: ${props => props.black ? "white" : "black"};
         text-decoration: none;
     }
     .social-container {
@@ -94,9 +94,9 @@ const footerData = [
     },
 ]
 
-export default function Footer(){
+export default function Footer(props){
     return(
-        <Container>
+        <Container black={props.black}>
             <div className="row no-gutters py-5 container-lg mx-auto">
                 <div className="col-12 col-md-4">
                     <div className="heading font-15">

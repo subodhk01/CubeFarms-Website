@@ -12,11 +12,13 @@ import Outsource from './pages/Outsource'
 import Advertising from './pages/Advertising'
 import Creative from './pages/Creative'
 import AboutUs from './pages/Company/AboutUs';
+import Approach from './pages/Company/Approach'
 
 function App() {
     return (
         <Switch>
             <Route path="/about" component={AboutUs} />
+            <Route path="/approach" component={Approach} />
             <Route path="/joinus" component={JoinUs} />
             <Route path="/web" component={Outsource} />
             <Route path="/advertising" component={Advertising} />

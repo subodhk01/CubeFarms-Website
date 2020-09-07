@@ -19,6 +19,17 @@ const widths = {
 }
 
 const Container = styled.div`
+    .top-container {
+        background: url('/static/homepage/top.png');
+        background-repeat: no-repeat;
+        background-position: right bottom;
+    }
+    .img-container {
+        text-align: center;
+    }
+    .img-container img {
+        max-width: 90%;
+    }
     .grey-dash {
         display: inline-block;
         height: 4px;
@@ -111,7 +122,7 @@ export default function Outsource(){
             </div>
             <div className="background-fade">
                 <AnimatedBg>
-                    <div className="hero-container">
+                    <div className="hero-container top-container">
                         <div className="container">
                             <div className="p-3">
                                 <h1 data-aos="fade-up" className="text-white home-heading">
@@ -160,9 +171,11 @@ export default function Outsource(){
                     </div>
                     <div className="mini-hero-container container-lg">
                         <div className="py-3 py-lg-5">
-                            <div className="row no-gutters">
+                            <div className="row no-gutters align-items-center">
                                 <div className="col-12 col-lg-6 p-3">
-
+                                    <div className="d-flex align-items-center justify-content-center img-container">
+                                        <img src="/static/homepage/creative.png" alt="Creative Services" />
+                                    </div>
                                 </div>
                                 <div className="col-12 col-lg-6 p-3 px-lg-0">
                                     <div data-aos="fade-left" className="heading font-32">
@@ -188,8 +201,8 @@ export default function Outsource(){
                     <Transition key={1} height="100px" from="#000000" to="#ffffff" />
                     <div className="mini-hero-container container-lg text-black">
                         <div className="py-3 py-lg-5">
-                            <div className="row no-gutters">
-                                <div className="col-12 col-lg-6 p-3 px-lg-0">
+                            <div className="row no-gutters align-items-center">
+                                <div className="col-12 col-lg-6 p-3 px-lg-0 order-2 order-lg-1">
                                     <div data-aos="fade-right" className="heading font-32 text-black">
                                         Web Studio
                                     </div>
@@ -207,8 +220,10 @@ export default function Outsource(){
                                         </div>
                                     </div>
                                 </div>
-                                <div className="col-12 col-lg-6 p-3">
-
+                                <div className="col-12 col-lg-6 p-3 order-1 order-lg-2">
+                                    <div className="d-flex align-items-center justify-content-center img-container">
+                                        <img src="/static/homepage/web.png" alt="Creative Services" />
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -216,9 +231,11 @@ export default function Outsource(){
                     <Transition key={2} height="100px" from="#ffffff" to="#000000" />
                     <div className="mini-hero-container container-lg">
                         <div className="py-3 py-lg-5">
-                            <div className="row no-gutters">
+                            <div className="row no-gutters align-items-center">
                                 <div className="col-12 col-lg-6 p-3">
-
+                                    <div className="d-flex align-items-center justify-content-center img-container">
+                                        <img src="/static/homepage/digital.png" alt="Creative Services" />
+                                    </div>
                                 </div>
                                 <div className="col-12 col-lg-6 p-3 px-lg-0">
                                     <div data-aos="fade-left"className="heading font-32">
@@ -244,7 +261,7 @@ export default function Outsource(){
                     <Transition key={3} height="100px" from="#000000" to="#ffffff" />
                     <div className="mini-hero-container container-lg text-black">
                         <div className="py-3 py-lg-5">
-                            <div className="row no-gutters">
+                            <div className="row no-gutters align-items-center">
                                 <div className="col-12 col-lg-6 p-3 px-lg-0">
                                     <div data-aos="fade-right" className="heading font-32  text-black">
                                         Product design
@@ -264,7 +281,9 @@ export default function Outsource(){
                                     </div>
                                 </div>
                                 <div className="col-12 col-lg-6 p-3">
-
+                                    <div className="d-flex align-items-center justify-content-center img-container">
+                                        <img src="/static/homepage/product.png" alt="Creative Services" />
+                                    </div>
                                 </div>
                             </div>
                         </div>

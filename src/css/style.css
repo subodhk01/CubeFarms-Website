@@ -120,8 +120,10 @@ a, a:hover {
     cursor: pointer;
 }
 
-.background-fade>div {
-    transition: background-color 1s ease;
+@media(min-width: 576px){
+    .background-fade>div {
+        transition: background-color 1s ease;
+    }
 }
 
 .joinusform > div, .joinusform > div > div, .joinusform > div > div > div {

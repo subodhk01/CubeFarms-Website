@@ -211,7 +211,9 @@ export default function Header(props){
         <Container white={props.white}>
             <div className={`d-flex align-items-center ${props.full ? "full" : "container justify-content-between"}`}>
                 <div>
-                    <img src={`${props.white ? logoWhite : logoBlack}`} alt="Cubefarms" />
+                    <a href="/">
+                        <img src={`${props.white ? logoWhite : logoBlack}`} alt="Cubefarms" />
+                    </a>
                 </div>
                 <div className="d-block d-lg-none">
                     <div className="p-3 cursor-pointer" onClick={() => setMobileNav(true)}>
@@ -226,12 +228,12 @@ export default function Header(props){
                                 <React.Fragment key={index1}>
                                     {item.path && 
                                         <div className="py-2">
-                                            <Link to={item.path}>
+                                            <a href={item.path}>
                                                 <div className={`position-relative ${ window.location.pathname == item.path ? "active" : "" }`}>
                                                     {item.title}
                                                     <div className="menu-item-underline"></div>
                                                 </div>
-                                            </Link>
+                                            </a>
                                         </div>
                                     }
                                     {item.dropdown && 
@@ -242,11 +244,11 @@ export default function Header(props){
                                             <Collapse in={mobileDropdown == item.title}>
                                                 <div>
                                                     {item.items && item.items.map((child, index2) => 
-                                                        <Link to={child.path} key={index2}>
+                                                        <a href={child.path} key={index2}>
                                                             <div className="dropdown-item-mobile">
                                                                 <div className="heading-bold font-12 text-white">{child.title}</div>
                                                             </div>
-                                                        </Link>
+                                                        </a>
                                                     )}
                                                 </div>
                                             </Collapse>
@@ -286,12 +288,12 @@ export default function Header(props){
                                     <div className="dropdown-container" style={{width: 220*item.items.length, left: -110*item.items.length + 55}}>
                                         <div className="dropdown d-flex align-items-center justify-content-center">
                                             {item.items && item.items.map((child, index2) => 
-                                                <Link to={child.path} key={index2}>
+                                                <a href={child.path} key={index2}>
                                                     <div className="dropdown-item">
                                                         <div className="heading-bold font-12">{child.title}</div>
                                                         <div className="content font-08">{child.content}</div>
                                                     </div>
-                                                </Link>
+                                                </a>
                                             )}
                                         </div>
                                     </div>

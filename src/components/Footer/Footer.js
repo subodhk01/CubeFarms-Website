@@ -64,7 +64,7 @@ const footerData = [
                 link: "/product"
             },
             {
-                label: "We, Studio",
+                label: "Web Studio",
                 link: "/web"
             },
             {
@@ -117,19 +117,19 @@ export default function Footer(props){
                     <div key={index} className={`${item.link ? "col-4" : "col-6"} col-md-auto p-2 p-md-0`}>
                         <div>
                             { item.link ?
-                                <Link to={item.link}>
+                                <a href={item.link}>
                                     <h5 className="heading-bold">{item.title}</h5>
-                                </Link>
+                                </a>
                                 :
                                 <h5 className="heading-bold">{item.title}</h5>
                             }
                             <div className="pt-2">
                                 { item.content && item.content.map((subitem, index) => 
-                                    <Link to={subitem.link} key={index}>
+                                    <a href={subitem.link} key={index}>
                                         <div className="py-2">
                                             {subitem.label}
                                         </div>
-                                    </Link>
+                                    </a>
                                 )}
                             </div>
                         </div>

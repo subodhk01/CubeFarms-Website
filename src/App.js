@@ -9,8 +9,8 @@ import 'aos/dist/aos.css';
 import Homepage from './pages/Homepage'
 import JoinUs from './pages/JoinUs'
 import Outsource from './pages/Outsource'
-import Advertising from './pages/Advertising'
-import Creative from './pages/Creative'
+import Advertising from './pages/Services/Advertising'
+import Creative from './pages/Services/Creative'
 import AboutUs from './pages/Company/AboutUs';
 import Approach from './pages/Company/Approach'
 import OutSource from './pages/Company/Outsource';

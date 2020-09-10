@@ -93,6 +93,11 @@ a, a:hover {
     color: white;
 }
 
+.form-input {
+    padding: 1rem 1.4rem;
+    height: auto;
+}
+
 .input-bottom-border {
     background: transparent;
     border: none;

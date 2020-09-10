@@ -14,6 +14,7 @@ import Creative from './pages/Services/Creative'
 import AboutUs from './pages/Company/AboutUs';
 import Approach from './pages/Company/Approach'
 import OutSource from './pages/Company/Outsource';
+import Contact from './pages/Contact';
 
 function App() {
     return (
@@ -22,6 +23,7 @@ function App() {
             <Route path="/approach" component={Approach} />
             <Route path="/outsource" component={OutSource} />
             <Route path="/joinus" component={JoinUs} />
+            <Route path="/contact" component={Contact} />
             <Route path="/web" component={Outsource} />
             <Route path="/advertising" component={Advertising} />
             <Route path="/creative" component={Creative} />

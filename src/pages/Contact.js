@@ -14,8 +14,8 @@ export default function Contact() {
     return(
         <Layout header={{full: true, black: true}}>
             <Container>
-                <div className="py-10 px-0 px-lg-5">
-                    <div className="row no-gutters justify-content-between py-10 px-2 px-lg-5">
+                <div className="py-10 px-2 px-lg-5">
+                    <div className="row no-gutters justify-content-between py-1 py-lg-5 px-2 px-lg-5">
                         <div className="col-12 col-lg-5">
                             <div className="font-12">
                                 <h1 className="heading-bold mb-5">
@@ -52,7 +52,7 @@ export default function Contact() {
                         </div>
                     </div>
                 </div>
-                <div className="bg-black">
+                <div className="bg-black py-5">
                     <div className="mini-hero-container container-lg">
                         <div class="w-100">
                             <h1 className="heading-bold mb-5">
@@ -61,7 +61,7 @@ export default function Contact() {
                             </h1>
                             <div>
                                 <div className="row no-gutters justify-content-center text-center">
-                                    <div className="col-12 col-md-3">
+                                    <div className="col-12 col-md-3 mb-4 mb-lg-0">
                                         <h3 className="mb-3">
                                             Our Services
                                         </h3>
@@ -74,7 +74,7 @@ export default function Contact() {
                                             </SingleArrowButton>
                                         </div>
                                     </div>
-                                    <div className="col-12 col-md-3">
+                                    <div className="col-12 col-md-3 mb-4 mb-lg-0">
                                         <h3 className="mb-3">
                                             Join Cubefarms
                                         </h3>
@@ -87,7 +87,7 @@ export default function Contact() {
                                             </SingleArrowButton>
                                         </div>
                                     </div>
-                                    <div className="col-12 col-md-3">
+                                    <div className="col-12 col-md-3 mb-4 mb-lg-0">
                                         <h3 className="mb-3">
                                             Anything else
                                         </h3>

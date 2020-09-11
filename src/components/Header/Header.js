@@ -8,6 +8,9 @@ import { MdClose } from 'react-icons/md'
 import { Collapse } from 'react-bootstrap'
 import SingleArrowButton from '../Buttons/SingleArrowButton'
 
+import { motion } from 'framer-motion'
+import { useScrollPosition } from '../../utils/scrollDirection'
+
 const logoWhite = '/static/logoWhite.png'
 const logoBlack = '/static/logoBlack.png'
 const HEADER_ITEMS = [
@@ -86,6 +89,8 @@ const Container = styled.div`
             background: white;
         `
     }
+    ${props => props.transparent && `background: transparent;`}
+    transition: 1.2s;
     position: fixed;
     z-index: 3;
     width: 100%;
@@ -196,9 +201,28 @@ const Container = styled.div`
     }
 `
 
+const variants = {
+    hidden: {
+        top: "-100%",
+        opacity: 0,
+        transition: {duration: 0.5}
+    },
+    visible: {
+        top: "0px",
+        opacity: 1,
+        transition: {duration: 0.5}
+    }
+}
+
 export default function Header(props){
     const [ mobileNav, setMobileNav ] = React.useState(false)
     const [ mobileDropdown, setMobileDropdown ] = React.useState("")
+    const [ navHidden, setNavHidden ] = React.useState(false)
+    useScrollPosition(({ prevPos, currPos }) => {
+        const isShow = currPos.y > prevPos.y
+        console.log(isShow)
+        if (isShow === navHidden) setNavHidden(!isShow)
+    }, [navHidden])
     const handleDropdown = (item) => {
         if(mobileDropdown == item.title){
             setMobileDropdown("")
@@ -206,10 +230,9 @@ export default function Header(props){
             setMobileDropdown(item.title)
         }
     }
-    console.log(props)
     return (
-        <Container white={props.white}>
-            <div className={`d-flex align-items-center ${props.full ? "full" : "container justify-content-between"}`}>
+        <Container white={props.white} transparent={navHidden}>
+            <motion.div variants={variants} initial="visible" animate={navHidden ? "hidden" : "visible"} className={`position-relative d-flex align-items-center ${props.full ? "full" : "container justify-content-between"}`}>
                 <div>
                     <a href="/">
                         <img src={`${props.white ? logoWhite : logoBlack}`} alt="Cubefarms" />
@@ -314,7 +337,7 @@ export default function Header(props){
 
                     </div>
                 </div>
-            </div>
+            </motion.div>
         </Container>
     )
 }

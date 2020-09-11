@@ -165,6 +165,10 @@ a, a:hover {
     font-family: "madetommy-light";
 }
 
+.heading-thin {
+    font-family: "madetommy-thin";
+}
+
 .heading-bold {
     font-family: "madetommy-bold";
 }

@@ -1,6 +1,14 @@
 @font-face {
+    font-family: 'madetommy-thin';
+    src: url('/static/fonts/madetommy/mt-thin.ttf')  format('truetype')
+}
+@font-face {
     font-family: 'madetommy-light';
     src: url('/static/fonts/madetommy/mt-light.ttf')  format('truetype')
+}
+@font-face {
+    font-family: 'madetommy-regular';
+    src: url('/static/fonts/madetommy/mt-regular.ttf')  format('truetype')
 }
 @font-face {
     font-family: 'madetommy-bold';

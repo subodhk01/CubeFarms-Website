@@ -90,7 +90,7 @@ const Container = styled.div`
         `
     }
     ${props => props.transparent && `background: transparent;`}
-    transition: 1.2s;
+    transition: 0.3s !important;
     position: fixed;
     z-index: 3;
     width: 100%;
@@ -140,7 +140,6 @@ const Container = styled.div`
         opacity: 0;
         z-index: -1;
         position: absolute;
-        top: -160px;
         transition: 0.3s;
     }
     .dropdown {
@@ -160,7 +159,6 @@ const Container = styled.div`
     }
     .menu-item:hover + .dropdown-container {
         opacity: 1;
-        top: 100px;
     }
     .dropdown-item:hover {
         background: ${PRIMARY};
@@ -173,7 +171,6 @@ const Container = styled.div`
     }
     .dropdown-container:hover {
         opacity: 1;
-        top: 100px;
     }
     svg {
         transition: 0.5s;
@@ -205,12 +202,12 @@ const variants = {
     hidden: {
         top: "-100%",
         opacity: 0,
-        transition: {duration: 0.5}
+        transition: {duration: 0.3}
     },
     visible: {
         top: "0px",
         opacity: 1,
-        transition: {duration: 0.5}
+        transition: {duration: 0.3}
     }
 }
 
@@ -307,6 +304,7 @@ export default function Header(props){
                                 <div className="position-relative">
                                     <div className="menu-item">
                                         {item.title}&nbsp;&nbsp;<FaChevronDown color={PRIMARY} size="16" className="dropdown-icon" />
+                                        <div className="menu-item-underline"></div>
                                     </div>
                                     <div className="dropdown-container" style={{width: 220*item.items.length, left: -110*item.items.length + 55}}>
                                         <div className="dropdown d-flex align-items-center justify-content-center">

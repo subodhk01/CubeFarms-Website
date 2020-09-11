@@ -41,10 +41,12 @@ const Container = styled.div`
     .home-span {
         overflow: hidden;
         display: inline-block;
+        font-family: "madetommy-regular";
         color: ${PRIMARY_DARK};
     }
     .home-heading {
         font-size: 4.5rem;
+        font-family: "madetommy-light";
     }
     @media(max-width: 991px){
         .home-heading {
@@ -124,40 +126,30 @@ export default function Outsource(){
                 <AnimatedBg>
                     <div className="hero-container top-container">
                         <div className="container">
-                            <div className="p-3">
+                            <div className="p-3 heading">
                                 <h1 data-aos="fade-up" className="text-white home-heading">
                                     We are<br />
-                                    your on Demand<br />
+                                    your <br />
+                                    on Demand<br />
                                     <motion.div animate={web} variants={widths} initial={"zero"} className="home-span">Web</motion.div>
                                     <motion.div animate={product} variants={widths} initial={"zero"} className="home-span">Product</motion.div>
                                     <motion.div animate={creative} variants={widths} initial={"zero"} className="home-span">Creative</motion.div>
                                     <motion.div animate={advertising} variants={widths} initial={"zero"} className="home-span">Advertising</motion.div>
-                                    <div className="home-span text-white">{" "}<Cursor /> Team</div>
+                                    <div className="home-span text-white">{" "}<Cursor /></div>
+                                    <div className="text-white">Team</div>
                                 </h1>
                             </div>
                         </div>
                     </div>
                     <div className="bg-white py-3 py-lg-5">
-                        <div data-aos="fade-up" className="row no-gutters align-items-center justify-content-between container-lg mx-auto p-0">
+                        <div className="row no-gutters align-items-center justify-content-between container-lg mx-auto p-0">
                             <div className="col-12 col-lg-6 p-2 text-muted font-14 heading">
                                 Cubefarms is a full stack digital agency working remotely with clients to provide compelling solutions through
                             </div>
-                            <div className="col-12 col-lg-5 p-2 d-flex justify-content-center heading-bold font-39" style={{color: PRIMARY}}>
-                                <div className="text-left" style={{minWidth: "340px"}}>         
-                                    <Typing loop={true} speed={100}>
-                                        <span>Strategy</span>
-                                        <Typing.Backspace count={9} delay={300} speed={30} />
-                                        <Typing.Speed ms={100} />
-                                        <span>Design</span>
-                                        <Typing.Backspace count={8} delay={300} speed={30} />
-                                        <Typing.Speed ms={100} />
-                                        <span>Content</span>
-                                        <Typing.Backspace count={8} delay={300} speed={30} />
-                                        <Typing.Speed ms={100} />
-                                        <span>Technology</span>
-                                        <Typing.Backspace count={13} delay={300} speed={30} />
-                                        <Typing.Speed ms={100} />
-                                    </Typing>
+                            <div className="col-12 col-lg-5 p-2 d-flex justify-content-center heading-bold font-27" style={{color: PRIMARY}}>
+                                <div className="text-left" data-aos="fade-up" style={{minWidth: "340px"}}>         
+                                    <div>Strategy. Design.</div>
+                                    <div>Content. Technology.</div>
                                 </div>
                             </div>
                         </div>
@@ -172,44 +164,14 @@ export default function Outsource(){
                     <div className="mini-hero-container container-lg">
                         <div className="py-3 py-lg-5">
                             <div className="row no-gutters align-items-center">
-                                <div className="col-12 col-lg-6 p-3">
-                                    <div className="d-flex align-items-center justify-content-center img-container">
-                                        <img src="/static/homepage/creative.png" alt="Creative Services" />
-                                    </div>
-                                </div>
-                                <div className="col-12 col-lg-6 p-3 px-lg-0">
-                                    <div data-aos="fade-left" className="heading font-32">
-                                        Creative Services
-                                    </div>
-                                    <div data-aos="fade-left" data-aos-delay={400} className="heading font-18 text-muted py-3">
-                                        Good design is good business. Out team of expert creative directors deliver high end designs which complement your brand, product and services.
-                                    </div>
-                                    <div data-aos="fade-left" data-aos-delay={800} className="text-muted font-weight-bold">
-                                        <div className="grey-dash"></div> Corporate Design, Logo Design, Professional Motion Graphics, Product label Design
-                                    </div>
-                                    <div data-aos="fade-left" data-aos-delay={1200} className="py-3 py-lg-5">
-                                        <div>
-                                            <CustomButton1 white>
-                                                Explore
-                                            </CustomButton1>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <Transition key={1} height="100px" from="#000000" to="#ffffff" />
-                    <div className="mini-hero-container container-lg text-black">
-                        <div className="py-3 py-lg-5">
-                            <div className="row no-gutters align-items-center">
                                 <div className="col-12 col-lg-6 p-3 px-lg-0 order-2 order-lg-1">
-                                    <div data-aos="fade-right" className="heading font-32 text-black">
+                                    <div data-aos="fade-right" className="heading font-32">
                                         Web Studio
                                     </div>
-                                    <div data-aos="fade-right" data-aos-delay={400} className="heading font-18 text-muted py-3">
+                                    <div data-aos="fade-right" data-aos-delay={400} className="heading-thin font-18 text-muted py-3">
                                         The internet is a virtual world. We help business to design, develop and manage websites that stand out and communicate clearly in this virtual world.
                                     </div>
-                                    <div data-aos="fade-right" data-aos-delay={800} className="text-muted font-weight-bold">
+                                    <div data-aos="fade-right" data-aos-delay={800} className="text-muted">
                                         <div className="grey-dash"></div> Corporate Design, Logo Design, Professional Motion Graphics, Product label Design
                                     </div>
                                     <div data-aos="fade-right" data-aos-delay={1200} className="py-3 py-lg-5">
@@ -228,23 +190,53 @@ export default function Outsource(){
                             </div>
                         </div>
                     </div>
+                    <Transition key={1} height="100px" from="#000000" to="#ffffff" />
+                    <div className="mini-hero-container container-lg text-black">
+                        <div className="py-3 py-lg-5">
+                            <div className="row no-gutters align-items-center">
+                                <div className="col-12 col-lg-6 p-3 px-lg-0">
+                                    <div data-aos="fade-right" className="heading font-32  text-black">
+                                        Product design
+                                    </div>
+                                    <div data-aos="fade-right" data-aos-delay={400} className="heading-thin font-18 text-muted py-3">
+                                        We work with startups and brands to create amazing MVPs, app prototypes and custom apps. Pair with our expert product designers for a user centric product.
+                                    </div>
+                                    <div data-aos="fade-right" data-aos-delay={800} className="text-muted">
+                                        <div className="grey-dash"></div> Corporate Design, Logo Design, Professional Motion Graphics, Product label Design
+                                    </div>
+                                    <div data-aos="fade-right" data-aos-delay={1200} className="py-3 py-lg-5">
+                                        <div>
+                                            <CustomButton1>
+                                                Explore
+                                            </CustomButton1>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="col-12 col-lg-6 p-3">
+                                    <div className="d-flex align-items-center justify-content-center img-container">
+                                        <img src="/static/homepage/product.png" alt="Creative Services" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <Transition key={2} height="100px" from="#ffffff" to="#000000" />
                     <div className="mini-hero-container container-lg">
                         <div className="py-3 py-lg-5">
                             <div className="row no-gutters align-items-center">
                                 <div className="col-12 col-lg-6 p-3">
                                     <div className="d-flex align-items-center justify-content-center img-container">
-                                        <img src="/static/homepage/digital.png" alt="Creative Services" />
+                                        <img src="/static/homepage/creative.png" alt="Creative Services" />
                                     </div>
                                 </div>
                                 <div className="col-12 col-lg-6 p-3 px-lg-0">
-                                    <div data-aos="fade-left"className="heading font-32">
-                                        Digital Advertising
+                                    <div data-aos="fade-left" className="heading font-32">
+                                        Creative Services
                                     </div>
-                                    <div data-aos="fade-left" data-aos-delay={400} className="heading font-18 text-muted py-3">
-                                        We use a data driven transparent approach to achieve your online objectives. Our digital branding services have proven to increase traggic, conversions and revenue.
+                                    <div data-aos="fade-left" data-aos-delay={400} className="heading-thin font-18 text-muted py-3">
+                                        Good design is good business. Out team of expert creative directors deliver high end designs which complement your brand, product and services.
                                     </div>
-                                    <div data-aos="fade-left" data-aos-delay={800} className="text-muted font-weight-bold">
+                                    <div data-aos="fade-left" data-aos-delay={800} className="text-muted">
                                         <div className="grey-dash"></div> Corporate Design, Logo Design, Professional Motion Graphics, Product label Design
                                     </div>
                                     <div data-aos="fade-left" data-aos-delay={1200} className="py-3 py-lg-5">
@@ -262,27 +254,27 @@ export default function Outsource(){
                     <div className="mini-hero-container container-lg text-black">
                         <div className="py-3 py-lg-5">
                             <div className="row no-gutters align-items-center">
+                                <div className="col-12 col-lg-6 p-3">
+                                    <div className="d-flex align-items-center justify-content-center img-container">
+                                        <img src="/static/homepage/digital.png" alt="Creative Services" />
+                                    </div>
+                                </div>
                                 <div className="col-12 col-lg-6 p-3 px-lg-0">
-                                    <div data-aos="fade-right" className="heading font-32  text-black">
-                                        Product design
+                                    <div data-aos="fade-left"className="heading font-32">
+                                        Digital Advertising
                                     </div>
-                                    <div data-aos="fade-right" data-aos-delay={400} className="heading font-18 text-muted py-3">
-                                        We work with startups and brands to create amazing MVPs, app prototypes and custom apps. Pair with our expert product designers for a user centric product.
+                                    <div data-aos="fade-left" data-aos-delay={400} className="heading-thin font-18 text-muted py-3">
+                                        We use a data driven transparent approach to achieve your online objectives. Our digital branding services have proven to increase traggic, conversions and revenue.
                                     </div>
-                                    <div data-aos="fade-right" data-aos-delay={800} className="text-muted font-weight-bold">
+                                    <div data-aos="fade-left" data-aos-delay={800} className="text-muted">
                                         <div className="grey-dash"></div> Corporate Design, Logo Design, Professional Motion Graphics, Product label Design
                                     </div>
-                                    <div data-aos="fade-right" data-aos-delay={1200} className="py-3 py-lg-5">
+                                    <div data-aos="fade-left" data-aos-delay={1200} className="py-3 py-lg-5">
                                         <div>
-                                            <CustomButton1>
+                                            <CustomButton1 white>
                                                 Explore
                                             </CustomButton1>
                                         </div>
-                                    </div>
-                                </div>
-                                <div className="col-12 col-lg-6 p-3">
-                                    <div className="d-flex align-items-center justify-content-center img-container">
-                                        <img src="/static/homepage/product.png" alt="Creative Services" />
                                     </div>
                                 </div>
                             </div>

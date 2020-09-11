@@ -117,16 +117,16 @@ export default function Footer(props){
                     <div key={index} className={`${item.link ? "col-4" : "col-6"} col-md-auto p-2 p-md-0`}>
                         <div>
                             { item.link ?
-                                <a href={item.link}>
-                                    <h5 className="heading-bold">{item.title}</h5>
+                                <a href={item.link} className="text-center text-md-left">
+                                    <h4 className="heading-thin">{item.title}</h4>
                                 </a>
                                 :
-                                <h5 className="heading-bold">{item.title}</h5>
+                                <h4 className="heading-thin">{item.title}</h4>
                             }
                             <div className="pt-2">
                                 { item.content && item.content.map((subitem, index) => 
                                     <a href={subitem.link} key={index}>
-                                        <div className="py-2">
+                                        <div className="py-2 heading">
                                             {subitem.label}
                                         </div>
                                     </a>

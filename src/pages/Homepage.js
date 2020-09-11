@@ -45,7 +45,11 @@ const Container = styled.div`
         color: ${PRIMARY_DARK};
     }
     .home-heading {
-        font-size: 4.5rem;
+        font-size: 4.2rem;
+        font-family: "madetommy-light";
+    }
+    .home-heading-mobile {
+        font-size: 2.7rem;
         font-family: "madetommy-light";
     }
     @media(max-width: 991px){
@@ -126,8 +130,8 @@ export default function Outsource(){
                 <AnimatedBg>
                     <div className="hero-container top-container">
                         <div className="container">
-                            <div className="p-3 heading">
-                                <h1 data-aos="fade-up" className="text-white home-heading">
+                            <div className="p-3 heading d-block d-md-none">
+                                <h1 data-aos="fade-up" className="text-white home-heading-mobile">
                                     We are<br />
                                     your <br />
                                     on Demand<br />
@@ -139,15 +143,26 @@ export default function Outsource(){
                                     <div className="text-white">Team</div>
                                 </h1>
                             </div>
+                            <div className="p-3 heading d-none d-md-block">
+                                <h1 data-aos="fade-up" className="text-white home-heading">
+                                    We are<br />
+                                    your on Demand<br />
+                                    <motion.div animate={web} variants={widths} initial={"zero"} className="home-span">Web</motion.div>
+                                    <motion.div animate={product} variants={widths} initial={"zero"} className="home-span">Product</motion.div>
+                                    <motion.div animate={creative} variants={widths} initial={"zero"} className="home-span">Creative</motion.div>
+                                    <motion.div animate={advertising} variants={widths} initial={"zero"} className="home-span">Advertising</motion.div>
+                                    <div className="home-span text-white">{" "}<Cursor />Team</div>
+                                </h1>
+                            </div>
                         </div>
                     </div>
-                    <div className="bg-white py-3 py-lg-5">
+                    <div className="bg-white py-4 px-2 py-lg-5">
                         <div className="row no-gutters align-items-center justify-content-between container-lg mx-auto p-0">
                             <div className="col-12 col-lg-6 p-2 text-muted font-14 heading">
                                 Cubefarms is a full stack digital agency working remotely with clients to provide compelling solutions through
                             </div>
                             <div className="col-12 col-lg-5 p-2 d-flex justify-content-center heading-bold font-27" style={{color: PRIMARY}}>
-                                <div className="text-left" data-aos="fade-up" style={{minWidth: "340px"}}>         
+                                <div className="text-left" style={{minWidth: "340px"}}>         
                                     <div>Strategy. Design.</div>
                                     <div>Content. Technology.</div>
                                 </div>
@@ -164,6 +179,11 @@ export default function Outsource(){
                     <div className="mini-hero-container container-lg">
                         <div className="py-3 py-lg-5">
                             <div className="row no-gutters align-items-center">
+                                <div className="col-12 col-lg-6 p-3 order-1 order-lg-2">
+                                    <div className="d-flex align-items-center justify-content-center img-container">
+                                        <img src="/static/homepage/web.png" alt="Creative Services" />
+                                    </div>
+                                </div>
                                 <div className="col-12 col-lg-6 p-3 px-lg-0 order-2 order-lg-1">
                                     <div data-aos="fade-right" className="heading font-32">
                                         Web Studio
@@ -180,11 +200,6 @@ export default function Outsource(){
                                                 Explore
                                             </CustomButton1>
                                         </div>
-                                    </div>
-                                </div>
-                                <div className="col-12 col-lg-6 p-3 order-1 order-lg-2">
-                                    <div className="d-flex align-items-center justify-content-center img-container">
-                                        <img src="/static/homepage/web.png" alt="Creative Services" />
                                     </div>
                                 </div>
                             </div>
@@ -254,11 +269,6 @@ export default function Outsource(){
                     <div className="mini-hero-container container-lg text-black">
                         <div className="py-3 py-lg-5">
                             <div className="row no-gutters align-items-center">
-                                <div className="col-12 col-lg-6 p-3">
-                                    <div className="d-flex align-items-center justify-content-center img-container">
-                                        <img src="/static/homepage/digital.png" alt="Creative Services" />
-                                    </div>
-                                </div>
                                 <div className="col-12 col-lg-6 p-3 px-lg-0">
                                     <div data-aos="fade-left"className="heading font-32">
                                         Digital Advertising
@@ -278,20 +288,25 @@ export default function Outsource(){
                                     </div>
                                 </div>
                             </div>
+                            <div className="col-12 col-lg-6 p-3">
+                                <div className="d-flex align-items-center justify-content-center img-container">
+                                    <img src="/static/homepage/digital.png" alt="Creative Services" />
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <Transition key={4} height="100px" from="#ffffff" to="#f3f5fa" />
                     <div className="mini-hero-container text-black">
                         <div className="py-3 py-lg-5 px-3 heading">
                             <div style={{maxWidth: "1000px"}}>
-                                <div className="font-3 heading-bold">
+                                <div className="font-3 heading-thin">
                                     Inspiring the<br />
                                     <span style={{color: PRIMARY_DARK}}>remote working culture</span>
                                 </div>
                                 <div className="py-3 py-lg-5 font-2">
                                     Here at Cubefarms we are making work from home a reality. All you need is laptop, Wi-Fi and sheer dedication towards your job
                                 </div>
-                                <div className="font-weight-bold font-15">
+                                <div className="heading font-15">
                                     The future of work is here
                                 </div>
                                 <div className="pt-3">

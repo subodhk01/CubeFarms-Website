@@ -140,7 +140,8 @@ const Container = styled.div`
         opacity: 0;
         z-index: -1;
         position: absolute;
-        transition: 0.3s;
+        top: -160px;
+        transition: 0.3s opacity;
     }
     .dropdown {
         background: white;
@@ -159,6 +160,7 @@ const Container = styled.div`
     }
     .menu-item:hover + .dropdown-container {
         opacity: 1;
+        top: 100px;
     }
     .dropdown-item:hover {
         background: ${PRIMARY};
@@ -171,6 +173,7 @@ const Container = styled.div`
     }
     .dropdown-container:hover {
         opacity: 1;
+        top: 100px;
     }
     svg {
         transition: 0.5s;

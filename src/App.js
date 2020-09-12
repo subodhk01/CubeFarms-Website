@@ -8,7 +8,6 @@ import 'aos/dist/aos.css'
 
 import Homepage from './pages/Homepage'
 import JoinUs from './pages/JoinUs'
-import Outsource from './pages/Outsource'
 import Advertising from './pages/Services/Advertising'
 import Creative from './pages/Services/Creative'
 import Web from './pages/Services/Web'

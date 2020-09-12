@@ -18,81 +18,48 @@ const Container = styled.div`
 `
 const whyChooseUsData = [
     {
-        image: "/static/choose.png",
+        image: "/static/advertising/choose1.png",
         content: "We provide one-month free support and train you to tackle your new digital tool."
     },
     {
-        image: "/static/choose.png",
+        image: "/static/advertising/choose1.png",
         content: "We use open source scripts and libraries so that you can keep full ownership of the project."
     },
     {
-        image: "/static/choose.png",
+        image: "/static/advertising/choose1.png",
         content: "Our development team uses the best technologies to create high-performance, cost-efficient, flexible web experience."
     },
     {
-        image: "/static/choose.png",
-        content: "We also provide `maintenance and security pack` at an affordable rate so that you have a fast optimised and secure website 24*7"
-    },
-]
-const ourStandardsData = [
-    {
-        image: "/static/standard.png",
-        content: "Design Excellence",
-    },
-    {
-        image: "/static/standard.png",
-        content: "Build-in SEO.",
-    },
-    {
-        image: "/static/standard.png",
-        content: "100% responsive",
-    },
-    {
-        image: "/static/standard.png",
-        content: "Cross-browser compatibility",
-    },
-    {
-        image: "/static/standard.png",
-        content: "CMS enabled",
-    },
-    {
-        image: "/static/standard.png",
-        content: "1-month support after delivery"
+        image: "/static/advertising/choose1.png",
+        content: "*7"
     },
 ]
 const ourProcessData = [
     {
-        title: "UX",
-        content: "We also provide `maintenance and security pack` at an affordable rate so that you have a fast optimised and secure website 24*7"
+        title: "Market research",
+        icon: "/static/advertising/process1.png",
+        content: "We take a comprehensive approach across your industry trends, competitors, and target audience. We conduct market research to understand your digital potential and make strategic decisions"
     },
     {
-        title: "WIREFRAMING",
-        content: "We also provide `maintenance and security pack` at an affordable rate so that you have a fast optimised and secure website 24*7"
+        title: "Collaborate",
+        icon: "/static/advertising/process1.png",
+        content: "You know your business the best and we are experts at our work. At this stage, we collaborate with you to discuss your objectives and set short term and long term goals"
     },
     {
-        title: "DESIGNING",
-        content: "We also provide `maintenance and security pack` at an affordable rate so that you have a fast optimised and secure website 24*7"
+        title: "Strategy",
+        icon: "/static/advertising/process1.png",
+        content: "With research, data and industry knowledge, we develop multi-channel marketing strategies with your goals and objectives in mind"
     },
     {
-        title: "DEVELOPING",
-        content: "We also provide `maintenance and security pack` at an affordable rate so that you have a fast optimised and secure website 24*7"
+        title: "Execute",
+        icon: "/static/advertising/process1.png",
+        content: "From creating SEO friendly content to strategically curated campaigns, and everything in between. We execute our strategy to connect your brand with the targeted audience"
     },
     {
-        title: "TESTING",
-        content: "We also provide `maintenance and security pack` at an affordable rate so that you have a fast optimised and secure website 24*7"
-    },
-    {
-        title: "HOSTING",
-        content: "We also provide `maintenance and security pack` at an affordable rate so that you have a fast optimised and secure website 24*7"
-    },
-    {
-        title: "LAUNCH",
-        content: "We also provide `maintenance and security pack` at an affordable rate so that you have a fast optimised and secure website 24*7"
-    },
-    {
-        title: "MAINTENANCE",
-        content: "We also provide `maintenance and security pack` at an affordable rate so that you have a fast optimised and secure website 24*7"
-    },
+        title: "Optimize",
+        icon: "/static/advertising/process1.png",
+        content: "The digital world is constantly changing. That's why we take a smart approach to digital advertising. With which we adjust our strategy and implement new findings to improve your ROI"
+    }
 ]
 
 export default function Outsource(){
@@ -124,14 +91,11 @@ export default function Outsource(){
                                 </div>
                             </div>
                         </div>
-                        <div className="hero-container">
+                        <div className="hero-container bg-white">
                             <WhyChooseUs data={whyChooseUsData} heading="Why Choose Us?" />
                         </div>
-                        {/* <div className="hero-container">
-                            <OurStandards data={ourStandardsData} heading="Our Standards" />
-                        </div> */}
                         <div className="hero-container">
-                            <OurServices data={ourProcessData} heading="Our Process" />
+                            <OurServices data={ourProcessData} heading="Our Process" line="/static/advertising/line.png" />
                         </div>
                         <div className="hero-container bg-white py-0">
                             <StaticSidePanelSection />

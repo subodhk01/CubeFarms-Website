@@ -24,7 +24,7 @@ export default function(props) {
                                     <div data-aos="fade-up" data-aos-delay={0}>
                                         <Tilt className="Tilt custom-block1 py-3" options={{ max : 25 }}>
                                             <div className="text-center py-4">
-                                                <div>
+                                                <div className="mb-4">
                                                     <img src={item.image} />
                                                 </div>
                                                 <div className="font-11">
@@ -37,7 +37,7 @@ export default function(props) {
                                     <div data-aos="fade-up" data-aos-delay={300}>
                                         <Tilt className="Tilt custom-block1 py-3" options={{ max : 25 }}>
                                             <div className="text-center py-4">
-                                                <div>
+                                                <div className="mb-4">
                                                     <img src={item.image} />
                                                 </div>
                                                 <div className="font-11">

@@ -19,79 +19,87 @@ const Container = styled.div`
 `
 const whyChooseUsData = [
     {
-        image: "/static/choose.png",
+        image: "/static/web/choose1.png",
         content: "We provide one-month free support and train you to tackle your new digital tool."
     },
     {
-        image: "/static/choose.png",
+        image: "/static/web/choose2.png",
         content: "We use open source scripts and libraries so that you can keep full ownership of the project."
     },
     {
-        image: "/static/choose.png",
+        image: "/static/web/choose3.png",
         content: "Our development team uses the best technologies to create high-performance, cost-efficient, flexible web experience."
     },
     {
-        image: "/static/choose.png",
+        image: "/static/web/choose4.png",
         content: "We also provide `maintenance and security pack` at an affordable rate so that you have a fast optimised and secure website 24*7"
     },
 ]
 const ourStandardsData = [
     {
-        image: "/static/standard.png",
+        image: "/static/web/standard1.png",
         content: "Design Excellence",
     },
     {
-        image: "/static/standard.png",
+        image: "/static/web/standard2.png",
         content: "Build-in SEO.",
     },
     {
-        image: "/static/standard.png",
+        image: "/static/web/standard3.png",
         content: "100% responsive",
     },
     {
-        image: "/static/standard.png",
+        image: "/static/web/standard4.png",
         content: "Cross-browser compatibility",
     },
     {
-        image: "/static/standard.png",
+        image: "/static/web/standard5.png",
         content: "CMS enabled",
     },
     {
-        image: "/static/standard.png",
+        image: "/static/web/standard6.png",
         content: "1-month support after delivery"
     },
 ]
 const ourProcessData = [
     {
         title: "UX",
+        icon: "/static/web/process1.png",
         content: "We also provide `maintenance and security pack` at an affordable rate so that you have a fast optimised and secure website 24*7"
     },
     {
         title: "WIREFRAMING",
+        icon: "/static/web/process1.png",
         content: "We also provide `maintenance and security pack` at an affordable rate so that you have a fast optimised and secure website 24*7"
     },
     {
         title: "DESIGNING",
+        icon: "/static/web/process1.png",
         content: "We also provide `maintenance and security pack` at an affordable rate so that you have a fast optimised and secure website 24*7"
     },
     {
         title: "DEVELOPING",
+        icon: "/static/web/process1.png",
         content: "We also provide `maintenance and security pack` at an affordable rate so that you have a fast optimised and secure website 24*7"
     },
     {
         title: "TESTING",
+        icon: "/static/web/process1.png",
         content: "We also provide `maintenance and security pack` at an affordable rate so that you have a fast optimised and secure website 24*7"
     },
     {
         title: "HOSTING",
+        icon: "/static/web/process1.png",
         content: "We also provide `maintenance and security pack` at an affordable rate so that you have a fast optimised and secure website 24*7"
     },
     {
         title: "LAUNCH",
+        icon: "/static/web/process1.png",
         content: "We also provide `maintenance and security pack` at an affordable rate so that you have a fast optimised and secure website 24*7"
     },
     {
         title: "MAINTENANCE",
+        icon: "/static/web/process1.png",
         content: "We also provide `maintenance and security pack` at an affordable rate so that you have a fast optimised and secure website 24*7"
     },
 ]
@@ -131,7 +139,7 @@ export default function Web(){
                             <OurStandards data={ourStandardsData} heading="Our Standards" />
                         </div>
                         <div className="hero-container">
-                            <OurServices data={ourProcessData} heading="Our Process" />
+                            <OurServices data={ourProcessData} heading="Our Process" line={"/static/web/line.png"} />
                         </div>
                         <div className="hero-container bg-white py-0">
                             <StaticSidePanelSection />

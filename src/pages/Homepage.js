@@ -287,10 +287,10 @@ export default function Outsource(){
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div className="col-12 col-lg-6 p-3">
-                                <div className="d-flex align-items-center justify-content-center img-container">
-                                    <img src="/static/homepage/digital.png" alt="Creative Services" />
+                                <div className="col-12 col-lg-6 p-3">
+                                    <div className="d-flex align-items-center justify-content-center img-container">
+                                        <img src="/static/homepage/digital.png" alt="Creative Services" />
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -299,11 +299,11 @@ export default function Outsource(){
                     <div className="mini-hero-container text-black">
                         <div className="py-3 py-lg-5 px-3 heading">
                             <div style={{maxWidth: "1000px"}}>
-                                <div className="font-3 heading-thin">
+                                <div className="font-3 heading">
                                     Inspiring the<br />
                                     <span style={{color: PRIMARY_DARK}}>remote working culture</span>
                                 </div>
-                                <div className="py-3 py-lg-5 font-2">
+                                <div className="py-3 py-lg-5 font-2 heading-thin">
                                     Here at Cubefarms we are making work from home a reality. All you need is laptop, Wi-Fi and sheer dedication towards your job
                                 </div>
                                 <div className="heading font-15">
@@ -320,7 +320,7 @@ export default function Outsource(){
                         </div>
                     </div>
                     <Transition key={5} height="100px" from="#f3f5fa" to="#f3f5fa" />
-                    <div className="mini-hero-container text-black bg-white">
+                    <div className="mini-hero-container bg-black text-white">
                         <div className="py-3 py-lg-5 px-3 heading text-center">
                             <div style={{maxWidth: "1000px"}}>
                                 <div className="font-3 heading-bold">

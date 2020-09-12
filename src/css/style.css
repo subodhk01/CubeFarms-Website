@@ -1,7 +1,10 @@
 html::-webkit-scrollbar {
     display: none;
 }
-html {
+*::-webkit-scrollbar {
+    display: none;
+}
+*, html {
     -ms-overflow-style: none;
 }
 a, a:hover {

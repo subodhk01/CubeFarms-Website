@@ -21,6 +21,11 @@ const Container = styled.div`
         font-size: 2rem;
         margin-bottom: 14px;
     }
+    .content-title img {
+        width: 47px;
+        height: 47px;
+        margin: 10px;
+    }
     .middle-image-box {
         position: absolute;
         left: 0;
@@ -62,8 +67,8 @@ export default function OurProcess(props) {
                                 <div data-aos="fade-up" data-aos-delay={200} key={index} className="service-block p-2">
                                     <div className="">
                                         <div className={`content-box ${index%2 ? "ml-auto" : "mr-auto"}`}>
-                                            <div className="content-title">
-                                                {item.title}
+                                            <div className="content-title d-flex align-items-center">
+                                                { item.icon && <img src={item.icon} alt={item.title} /> }  {item.title}
                                             </div>
                                             <div className="">
                                                 {item.content}

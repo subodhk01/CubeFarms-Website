@@ -22,6 +22,11 @@ const Container = styled.div`
         border-radius: 10px;
         background: white;
         box-shadow: 0px 0px 30px 6px #ecf0f7;
+        background: url("/static/looking.png");
+        background-size: 150px;
+        background-repeat: no-repeat;
+        background-position: left bottom;
+        padding-left: 150px !important;
     }
     .title {
         font-size: 1.3rem;

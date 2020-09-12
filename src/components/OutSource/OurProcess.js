@@ -52,7 +52,7 @@ export default function OurProcess(props) {
                 <div>
                     <div className="position-relative pt-5 pt-xl-0">
                         <div className="middle-image-box d-none d-xl-block">
-                            <img src={line} />
+                            <img src={props.line || line} />
                         </div>
                         <div className={`middle-black-box d-none d-xl-block`}>
 
@@ -73,7 +73,7 @@ export default function OurProcess(props) {
                                 </div>
                             )}
                         </div>
-                        <div style={{height: "60px"}}>
+                        <div style={{height: "160px"}}>
                             
                         </div>
                     </div>

@@ -19,45 +19,81 @@ const Container = styled.div`
 `
 const whyChooseUsData = [
     {
-        image: "/static/creative/choose1.png",
+        image: "/static/choose.png",
         content: "We provide one-month free support and train you to tackle your new digital tool."
     },
     {
-        image: "/static/creative/choose2.png",
+        image: "/static/choose.png",
         content: "We use open source scripts and libraries so that you can keep full ownership of the project."
-    }
+    },
+    {
+        image: "/static/choose.png",
+        content: "Our development team uses the best technologies to create high-performance, cost-efficient, flexible web experience."
+    },
+    {
+        image: "/static/choose.png",
+        content: "We also provide `maintenance and security pack` at an affordable rate so that you have a fast optimised and secure website 24*7"
+    },
+]
+const ourStandardsData = [
+    {
+        image: "/static/standard.png",
+        content: "Design Excellence",
+    },
+    {
+        image: "/static/standard.png",
+        content: "Build-in SEO.",
+    },
+    {
+        image: "/static/standard.png",
+        content: "100% responsive",
+    },
+    {
+        image: "/static/standard.png",
+        content: "Cross-browser compatibility",
+    },
+    {
+        image: "/static/standard.png",
+        content: "CMS enabled",
+    },
+    {
+        image: "/static/standard.png",
+        content: "1-month support after delivery"
+    },
 ]
 const ourProcessData = [
     {
-        title: "Brief",
-        icon: "process1",
+        title: "UX",
         content: "We also provide `maintenance and security pack` at an affordable rate so that you have a fast optimised and secure website 24*7"
     },
     {
-        title: "Research",
-        icon: "process2",
+        title: "WIREFRAMING",
         content: "We also provide `maintenance and security pack` at an affordable rate so that you have a fast optimised and secure website 24*7"
     },
     {
-        title: "Sketch",
-        icon: "process3",
+        title: "DESIGNING",
         content: "We also provide `maintenance and security pack` at an affordable rate so that you have a fast optimised and secure website 24*7"
     },
     {
-        title: "Concepts",
-        icon: "process4",
+        title: "DEVELOPING",
         content: "We also provide `maintenance and security pack` at an affordable rate so that you have a fast optimised and secure website 24*7"
     },
     {
-        title: "Present",
-        icon: "process5",
+        title: "TESTING",
         content: "We also provide `maintenance and security pack` at an affordable rate so that you have a fast optimised and secure website 24*7"
     },
     {
-        title: "Revise",
-        icon: "process6",
+        title: "HOSTING",
         content: "We also provide `maintenance and security pack` at an affordable rate so that you have a fast optimised and secure website 24*7"
-    }
+    },
+    {
+        title: "LAUNCH",
+        content: "We also provide `maintenance and security pack` at an affordable rate so that you have a fast optimised and secure website 24*7"
+    },
+    {
+        title: "MAINTENANCE",
+        content: "We also provide `maintenance and security pack` at an affordable rate so that you have a fast optimised and secure website 24*7"
+    },
 ]
 
 export default function Product(){
@@ -77,13 +113,13 @@ export default function Product(){
                             <div className="container">
                                 <div className="p-3" style={{maxWidth: "600px"}}>
                                     <h1 className="font-39 text-white heading-thin">
-                                        CREATIVE SERVICES
+                                        PRODUCT DESIGN
                                     </h1>
                                     <div className="font-13 mb-2" style={{color: PRIMARY}}>
-                                        Good design is good business
+                                        We build digital products from scratch
                                     </div>
                                     <div className="font-11" style={{color: "rgba(245,245,245,0.83)", fontFamily: "madetommy-light"}}>
-                                        We are passionate about effective design. Driven by our vision, we combine traditional graphics design principles with new technology to produce excellent design concepts that stand out
+                                        We take your ideas and create user-centric digital products with high-end frontend/backend integration and bespoke user experience
                                     </div>
                                 </div>
                             </div>
@@ -92,7 +128,7 @@ export default function Product(){
                             <WhyChooseUs data={whyChooseUsData} heading="Why choose our services" />
                         </div>
                         <div className="hero-container">
-                            <OurServices data={ourProcessData} heading="Our Process" line="/static/creative/line.png" />
+                            <OurServices data={ourProcessData} heading="Our Process" />
                         </div>
                         <div className="hero-container bg-white py-0">
                             <StaticSidePanelSection />

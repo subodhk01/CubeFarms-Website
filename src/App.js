@@ -16,6 +16,7 @@ import AboutUs from './pages/Company/AboutUs'
 import Approach from './pages/Company/Approach'
 import OutSource from './pages/Company/Outsource'
 import Contact from './pages/Contact'
+import Product from './pages/Services/Product'
 
 function App() {
     return (
@@ -26,6 +27,7 @@ function App() {
             <Route path="/joinus" component={JoinUs} />
             <Route path="/contact" component={Contact} />
             <Route path="/web" component={Web} />
+            <Route path="/product" component={Product} />
             <Route path="/advertising" component={Advertising} />
             <Route path="/creative" component={Creative} />
             <Route path="/" component={Homepage} />

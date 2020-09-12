@@ -28,7 +28,7 @@ export default function WhyChooseUs(props) {
                             <div className="row no-gutters">
                                 {props.data.map((item,index) => 
                                     <div key={index} className="col-md-12 p-3">
-                                        <div data-aos="fade-up" className="item-shadow text-black">
+                                        <div data-aos="fade-up" className="item-shadow text-black p-3">
                                             <div className="row no-gutters align-items-center">
                                                 <div className="col-4">
                                                     <img src={item.image} />

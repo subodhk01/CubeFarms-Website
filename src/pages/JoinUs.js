@@ -18,19 +18,17 @@ const Container = styled.div`
         background-size: cover;
     }
     .subheading {
-        font-size: 2.3rem;
+        font-size: 1.3rem;
     }
     .heading {
-        font-size: 2.6rem;
+        font-size: 1.6rem;
     }
     .subheading, .heading {
-        text-shadow: 0px 0px 5px silver;
         font-weight: bold;
     }
     .subheadingWhite {
         color: white;
         font-size: 1.8rem;
-        text-shadow: 0px 0px 5px rgba(0,0,0,0.4);
     }
     .form {
         overflow: hidden;
@@ -38,7 +36,17 @@ const Container = styled.div`
     }
     @media(min-width: 992px){
         .outerContainer {
-            height: 100%;
+            padding-top: 89px;
+            height: calc(100%);
+        }
+        .outerContainer > div {
+
+        }
+        .subheading {
+            font-size: 2.3rem;
+        }
+        .heading {
+            font-size: 2.6rem;
         }
     }
 `
@@ -46,15 +54,15 @@ const Container = styled.div`
 export default function JoinUs(){
     return (
         <Container>
-            <Header />
+            <Header full={true} />
             <div className="row no-gutters outerContainer">
                 <div className="col-12 col-lg-6 hero px-2 px-md-5 py-5">
-                    <div className="py-5 h-100 d-flex flex-column align-items-center justify-content-center">
+                    <div className="py-10 h-100 d-flex flex-column align-items-center justify-content-center">
                         <div className="subheading">Work someplace Awesome</div>
                         <div className="heading">Work at Cubefarms</div>
                     </div>
                 </div>
-                <div className="col-12 col-lg-6 form p-3 p-md-5 d-flex flex-column position-relative">
+                <div className="col-12 col-lg-6 form px-3 px-md-5 py-10 py-md-3 d-flex flex-column position-relative">
                     <div className="subheadingWhite w-100 py-md-2">
                         Let's get to know you!
                     </div>

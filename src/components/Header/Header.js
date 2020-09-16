@@ -160,7 +160,7 @@ const Container = styled.div`
     }
     .menu-item:hover + .dropdown-container {
         opacity: 1;
-        top: 100px;
+        top: 88px;
     }
     .dropdown-item:hover {
         background: ${PRIMARY};
@@ -173,7 +173,7 @@ const Container = styled.div`
     }
     .dropdown-container:hover {
         opacity: 1;
-        top: 100px;
+        top: 88px;
     }
     svg {
         transition: 0.5s;
@@ -220,7 +220,6 @@ export default function Header(props){
     const [ navHidden, setNavHidden ] = React.useState(false)
     useScrollPosition(({ prevPos, currPos }) => {
         const isShow = currPos.y > prevPos.y
-        console.log(isShow)
         if (isShow === navHidden) setNavHidden(!isShow)
     }, [navHidden])
     const handleDropdown = (item) => {

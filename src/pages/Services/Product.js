@@ -20,20 +20,20 @@ const Container = styled.div`
 const whyChooseUsData = [
     {
         image: "/static/choose.png",
-        content: "We provide one-month free support and train you to tackle your new digital tool."
+        content: <><strong>User-centric approach:</strong> We focus on the needs and expectations of end-users while working on product development. Considering user feedback and timely testing of the product during the development phase ensures the product that users want</>
     },
     {
         image: "/static/choose.png",
-        content: "We use open source scripts and libraries so that you can keep full ownership of the project."
+        content: <><strong>Agile development:</strong> We focus on the needs and expectations of end-users while working on product development. Considering user feedback and timely testing of the product during the development phase ensures the product that users want</>
     },
     {
         image: "/static/choose.png",
-        content: "Our development team uses the best technologies to create high-performance, cost-efficient, flexible web experience."
+        content: <><strong>Independent dedicated teams:</strong> We focus on the needs and expectations of end-users while working on product development. Considering user feedback and timely testing of the product during the development phase ensures the product that users want</>
     },
     {
         image: "/static/choose.png",
-        content: "We also provide `maintenance and security pack` at an affordable rate so that you have a fast optimised and secure website 24*7"
-    },
+        content: <><strong>Cost-saving:</strong> We focus on the needs and expectations of end-users while working on product development. Considering user feedback and timely testing of the product during the development phase ensures the product that users want</>
+    }
 ]
 const ourStandardsData = [
     {
@@ -63,37 +63,25 @@ const ourStandardsData = [
 ]
 const ourProcessData = [
     {
-        title: "UX",
-        content: "We also provide `maintenance and security pack` at an affordable rate so that you have a fast optimised and secure website 24*7"
+        title: "Give us a brief of your idea",
+        content: "First we need to understand your vision , business and market need. So that we can proceed in a constructive way"
     },
     {
-        title: "WIREFRAMING",
-        content: "We also provide `maintenance and security pack` at an affordable rate so that you have a fast optimised and secure website 24*7"
+        title: "Discovery and planning",
+        content: "Now we identify the product need and do the market research. Now we structure the product with this market research and user requirements"
     },
     {
-        title: "DESIGNING",
-        content: "We also provide `maintenance and security pack` at an affordable rate so that you have a fast optimised and secure website 24*7"
+        title: "Product design (UI+UX)",
+        content: "Once the conceptual work is done .We start to work on the UI/UX and wireframing of the product. We illiterate the design and interface of final product"
     },
     {
-        title: "DEVELOPING",
-        content: "We also provide `maintenance and security pack` at an affordable rate so that you have a fast optimised and secure website 24*7"
+        title: "Product development phase",
+        content: "Having the concept and frontend design in place, we can move on the backend development of the product"
     },
     {
-        title: "TESTING",
-        content: "We also provide `maintenance and security pack` at an affordable rate so that you have a fast optimised and secure website 24*7"
-    },
-    {
-        title: "HOSTING",
-        content: "We also provide `maintenance and security pack` at an affordable rate so that you have a fast optimised and secure website 24*7"
-    },
-    {
-        title: "LAUNCH",
-        content: "We also provide `maintenance and security pack` at an affordable rate so that you have a fast optimised and secure website 24*7"
-    },
-    {
-        title: "MAINTENANCE",
-        content: "We also provide `maintenance and security pack` at an affordable rate so that you have a fast optimised and secure website 24*7"
-    },
+        title: "User feedback/testing and market validation",
+        content: "Last step is the ultimate testing of the product by its audience. We’ll set up proper data analysis to track the user reactions and  market validation of the product to update  it to its best version"
+    }
 ]
 
 export default function Product(){
@@ -105,10 +93,11 @@ export default function Product(){
         }
     } ,[])
     return (
-        <Layout header={{white: true,full: true}}>
+        <Layout header={{white: true,full: true}} footer={{black: true}}>
             <Container>
                 <div className="background-fade">
                     <AnimatedBg>
+                        <Transition height="100px" from="#000000" to="#000000" />
                         <div className="hero-container">
                             <div className="container">
                                 <div className="p-3" style={{maxWidth: "600px"}}>
@@ -130,11 +119,10 @@ export default function Product(){
                         <div className="hero-container">
                             <OurServices data={ourProcessData} heading="Our Process" />
                         </div>
-                        <div className="hero-container bg-white py-0">
+                        {/* <div className="hero-container bg-white py-0">
                             <StaticSidePanelSection />
-                        </div>
-                        <Transition height="100px" from="#000000" to="#ffffff" />
-                        <div className="min-hero-container py-10">
+                        </div> */}
+                        <div className="min-hero-container py-10 bg-white">
                             <LookingForSomethingElse />
                         </div>
                     </AnimatedBg>

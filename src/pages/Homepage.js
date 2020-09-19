@@ -10,7 +10,6 @@ import { AnimatedBg, Transition } from 'scroll-background';
 import { PRIMARY, PRIMARY_DARK } from '../utils/Colors'
 import { FaQuoteLeft } from 'react-icons/fa'
 import Footer from '../components/Footer/Footer'
-import CustomButton1 from '../components/Buttons/CustomButton1'
 import SingleArrowButton from '../components/Buttons/SingleArrowButton'
 
 const widths = {
@@ -212,9 +211,9 @@ export default function Outsource(){
                                     </div>
                                     <div data-aos="fade-right" data-aos-delay={1200} className="py-3 py-lg-5">
                                         <div>
-                                            <CustomButton1>
+                                            <SingleArrowButton>
                                                 Explore
-                                            </CustomButton1>
+                                            </SingleArrowButton>
                                         </div>
                                     </div>
                                 </div>
@@ -247,9 +246,9 @@ export default function Outsource(){
                                     </div>
                                     <div data-aos="fade-right" data-aos-delay={1200} className="py-3 py-lg-5">
                                         <div>
-                                            <CustomButton1>
+                                            <SingleArrowButton>
                                                 Explore
-                                            </CustomButton1>
+                                            </SingleArrowButton>
                                         </div>
                                     </div>
                                 </div>
@@ -272,9 +271,9 @@ export default function Outsource(){
                                     </div>
                                     <div data-aos="fade-left" data-aos-delay={1200} className="py-3 py-lg-5">
                                         <div>
-                                            <CustomButton1 white>
+                                            <SingleArrowButton white>
                                                 Explore
-                                            </CustomButton1>
+                                            </SingleArrowButton>
                                         </div>
                                     </div>
                                 </div>
@@ -307,9 +306,9 @@ export default function Outsource(){
                                     </div>
                                     <div data-aos="fade-left" data-aos-delay={1200} className="py-3 py-lg-5">
                                         <div>
-                                            <CustomButton1 white>
+                                            <SingleArrowButton white>
                                                 Explore
-                                            </CustomButton1>
+                                            </SingleArrowButton>
                                         </div>
                                     </div>
                                 </div>

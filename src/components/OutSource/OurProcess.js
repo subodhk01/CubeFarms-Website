@@ -36,6 +36,14 @@ const Container = styled.div`
     .middle-image-box img {
         max-width: 500px;
     }
+    @keyframes entry{
+        0%{
+            background: white;
+        }
+        100% {
+            background: black;
+        }
+    }
     .middle-black-box {
         position: sticky;
         left: 50%;
@@ -44,6 +52,7 @@ const Container = styled.div`
         width: 300px;
         height: 200px;
         background: black;
+        animation: entry 1s ease;
     }
 `
 
@@ -78,7 +87,7 @@ export default function OurProcess(props) {
                                 </div>
                             )}
                         </div>
-                        <div style={{height: "160px"}}>
+                        <div style={{height: "175px"}}>
                             
                         </div>
                     </div>

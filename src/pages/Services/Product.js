@@ -19,67 +19,46 @@ const Container = styled.div`
 `
 const whyChooseUsData = [
     {
-        image: "/static/choose.png",
+        image: "/static/product/choose1.png",
         content: <><strong>User-centric approach:</strong> We focus on the needs and expectations of end-users while working on product development. Considering user feedback and timely testing of the product during the development phase ensures the product that users want</>
     },
     {
-        image: "/static/choose.png",
+        image: "/static/product/choose2.png",
         content: <><strong>Agile development:</strong> We focus on the needs and expectations of end-users while working on product development. Considering user feedback and timely testing of the product during the development phase ensures the product that users want</>
     },
     {
-        image: "/static/choose.png",
+        image: "/static/product/choose3.png",
         content: <><strong>Independent dedicated teams:</strong> We focus on the needs and expectations of end-users while working on product development. Considering user feedback and timely testing of the product during the development phase ensures the product that users want</>
     },
     {
-        image: "/static/choose.png",
+        image: "/static/product/choose4.png",
         content: <><strong>Cost-saving:</strong> We focus on the needs and expectations of end-users while working on product development. Considering user feedback and timely testing of the product during the development phase ensures the product that users want</>
     }
-]
-const ourStandardsData = [
-    {
-        image: "/static/standard.png",
-        content: "Design Excellence",
-    },
-    {
-        image: "/static/standard.png",
-        content: "Build-in SEO.",
-    },
-    {
-        image: "/static/standard.png",
-        content: "100% responsive",
-    },
-    {
-        image: "/static/standard.png",
-        content: "Cross-browser compatibility",
-    },
-    {
-        image: "/static/standard.png",
-        content: "CMS enabled",
-    },
-    {
-        image: "/static/standard.png",
-        content: "1-month support after delivery"
-    },
 ]
 const ourProcessData = [
     {
         title: "Give us a brief of your idea",
+        icon: "/static/product/process1.png",
         content: "First we need to understand your vision , business and market need. So that we can proceed in a constructive way"
     },
     {
         title: "Discovery and planning",
+        icon: "/static/product/process1.png",
         content: "Now we identify the product need and do the market research. Now we structure the product with this market research and user requirements"
     },
     {
         title: "Product design (UI+UX)",
+        icon: "/static/product/process1.png",
         content: "Once the conceptual work is done .We start to work on the UI/UX and wireframing of the product. We illiterate the design and interface of final product"
     },
     {
         title: "Product development phase",
+        icon: "/static/product/process1.png",
         content: "Having the concept and frontend design in place, we can move on the backend development of the product"
     },
     {
         title: "User feedback/testing and market validation",
+        icon: "/static/product/process1.png",
         content: "Last step is the ultimate testing of the product by its audience. We’ll set up proper data analysis to track the user reactions and  market validation of the product to update  it to its best version"
     }
 ]
@@ -97,7 +76,7 @@ export default function Product(){
             <Container>
                 <div className="background-fade">
                     <AnimatedBg>
-                        <Transition height="100px" from="#000000" to="#000000" />
+                        <Transition height="0px" from="#000000" to="#000000" />
                         <div className="hero-container">
                             <div className="container">
                                 <div className="p-3" style={{maxWidth: "600px"}}>
@@ -117,7 +96,7 @@ export default function Product(){
                             <WhyChooseUs data={whyChooseUsData} heading="Why choose our services" />
                         </div>
                         <div className="hero-container">
-                            <OurServices data={ourProcessData} heading="Our Process" />
+                            <OurServices data={ourProcessData} heading="Our Process" line="/static/product/line.png" />
                         </div>
                         {/* <div className="hero-container bg-white py-0">
                             <StaticSidePanelSection />

@@ -19,10 +19,18 @@ const widths = {
 }
 
 const Container = styled.div`
+    @keyframes backgroundMove {
+        0% { background-position: 20px 30vh; }
+        25% { background-position: 0px 32vh; }
+        50% { background-position: -20px 30vh }
+        75% { background-position: 0px 28vh; }
+    }
     .top-container {
-        background: url('/static/homepage/top.png');
+        background: url('/static/hometop.png');
+        background-size: contain;
         background-repeat: no-repeat;
-        background-position: right bottom;
+        background-position: 20px 30vh;
+        animation: backgroundMove ease 9s infinite;
     }
     .img-container {
         text-align: center;
@@ -39,7 +47,7 @@ const Container = styled.div`
         background: grey;
     }
     .home-span {
-        overflow: hidden;
+        overflow: auto;
         display: inline-block;
         font-family: "madetommy-regular";
         color: ${PRIMARY_DARK};
@@ -54,12 +62,22 @@ const Container = styled.div`
     }
     @media(max-width: 991px){
         .home-heading {
-            font-size: 2rem;
+            font-size: 1.9rem;
         }
+        .top-container {
+            background-size: cover;
+        }
+    }
+    .culture-section {
+        background: url('/static/worldmap.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center center;    
     }
 `
 
 export default function Outsource(){
+    const [ white, setWhite ] = React.useState(true)
     const web = useAnimation()
     const product = useAnimation()
     const creative = useAnimation()
@@ -68,6 +86,9 @@ export default function Outsource(){
         if(window){
             AOS.init({
                 duration: 1400,
+            })
+            document.addEventListener("aos:in", ({ detail }) => {
+                console.log("white in", detail)
             })
         }
         setTimeout(() => {
@@ -124,7 +145,7 @@ export default function Outsource(){
     return (
         <Container>
             <div>
-                <Header white full />
+                <Header white={white} full />
             </div>
             <div className="background-fade">
                 <AnimatedBg>
@@ -156,7 +177,7 @@ export default function Outsource(){
                             </div>
                         </div>
                     </div>
-                    <div className="bg-white py-4 px-2 py-lg-5">
+                    <div className="bg-white py-4 px-2 py-lg-5" data-aos-id="white-bg">
                         <div className="row no-gutters align-items-center justify-content-between container-lg mx-auto p-0">
                             <div className="col-12 col-lg-6 p-2 text-muted font-14 heading">
                                 Cubefarms is a full stack digital agency working remotely with clients to provide compelling solutions through
@@ -179,13 +200,43 @@ export default function Outsource(){
                     <div className="mini-hero-container container-lg">
                         <div className="py-3 py-lg-5">
                             <div className="row no-gutters align-items-center">
+                                <div className="col-12 col-lg-6 p-3 px-lg-0 order-2 order-lg-1">
+                                    <div data-aos="fade-right" className="heading font-32">
+                                        Product design
+                                    </div>
+                                    <div data-aos="fade-right" data-aos-delay={400} className="heading-thin font-18 text-muted py-3">
+                                        We work with startups and brands to create amazing MVPs, app prototypes and custom apps. Pair with our expert product designers for a user centric product.
+                                    </div>
+                                    <div data-aos="fade-right" data-aos-delay={800} className="text-muted">
+                                        <div className="grey-dash"></div> Corporate Design, Logo Design, Professional Motion Graphics, Product label Design
+                                    </div>
+                                    <div data-aos="fade-right" data-aos-delay={1200} className="py-3 py-lg-5">
+                                        <div>
+                                            <CustomButton1>
+                                                Explore
+                                            </CustomButton1>
+                                        </div>
+                                    </div>
+                                </div>
                                 <div className="col-12 col-lg-6 p-3 order-1 order-lg-2">
+                                    <div className="d-flex align-items-center justify-content-center img-container">
+                                        <img src="/static/homepage/product.png" alt="Creative Services" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <Transition key={1} height="100px" from="#000000" to="#ffffff" />
+                    <div className="mini-hero-container container-lg text-black">
+                        <div className="py-3 py-lg-5">
+                            <div className="row no-gutters align-items-center">
+                                <div className="col-12 col-lg-6 p-3 order-1">
                                     <div className="d-flex align-items-center justify-content-center img-container">
                                         <img src="/static/homepage/web.png" alt="Creative Services" />
                                     </div>
                                 </div>
-                                <div className="col-12 col-lg-6 p-3 px-lg-0 order-2 order-lg-1">
-                                    <div data-aos="fade-right" className="heading font-32">
+                                <div className="col-12 col-lg-6 p-3 px-lg-0 order-2">
+                                    <div data-aos="fade-right" className="heading font-32 text-black">
                                         Web Studio
                                     </div>
                                     <div data-aos="fade-right" data-aos-delay={400} className="heading-thin font-18 text-muted py-3">
@@ -205,38 +256,38 @@ export default function Outsource(){
                             </div>
                         </div>
                     </div>
-                    <Transition key={1} height="100px" from="#000000" to="#ffffff" />
-                    <div className="mini-hero-container container-lg text-black">
+                    <Transition key={2} height="100px" from="#ffffff" to="#000000" />
+                    <div className="mini-hero-container container-lg">
                         <div className="py-3 py-lg-5">
                             <div className="row no-gutters align-items-center">
-                                <div className="col-12 col-lg-6 p-3 px-lg-0">
-                                    <div data-aos="fade-right" className="heading font-32  text-black">
-                                        Product design
+                                <div className="col-12 col-lg-6 p-3 px-lg-0 order-2 order-lg-1">
+                                    <div data-aos="fade-left"className="heading font-32">
+                                        Digital Advertising
                                     </div>
-                                    <div data-aos="fade-right" data-aos-delay={400} className="heading-thin font-18 text-muted py-3">
-                                        We work with startups and brands to create amazing MVPs, app prototypes and custom apps. Pair with our expert product designers for a user centric product.
+                                    <div data-aos="fade-left" data-aos-delay={400} className="heading-thin font-18 text-muted py-3">
+                                        We use a data driven transparent approach to achieve your online objectives. Our digital branding services have proven to increase traggic, conversions and revenue.
                                     </div>
-                                    <div data-aos="fade-right" data-aos-delay={800} className="text-muted">
+                                    <div data-aos="fade-left" data-aos-delay={800} className="text-muted">
                                         <div className="grey-dash"></div> Corporate Design, Logo Design, Professional Motion Graphics, Product label Design
                                     </div>
-                                    <div data-aos="fade-right" data-aos-delay={1200} className="py-3 py-lg-5">
+                                    <div data-aos="fade-left" data-aos-delay={1200} className="py-3 py-lg-5">
                                         <div>
-                                            <CustomButton1>
+                                            <CustomButton1 white>
                                                 Explore
                                             </CustomButton1>
                                         </div>
                                     </div>
                                 </div>
-                                <div className="col-12 col-lg-6 p-3">
+                                <div className="col-12 col-lg-6 p-3 order-1 order-lg-2">
                                     <div className="d-flex align-items-center justify-content-center img-container">
-                                        <img src="/static/homepage/product.png" alt="Creative Services" />
+                                        <img src="/static/homepage/digital.png" alt="Creative Services" />
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <Transition key={2} height="100px" from="#ffffff" to="#000000" />
-                    <div className="mini-hero-container container-lg">
+                    <Transition key={3} height="100px" from="#000000" to="#ffffff" />
+                    <div className="mini-hero-container container-lg text-black">
                         <div className="py-3 py-lg-5">
                             <div className="row no-gutters align-items-center">
                                 <div className="col-12 col-lg-6 p-3">
@@ -265,38 +316,8 @@ export default function Outsource(){
                             </div>
                         </div>
                     </div>
-                    <Transition key={3} height="100px" from="#000000" to="#ffffff" />
-                    <div className="mini-hero-container container-lg text-black">
-                        <div className="py-3 py-lg-5">
-                            <div className="row no-gutters align-items-center">
-                                <div className="col-12 col-lg-6 p-3 px-lg-0">
-                                    <div data-aos="fade-left"className="heading font-32">
-                                        Digital Advertising
-                                    </div>
-                                    <div data-aos="fade-left" data-aos-delay={400} className="heading-thin font-18 text-muted py-3">
-                                        We use a data driven transparent approach to achieve your online objectives. Our digital branding services have proven to increase traggic, conversions and revenue.
-                                    </div>
-                                    <div data-aos="fade-left" data-aos-delay={800} className="text-muted">
-                                        <div className="grey-dash"></div> Corporate Design, Logo Design, Professional Motion Graphics, Product label Design
-                                    </div>
-                                    <div data-aos="fade-left" data-aos-delay={1200} className="py-3 py-lg-5">
-                                        <div>
-                                            <CustomButton1 white>
-                                                Explore
-                                            </CustomButton1>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="col-12 col-lg-6 p-3">
-                                    <div className="d-flex align-items-center justify-content-center img-container">
-                                        <img src="/static/homepage/digital.png" alt="Creative Services" />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <Transition key={4} height="100px" from="#ffffff" to="#f3f5fa" />
-                    <div className="mini-hero-container text-black">
+                    <Transition key={4} height="50px" from="#ffffff" to="#f3f5fa" />
+                    <div className="hero-container text-black culture-section">
                         <div className="py-3 py-lg-5 px-3 heading">
                             <div style={{maxWidth: "1000px"}}>
                                 <div className="font-3 heading">

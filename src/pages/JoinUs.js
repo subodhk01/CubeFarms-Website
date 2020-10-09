@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import Header from '../components/Header/Header'
+import Header from '../components/Header/JoinUsHeader'
 import JoinUsForm from '../components/JoinUsForm'
 import StepScroll from '../components/StepScroll'
 
@@ -13,7 +13,7 @@ const Container = styled.div`
     height: 100%;
     .hero {
         height: 100%;
-        background: url(${background});
+        //background: url(${background});
         background-repeat: no-repeat;
         background-size: cover;
     }
@@ -32,12 +32,11 @@ const Container = styled.div`
     }
     .form {
         overflow: hidden;
-        background: linear-gradient(to bottom,${PRIMARY}, ${PRIMARY_DARK})
+        background: linear-gradient(to bottom,${PRIMARY_DARK}, ${PRIMARY_DARK})
     }
     @media(min-width: 992px){
-        .outerContainer {
-            padding-top: 89px;
-            height: calc(100%);
+        .outerContainer {      
+            min-height: 100%;
         }
         .outerContainer > div {
 
@@ -49,14 +48,26 @@ const Container = styled.div`
             font-size: 2.6rem;
         }
     }
+    .hero {
+        min-height: 100%;
+        height: auto;
+    }
 `
 
 export default function JoinUs(){
+    React.useEffect(() => {
+        if(document){
+            document.body.style.background = PRIMARY_DARK
+        }
+    } ,[])
     return (
         <Container>
-            <Header full={true} />
+            <div className="d-block d-lg-none">
+                <Header full={false} transparent />
+            </div>
             <div className="row no-gutters outerContainer">
-                <div className="col-12 col-lg-6 hero px-2 px-md-5 py-5">
+                <div className="col-12 col-lg-6 d-none d-lg-block hero position-relative bg-white">
+                    <Header full={false} transparent />
                     <div className="py-10 h-100 d-flex flex-column align-items-center justify-content-center">
                         <div className="subheading">Work someplace Awesome</div>
                         <div className="heading">Work at Cubefarms</div>

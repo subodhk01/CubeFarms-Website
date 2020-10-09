@@ -17,7 +17,7 @@ export default function(props) {
                     {props.heading}
                 </h2>
                 <div className="container">
-                    <div className="row no-gutters">
+                    <div className="row no-gutters justify-content-center align-items-stretch">
                         {props.data.map((item,index) => 
                             <div key={index} className="col-md-4 p-2 p-md-4">
                                 { index < 3 ?

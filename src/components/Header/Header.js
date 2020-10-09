@@ -13,6 +13,7 @@ import { useScrollPosition } from '../../utils/scrollDirection'
 
 const logoWhite = '/static/logoWhite.png'
 const logoBlack = '/static/logoBlack.png'
+
 const HEADER_ITEMS = [
     {
         title: "Company",
@@ -62,10 +63,6 @@ const HEADER_ITEMS = [
         ]
     },
     {
-        title: "Join Us",
-        path: "/joinus"
-    },
-    {
         title: "Blog",
         path: "/blog"
     },
@@ -75,6 +72,10 @@ const HEADER_ITEMS = [
     },
     {
         title: "Price Estimate",
+        path: "/joinus"
+    },
+    {
+        title: "We Are Hiring",
         button: true
     }
 ]

@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { PRIMARY_DARK } from '../../utils/Colors'
+import { PRIMARY_DARK, PRIMARY } from '../../utils/Colors'
 
 const Radio = styled.div`
     padding: 5px;
@@ -8,7 +8,7 @@ const Radio = styled.div`
         display: none;
     }
     label {
-        background-color: ${PRIMARY_DARK};
+        background-color: #377eeb40;
         padding: 0.4rem 1.2rem;
         border-radius: 50px;
         cursor: pointer;

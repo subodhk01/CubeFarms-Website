@@ -15,6 +15,12 @@ const Container = styled.div`
     .heading {
         font-size: 2.6rem;
     }
+    .topsection {
+        background-image: url('static/advertising/back.png');
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
 `
 const whyChooseUsData = [
     {
@@ -75,7 +81,7 @@ export default function Outsource(){
             <Container>
                 <div className="background-fade">
                     <AnimatedBg>
-                        <div className="hero-container">
+                        <div className="hero-container topsection">
                             <div className="container">
                                 <div className="p-3" style={{maxWidth: "600px"}}>
                                     <h1 className="font-39 text-white">

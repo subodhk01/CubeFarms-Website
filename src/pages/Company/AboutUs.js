@@ -51,34 +51,57 @@ const PRINCIPLES = [
     }
 ]
 
+const MODE = {
+    AGENCY: "AGENCY",
+    NORMAL: "NORMAL"
+}
+
 const TEAM = [
     {
-        image: "/static/about/team1.png",
+        image: {
+            [MODE.AGENCY]: "/static/team/agency1.png",
+            [MODE.NORMAL]: "/static/team/normal1.png",
+        },
         name: "Priyanshu Mahar",
         post: "Founder"
     },
     {
-        image: "/static/about/team1.png",
+        image: {
+            [MODE.AGENCY]: "/static/team/agency2.png",
+            [MODE.NORMAL]: "/static/team/normal2.png",
+        },
         name: "Devik Kamath",
         post: "Co-Founder"
     },
     {
-        image: "/static/about/team1.png",
+        image: {
+            [MODE.AGENCY]: "/static/team/agency3.png",
+            [MODE.NORMAL]: "/static/team/normal3.png",
+        },
         name: "Subodh Verma",
         post: "Co-Founder"
     },
     {
-        image: "/static/about/team1.png",
+        image: {
+            [MODE.AGENCY]: "/static/team/agency1.png",
+            [MODE.NORMAL]: "/static/team/normal1.png",
+        },
         name: "",
         post: ""
     },
     {
-        image: "/static/about/team1.png",
+        image: {
+            [MODE.AGENCY]: "/static/team/agency2.png",
+            [MODE.NORMAL]: "/static/team/normal2.png",
+        },
         name: "",
         post: ""
     },
     {
-        image: "/static/about/team1.png",
+        image: {
+            [MODE.AGENCY]: "/static/team/agency3.png",
+            [MODE.NORMAL]: "/static/team/normal3.png",
+        },
         name: "",
         post: ""
     },
@@ -92,8 +115,36 @@ const Container = styled.div`
         max-width: 80%;
     }
     .journey-item {
-        padding: 0.4rem 2rem;
-        border-bottom: 3px solid ${PRIMARY_DARK};
+        padding: 0.7rem 2rem;
+        width: 130px;
+        cursor: pointer;
+    }
+    .journey-line {
+        padding: 2px;
+        background: ${PRIMARY_DARK};
+        transition: 0.5s;
+        float: right;
+    }
+    .journey-info {
+        transition: 0.5s;
+        position: absolute;
+        width: 100%;
+    }
+    .journey-info h1 {
+        color: ${PRIMARY_DARK};
+        padding: 20px 5px;
+    }
+    .journey-info > div {
+        max-width: 450px;
+        margin: 0px auto;
+    }
+    @media(max-width: 767px) {
+        .journey-info {
+            position: relative;
+            opacity: 1 !important;
+            visibility: visible !important;
+            padding: 15px 10px !important;
+        }
     }
     .gradient-1 {
         font-size: 72px;
@@ -113,9 +164,48 @@ const Container = styled.div`
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
+    .mode-switch {
+        border: 3px solid white;
+        border-radius: 50px;
+        width: 280px;
+        margin-left: auto;
+        background: black;
+        z-index: 2;
+    }
+    .mode-switch > div {
+        width: 50%;
+        text-align: center;
+        padding: 0.5rem 0.8rem;
+        color: white;
+        cursor: pointer;
+        z-index: 2;
+    }
+    .active {
+        background: white;
+        color: black !important;
+    }
+    .active-left {
+        border-top-left-radius: 50px;
+        border-bottom-left-radius: 50px;
+    }
+    .active-right {
+        border-top-right-radius: 50px;
+        border-bottom-right-radius: 50px;
+    }
+    .switch-line {
+        border-top: 3px solid white;
+        position: absolute;
+        width: 90%;
+        margin: 0;
+        bottom: 37px;
+        z-index: 1;
+    }
 `
 
+
 export default function AboutUs() {
+    const [ journeyCount, setJourneyCount ] = React.useState(5)
+    const [ team, setTeam ] = React.useState(MODE.NORMAL)
     React.useEffect(() => {
         if(window){
             AOS.init({
@@ -185,20 +275,55 @@ export default function AboutUs() {
                         <div className="py-3">
                             <h1>Our process and journey with you</h1>
                         </div>
-                        <div className="d-flex align-items-center justify-content-center py-2 mb-4">
-                            <div className="p-3">Start with WHY</div>
-                            <div className="journey-item">Goals</div>
-                            <div className="journey-item">Who</div>
-                            <div className="journey-item">What</div>
-                            <div className="journey-item">How</div>
+                        <div className="d-none d-lg-inline-block py-3 mb-2">
+                            <div className="d-flex align-items-center justify-content-center">
+                                <div className="p-3">Start with WHY</div>
+                                <div className="journey-item" onMouseEnter={() => setJourneyCount(4)} onMouseLeave={() => setJourneyCount(5)}>Goals</div>
+                                <div className="journey-item" onMouseEnter={() => setJourneyCount(3)} onMouseLeave={() => setJourneyCount(5)}>Who</div>
+                                <div className="journey-item" onMouseEnter={() => setJourneyCount(2)} onMouseLeave={() => setJourneyCount(5)}>What</div>
+                                <div className="journey-item" onMouseEnter={() => setJourneyCount(1)} onMouseLeave={() => setJourneyCount(5)}>How</div>
+                            </div>
+                            <div className="journey-line" style={{width: (journeyCount*130).toString() + "px"}}></div>
                         </div>
-                        <div className="py-3">
-                            <h1 className="color-primary-dark">Why is the project happening</h1>
-                        </div>
-                        <div className="py-2">
-                            Every business-centric problem starts with a WHY.<br/>
-                            Complex projects will have lots of WHYs.<br />
-                            Capture all of them.
+                        <div className="position-relative" style={{minHeight: "170px"}}>
+                            <div className="journey-info" style={{visibility: journeyCount==5 ? "visible": "collapse", opacity: journeyCount==5 ? 1 : 0 }}>
+                                <h1>Why is the project happening</h1>
+                                <div className="py-2">
+                                    Every business-centric problem starts with a WHY.
+                                    Complex projects will have lots of WHYs.
+                                    Capture all of them.
+                                </div>
+                            </div>
+                            <div className="journey-info" style={{visibility: journeyCount==4 ? "visible": "collapse", opacity: journeyCount==4 ? 1 : 0 }}>
+                                <h1>Get specific with some goals in mind</h1>
+                                <div className="py-2">
+                                    We turn each of your WHYs into specific, quantifiable business goals.
+                                </div>
+                            </div>
+                            <div className="journey-info" style={{visibility: journeyCount==3 ? "visible": "collapse", opacity: journeyCount==3 ? 1 : 0 }}>
+                                <h1 className="color-primary-dark">Who has an impact on those goals</h1>
+                                <div className="py-2">
+                                    Every business-centric problem starts with a WHY.<br/>
+                                    Complex projects will have lots of WHYs.<br />
+                                    Capture all of them.
+                                </div>
+                            </div>
+                            <div className="journey-info" style={{visibility: journeyCount==2 ? "visible": "collapse", opacity: journeyCount==2 ? 1 : 0 }}>
+                                <h1>What do you need</h1>
+                                <div className="py-2">
+                                    Every business-centric problem starts with a WHY.<br/>
+                                    Complex projects will have lots of WHYs.<br />
+                                    Capture all of them.
+                                </div>
+                            </div>
+                            <div className="journey-info" style={{visibility: journeyCount==1 ? "visible": "collapse", opacity: journeyCount==1 ? 1 : 0 }}>
+                                <h1>How would we do it</h1>
+                                <div className="py-2">
+                                    Every business-centric problem starts with a WHY.<br/>
+                                    Complex projects will have lots of WHYs.<br />
+                                    Capture all of them.
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -212,7 +337,7 @@ export default function AboutUs() {
                         </div>
                         <div className="row no-gutters justify-content-center">
                             {PRINCIPLES.map((item,index) =>
-                                <div className="col-md-6 p-3 p-md-5" key={index}>
+                                <div className="col-md-6 p-3 p-md-4" key={index}>
                                     <div className="custom-block1 block-light px-4 py-4 d-flex align-items-center">
                                         <div className="p-2">
                                             <img src={item.image} />
@@ -238,13 +363,24 @@ export default function AboutUs() {
                                 </div>
                                 Our Team
                             </div>
-                            <div>
+                            <div className="heading p-2 p-md-5 font-13">
+                                We are excellent and so as are our client. We wouldn't have it any other way<br />
+                                Meet the team
+                            </div>
+                            <div className="position-relative px-2 px-md-5 pb-3">
+                                <div className="d-flex align-items-center justify-content-center mode-switch position-relative">
+                                    <div className={`${team === MODE.NORMAL ? "active active-left" : ""}`} onClick={() => setTeam(MODE.NORMAL)}>NORMAL</div>
+                                    <div className={`${team === MODE.AGENCY ? "active active-right" : ""}`} onClick={() => setTeam(MODE.AGENCY)}>AGENCY</div>
+                                </div>
+                                <hr className="switch-line" />
+                            </div>
+                            <div className="px-2 px-md-5">
                                 <div className="row no-gutters justiy-content-center">
                                     {TEAM.map((member, index) =>
                                         <div className="col-12 col-md-6 col-lg-4 p-4">
                                             <div>
                                                 <div>
-                                                    <img src={member.image} />
+                                                    <img src={member.image[team]} />
                                                 </div>
                                                 <div className="py-2">
                                                     <h5>{member.name}</h5>

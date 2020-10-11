@@ -63,8 +63,8 @@ const HEADER_ITEMS = [
         ]
     },
     {
-        title: "Blog",
-        path: "/blog"
+        title: "About",
+        path: "/about"
     },
     {
         title: "Contact",

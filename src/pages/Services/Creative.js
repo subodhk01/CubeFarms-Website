@@ -12,17 +12,6 @@ import { AnimatedBg, Transition } from 'scroll-background';
 import Layout from '../../components/UI/Layout'
 import { PRIMARY } from '../../utils/Colors'
 
-const Container = styled.div`
-    .heading {
-        font-size: 2.6rem;
-    }
-    .topsection {
-        background-image: url('static/creative/back.png');
-        background-size: cover;
-        background-position: center center;
-        background-repeat: no-repeat;
-    }
-`
 const whyChooseUsData = [
     {
         image: "/static/creative/choose1.png",
@@ -66,6 +55,17 @@ const ourProcessData = [
     }
 ]
 
+const Container = styled.div`
+    .heading {
+        font-size: 2.6rem;
+    }
+    .topsection {
+        background-image: url('static/creative/back.png');
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+`
 export default function Product(){
     React.useEffect(() => {
         if(window){

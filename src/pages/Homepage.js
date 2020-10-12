@@ -26,7 +26,7 @@ const Container = styled.div`
     }
     .top-container {
         background: url('/static/hometop.png');
-        background-size: contain;
+        background-size: 120%;
         background-repeat: no-repeat;
         background-position: 20px 30vh;
         animation: backgroundMove ease 9s infinite;
@@ -35,7 +35,8 @@ const Container = styled.div`
         text-align: center;
     }
     .img-container img {
-        max-width: 90%;
+        max-width: 78%;
+        max-height: 480px;
     }
     .grey-dash {
         display: inline-block;
@@ -72,6 +73,9 @@ const Container = styled.div`
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center center;    
+    }
+    .text-content {
+        text-align: justify;
     }
 `
 
@@ -181,7 +185,7 @@ export default function Outsource(){
                             <div className="col-12 col-lg-6 p-2 text-muted font-14 heading">
                                 Cubefarms is a full stack digital agency working remotely with clients to provide compelling solutions through
                             </div>
-                            <div className="col-12 col-lg-5 p-2 d-flex justify-content-center heading-bold font-27" style={{color: PRIMARY}}>
+                            <div className="col-12 col-lg-5 p-2 d-flex justify-content-center heading-bold font-27" style={{color: PRIMARY_DARK}}>
                                 <div className="text-left" style={{minWidth: "340px"}}>         
                                     <div>Strategy. Design.</div>
                                     <div>Content. Technology.</div>
@@ -203,7 +207,7 @@ export default function Outsource(){
                                     <div data-aos="fade-right" className="heading font-32">
                                         Product design
                                     </div>
-                                    <div data-aos="fade-right" data-aos-delay={400} className="heading-thin font-18 text-muted py-3">
+                                    <div data-aos="fade-right" data-aos-delay={400} className="heading-thin text-content font-18 text-muted py-3">
                                         We work with startups and brands to create amazing MVPs, app prototypes and custom apps. Pair with our expert product designers for a user centric product.
                                     </div>
                                     <div data-aos="fade-right" data-aos-delay={800} className="text-muted">
@@ -238,7 +242,7 @@ export default function Outsource(){
                                     <div data-aos="fade-right" className="heading font-32 text-black">
                                         Web Studio
                                     </div>
-                                    <div data-aos="fade-right" data-aos-delay={400} className="heading-thin font-18 text-muted py-3">
+                                    <div data-aos="fade-right" data-aos-delay={400} className="heading-thin text-content font-18 text-muted py-3">
                                         The internet is a virtual world. We help business to design, develop and manage websites that stand out and communicate clearly in this virtual world.
                                     </div>
                                     <div data-aos="fade-right" data-aos-delay={800} className="text-muted">
@@ -263,7 +267,7 @@ export default function Outsource(){
                                     <div data-aos="fade-left"className="heading font-32">
                                         Digital Advertising
                                     </div>
-                                    <div data-aos="fade-left" data-aos-delay={400} className="heading-thin font-18 text-muted py-3">
+                                    <div data-aos="fade-left" data-aos-delay={400} className="heading-thin text-content font-18 text-muted py-3">
                                         We use a data driven transparent approach to achieve your online objectives. Our digital branding services have proven to increase traggic, conversions and revenue.
                                     </div>
                                     <div data-aos="fade-left" data-aos-delay={800} className="text-muted">
@@ -298,7 +302,7 @@ export default function Outsource(){
                                     <div data-aos="fade-left" className="heading font-32">
                                         Creative Services
                                     </div>
-                                    <div data-aos="fade-left" data-aos-delay={400} className="heading-thin font-18 text-muted py-3">
+                                    <div data-aos="fade-left" data-aos-delay={400} className="heading-thin text-content font-18 text-muted py-3">
                                         Good design is good business. Out team of expert creative directors deliver high end designs which complement your brand, product and services.
                                     </div>
                                     <div data-aos="fade-left" data-aos-delay={800} className="text-muted">
@@ -343,7 +347,7 @@ export default function Outsource(){
                     <div className="mini-hero-container bg-black text-white">
                         <div className="py-3 py-lg-5 px-3 heading text-center">
                             <div style={{maxWidth: "1000px"}}>
-                                <div className="font-3 heading-bold">
+                                <div className="font-3 heading-regular">
                                     Our client stories
                                 </div>
                                 <div className="py-3 py-lg-5">

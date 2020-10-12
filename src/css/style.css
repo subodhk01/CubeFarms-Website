@@ -86,7 +86,7 @@ a, a:hover {
 
 .btn-round-blue {
     padding: 0.63rem 1.7rem;
-    background: #377eeb;
+    background: #0056FF;
     border: none;
     border-radius: 100px;
     color: white;
@@ -179,6 +179,10 @@ textarea {
 
 .heading-bold {
     font-family: "madetommy-bold";
+}
+
+.heading-regular {
+    font-family: "madetommy-regular";
 }
 
 .custom-block1 {

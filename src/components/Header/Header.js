@@ -22,16 +22,19 @@ const HEADER_ITEMS = [
             {
                 title: "About",
                 content: "Lorem ipsum lorem ipsum lorem ipsum really lorem ipsum",
+                image: "/static/header/about.png",
                 path: "/about"
             },
             {
                 title: "Approach",
                 content: "Lorem ipsum lorem ipsum lorem ipsum really lorem ipsum",
+                image: "/static/header/approach.png",
                 path: "/approach"
             },
             {
                 title: "Outsource",
                 content: "Lorem ipsum lorem ipsum lorem ipsum really lorem ipsum",
+                image: "/static/header/outsource.png",
                 path: "/outsource"
             }
         ]
@@ -43,21 +46,25 @@ const HEADER_ITEMS = [
             {
                 title: "Web",
                 content: "Lorem ipsum lorem ipsum lorem ipsum really lorem ipsum",
+                image: "/static/header/web.png",
                 path: "/web"
             },
             {
                 title: "Product",
                 content: "Lorem ipsum lorem ipsum lorem ipsum really lorem ipsum",
+                image: "/static/header/product.png",
                 path: "/product"
             },
             {
                 title: "Creative",
                 content: "Lorem ipsum lorem ipsum lorem ipsum really lorem ipsum",
+                image: "/static/header/creative.png",
                 path: "/creative"
             },
             {
                 title: "Advertising",
                 content: "Lorem ipsum lorem ipsum lorem ipsum really lorem ipsum",
+                image: "/static/header/advertising.png",
                 path: "/advertising"
             },
         ]
@@ -141,7 +148,7 @@ const Container = styled.div`
         opacity: 0;
         z-index: -1;
         position: absolute;
-        top: -160px;
+        top: -180px;
         transition: 0.3s opacity;
     }
     .dropdown {
@@ -171,6 +178,11 @@ const Container = styled.div`
     }
     .dropdown-item:hover .content {
         color: white;
+    }
+    .dropdown-item img {
+        max-height: 35px;
+        margin: 5px;
+        border-radius: 5px;
     }
     .dropdown-container:hover {
         opacity: 1;
@@ -314,7 +326,12 @@ export default function Header(props){
                                             {item.items && item.items.map((child, index2) => 
                                                 <a href={child.path} key={index2}>
                                                     <div className="dropdown-item">
-                                                        <div className="heading-bold font-12">{child.title}</div>
+                                                        <div className="d-flex align-items-center">
+                                                            <div>
+                                                                <img src={child.image} />
+                                                            </div>
+                                                            <div className="heading-bold font-12">{child.title}</div>
+                                                        </div>
                                                         <div className="content font-08">{child.content}</div>
                                                     </div>
                                                 </a>

@@ -46,15 +46,38 @@ const Container = styled.div`
     }
 `
 
-export default function() {
+export default function LookingForSomethingElse(props) {
     return (
         <div className="container">
             <Container>
-                <h2 className="heading mb-5">
-                    Looking for <br />something else?
-                </h2>
                 <div>
                     <div className="row no-gutters">
+                        <div className="col-12 col-md-6 p-2 p-md-3">
+                            <div data-aos="fade-up" className="p-4 p-md-5">
+                                <div className="position-relative">
+                                <h2 className="heading mb-5">
+                                    Looking for <br />something else?
+                                </h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-12 col-md-6 p-2 p-md-3">
+                            <div data-aos="fade-up" className="item p-4 p-md-5">
+                                <div className="position-relative">
+                                    <div className="pb-4">
+                                        <h3 className="title">
+                                            Inovative Consulting
+                                        </h3>
+                                        <p className="content">
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut amet nostrum culpa! Voluptas distinctio autem officia minima ut similique ad adipisci, dicta nihil quam suscipit, quis repudiandae nemo placeat fugiat?
+                                        </p>
+                                    </div>
+                                    <div className="read-more">
+                                        Read More
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <div className="col-12 col-md-6 p-2 p-md-3">
                             <div data-aos="fade-up" className="item p-4 p-md-5">
                                 <div className="position-relative">

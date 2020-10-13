@@ -1,0 +1,207 @@
+html::-webkit-scrollbar {
+    display: none;
+}
+*::-webkit-scrollbar {
+    display: none;
+}
+*, html {
+    -ms-overflow-style: none;
+}
+a, a:hover {
+    text-decoration: none;
+}
+
+.font-01 { font-size: 0.1rem; }
+.font-02 { font-size: 0.2rem; }
+.font-03 { font-size: 0.3rem; }
+.font-04 { font-size: 0.4rem; }
+.font-05 { font-size: 0.5rem; }
+.font-06 { font-size: 0.6rem; }
+.font-07 { font-size: 0.7rem; }
+.font-08 { font-size: 0.8rem; }
+.font-09 { font-size: 0.9rem; }
+.font-10, .font1 { font-size: 1rem; }
+.font-11 { font-size: 1.1rem; }
+.font-12 { font-size: 1.2rem; }
+.font-13 { font-size: 1.3rem; }
+.font-14 { font-size: 1.4rem; }
+.font-15 { font-size: 1.5rem; }
+.font-16 { font-size: 1.6rem; }
+.font-17 { font-size: 1.7rem; }
+.font-18 { font-size: 1.8rem; }
+.font-19 { font-size: 1.9rem; }
+.font-20, .font-2 { font-size: 2rem; }
+.font-21 { font-size: 2.1rem; }
+.font-22 { font-size: 2.2rem; }
+.font-23 { font-size: 2.3rem; }
+.font-24 { font-size: 2.4rem; }
+.font-25 { font-size: 2.5rem; }
+.font-26 { font-size: 2.6rem; }
+.font-27 { font-size: 2.7rem; }
+.font-28 { font-size: 2.8rem; }
+.font-29 { font-size: 2.9rem; }
+.font-30, .font-3 { font-size: 3rem; }
+.font-31 { font-size: 3.1rem; }
+.font-32 { font-size: 3.2rem; }
+.font-33 { font-size: 3.3rem; }
+.font-34 { font-size: 3.4rem; }
+.font-35 { font-size: 3.5rem; }
+.font-36 { font-size: 3.6rem; }
+.font-37 { font-size: 3.7rem; }
+.font-38 { font-size: 3.8rem; }
+.font-39 { font-size: 3.9rem; }
+.font-40, .font-4 { font-size: 4rem; }
+.font-41 { font-size: 4.1rem; }
+.font-42 { font-size: 4.2rem; }
+.font-43 { font-size: 4.3rem; }
+.font-44 { font-size: 4.4rem; }
+.font-45 { font-size: 4.5rem; }
+.font-46 { font-size: 4.6rem; }
+.font-47 { font-size: 4.7rem; }
+.font-48 { font-size: 4.8rem; }
+.font-49 { font-size: 4.9rem; }
+.font-50, .font-5 { font-size: 5rem; }
+.color-primary { color: #377eeb }
+.color-primary-dark { color: #0a3f92 }
+
+.pt-6 {padding-top: 3.5rem;}
+.pt-7 {padding-top: 4rem;}
+.pt-8 {padding-top: 4.5rem;}
+.pt-9 {padding-top: 5rem;}
+.pt-10 {padding-top: 5.5rem;}
+.pb-6 {padding-bottom: 3.5rem;}
+.pb-7 {padding-bottom: 4rem;}
+.pb-8 {padding-bottom: 4.5rem;}
+.pb-9 {padding-bottom: 5rem;}
+.pb-10 {padding-bottom: 5.5rem;}
+.py-6 {padding: 3.5rem 0rem;}
+.py-7 {padding: 4rem 0rem;}
+.py-8 {padding: 4.5rem 0rem;}
+.py-9 {padding: 5rem 0rem;}
+.py-10 {padding: 5.5rem 0rem;}
+
+.invisible {opacity: 0;}
+.bg-black{background-color: black;}
+.text-black{color: black !important;}
+
+.btn-round-blue {
+    padding: 0.63rem 1.7rem;
+    background: #0056FF;
+    border: none;
+    border-radius: 100px;
+    color: white;
+    font-size: 0.8rem;
+}
+.btn-round-blue:hover {
+    color: white;
+}
+
+textarea {
+    background-color: rgba(255, 255, 255, 0.06) !important;
+    border: 1px solid rgba(255, 255, 255, 0.06) !important;
+}
+
+.form-input {
+    padding: 1rem 1.4rem;
+    height: auto;
+}
+
+.input-bottom-border {
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid white;
+    padding: 0px 10px;
+    color: white;
+    outline: none;
+    width: auto;
+}
+
+.input-file {
+    display: none;
+}
+
+.input-file-label {
+    color: #0a3f92;
+    background-color: white;
+    padding: 0.4rem 1.2rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.1s;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+@media(min-width: 576px){
+    .background-fade>div {
+        transition: background-color 1s ease;
+    }
+}
+
+.joinusform > div, .joinusform > div > div, .joinusform > div > div > div {
+    height: 100%;
+}
+
+.container-lg {
+    max-width: 90vw;
+}
+@media(max-width: 576px){
+    .container-lg {
+        max-width: 100vw;
+    }
+}
+
+.hero-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    padding: 40px 0px;
+}
+.mini-hero-container {
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    overflow-x: auto;
+}
+
+.heading {
+    font-family: "madetommy-light";
+}
+
+.heading-thin {
+    font-family: "madetommy-thin";
+}
+
+.heading-bold {
+    font-family: "madetommy-bold";
+}
+
+.heading-regular {
+    font-family: "madetommy-regular";
+}
+
+.custom-block1 {
+    background: #191622;
+    border-radius: 10px;
+    font-family: "helvetica-regular";
+    padding: 10px 20px;
+}
+.block-light {
+    background: #ecf0f7;
+}
+.custom-block1 img {
+    border-radius: 10px;
+    max-height: 170px;
+    max-width: 100%;
+}
+
+.item-shadow {
+    border-radius: 10px;
+    background: white;
+    box-shadow: 0px 0px 30px 6px #ecf0f7;
+}

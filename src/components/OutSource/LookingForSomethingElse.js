@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import CustomButton1 from '../Buttons/CustomButton1'
 // import { PRIMARY_DARK } from '../../utils/Colors'
 
 
@@ -72,9 +73,9 @@ export default function LookingForSomethingElse(props) {
                                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut amet nostrum culpa! Voluptas distinctio autem officia minima ut similique ad adipisci, dicta nihil quam suscipit, quis repudiandae nemo placeat fugiat?
                                         </p>
                                     </div>
-                                    <div className="read-more">
+                                    <CustomButton1>
                                         Read More
-                                    </div>
+                                    </CustomButton1>
                                 </div>
                             </div>
                         </div>
@@ -89,9 +90,9 @@ export default function LookingForSomethingElse(props) {
                                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut amet nostrum culpa! Voluptas distinctio autem officia minima ut similique ad adipisci, dicta nihil quam suscipit, quis repudiandae nemo placeat fugiat?
                                         </p>
                                     </div>
-                                    <div className="read-more">
+                                    <CustomButton1>
                                         Read More
-                                    </div>
+                                    </CustomButton1>
                                 </div>
                             </div>
                         </div>
@@ -106,9 +107,9 @@ export default function LookingForSomethingElse(props) {
                                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut amet nostrum culpa! Voluptas distinctio autem officia minima ut similique ad adipisci, dicta nihil quam suscipit, quis repudiandae nemo placeat fugiat?
                                         </p>
                                     </div>
-                                    <div className="read-more">
+                                    <CustomButton1>
                                         Read More
-                                    </div>
+                                    </CustomButton1>
                                 </div>
                             </div>
                         </div>

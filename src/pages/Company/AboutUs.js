@@ -129,14 +129,23 @@ const Container = styled.div`
         transition: 0.5s;
         position: absolute;
         width: 100%;
+        font-size: 1.4rem;
     }
     .journey-info h1 {
         color: ${PRIMARY_DARK};
         padding: 20px 5px;
+        font-size: 2.9rem;
     }
     .journey-info > div {
         max-width: 450px;
         margin: 0px auto;
+    }
+    .gradient {
+        font-size: 7rem;
+        background: url('static/gradient.png');
+        background-attachment: fixed;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
     @media(max-width: 767px) {
         .journey-info {
@@ -144,25 +153,11 @@ const Container = styled.div`
             opacity: 1 !important;
             visibility: visible !important;
             padding: 15px 10px !important;
+            font-size: 1rem;
         }
-    }
-    .gradient-1 {
-        font-size: 72px;
-        background: -webkit-linear-gradient(#eee, #333);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-    .gradient-2 {
-        font-size: 72px;
-        background: -webkit-linear-gradient(#eee, #333);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-    .gradient-3 {
-        font-size: 72px;
-        background: -webkit-linear-gradient(#eee, #333);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+        .gradient {
+            font-size: 3rem;
+        }
     }
     .mode-switch {
         border: 3px solid white;
@@ -231,10 +226,10 @@ export default function AboutUs() {
                     </div>
                 </div>
                 <div className="py-5 bg-black text-white font-23" style={{fontFamily: "madetommy-bold"}}>
-                    <div className="container">
-                        <h1 className="gradient-1">commit.</h1>
-                        <h1 className="gradient-2">expore.</h1>
-                        <h1 className="gradient-3">do great work.</h1>
+                    <div className="container py-2 py-5">
+                        <h1 className="gradient">commit.</h1>
+                        <h1 className="gradient">expore.</h1>
+                        <h1 className="gradient">do great work.</h1>
                     </div>
                 </div>
                 <div className="mini-hero-container container-lg text-black">
@@ -271,9 +266,9 @@ export default function AboutUs() {
                     </div>
                 </div>
                 <div className="hero-container-mini bg-black text-white py-5 text-center border-top">
-                    <div className="py-5">
-                        <div className="py-3">
-                            <h1>Our process and journey with you</h1>
+                    <div className="py-3 py-md-5">
+                        <div className="py-3 py-md-5">
+                            <h1 className="font-34">Our process and journey with you</h1>
                         </div>
                         <div className="d-none d-lg-inline-block py-3 mb-2">
                             <div className="d-flex align-items-center justify-content-center">
@@ -285,7 +280,7 @@ export default function AboutUs() {
                             </div>
                             <div className="journey-line" style={{width: (journeyCount*130).toString() + "px"}}></div>
                         </div>
-                        <div className="position-relative" style={{minHeight: "170px"}}>
+                        <div className="position-relative" style={{minHeight: "250px"}}>
                             <div className="journey-info" style={{visibility: journeyCount==5 ? "visible": "collapse", opacity: journeyCount==5 ? 1 : 0 }}>
                                 <h1>Why is the project happening</h1>
                                 <div className="py-2">
@@ -303,24 +298,24 @@ export default function AboutUs() {
                             <div className="journey-info" style={{visibility: journeyCount==3 ? "visible": "collapse", opacity: journeyCount==3 ? 1 : 0 }}>
                                 <h1 className="color-primary-dark">Who has an impact on those goals</h1>
                                 <div className="py-2">
-                                    Every business-centric problem starts with a WHY.<br/>
-                                    Complex projects will have lots of WHYs.<br />
+                                    Every business-centric problem starts with a WHY.
+                                    Complex projects will have lots of WHYs.
                                     Capture all of them.
                                 </div>
                             </div>
                             <div className="journey-info" style={{visibility: journeyCount==2 ? "visible": "collapse", opacity: journeyCount==2 ? 1 : 0 }}>
                                 <h1>What do you need</h1>
                                 <div className="py-2">
-                                    Every business-centric problem starts with a WHY.<br/>
-                                    Complex projects will have lots of WHYs.<br />
+                                    Every business-centric problem starts with a WHY.
+                                    Complex projects will have lots of WHYs.
                                     Capture all of them.
                                 </div>
                             </div>
                             <div className="journey-info" style={{visibility: journeyCount==1 ? "visible": "collapse", opacity: journeyCount==1 ? 1 : 0 }}>
                                 <h1>How would we do it</h1>
                                 <div className="py-2">
-                                    Every business-centric problem starts with a WHY.<br/>
-                                    Complex projects will have lots of WHYs.<br />
+                                    Every business-centric problem starts with a WHY.
+                                    Complex projects will have lots of WHYs.
                                     Capture all of them.
                                 </div>
                             </div>
@@ -358,7 +353,7 @@ export default function AboutUs() {
                     <div className="container-lg hero-container">
                         <div className="w-100">
                             <div className="heading p-2 p-md-5 font-24 pb-4">
-                                <div className="mb-2" style={{width: "120px", height: "8px", background: PRIMARY}}>
+                                <div className="mb-2" style={{width: "120px", height: "8px", background: PRIMARY_DARK}}>
 
                                 </div>
                                 Our Team

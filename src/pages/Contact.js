@@ -15,7 +15,7 @@ export default function Contact() {
         <Layout header={{full: true, black: true}}>
             <Container>
                 <div className="py-10 px-2 px-lg-5">
-                    <div className="row no-gutters justify-content-between py-1 py-lg-5 px-2 px-lg-5">
+                    <div className="row no-gutters justify-content-between py-1 py-lg-5 px-2 px-lg-5 mt-1 mt-md-5">
                         <div className="col-12 col-lg-5">
                             <div className="font-12">
                                 <h1 className="heading-bold mb-5">

@@ -160,8 +160,17 @@ export default function Footer(props){
                             </a>
                         </div>
                     </div>
-                    2020-travostel hospitality private limited<br />
-                    <span className="heading-bold">Proudly Made in India</span>
+                    <div className="d-flex align-items-center justify-content-end py-2">
+                        <div className="px-2">
+                            <img src="static/flag.png" style={{maxHeight: "30px"}} />
+                        </div>
+                        <div>
+                            <span className="heading-bold">Proudly Made in India</span>
+                        </div>
+                    </div>
+                    <div className="mt-4 mt-md-0">
+                        2020-travostel hospitality private limited
+                    </div>
                 </div>
             </div>
         </Container>

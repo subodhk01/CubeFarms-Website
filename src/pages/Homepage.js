@@ -345,13 +345,13 @@ export default function Outsource(){
                     </div>
                     <Transition key={5} height="100px" from="#f3f5fa" to="#f3f5fa" />
                     <div className="mini-hero-container bg-black text-white">
-                        <div className="py-3 py-lg-5 px-3 heading text-center">
+                        <div className="py-5 px-3 heading text-center">
                             <div style={{maxWidth: "1000px"}}>
                                 <div className="font-3 heading-regular">
                                     Our client stories
                                 </div>
                                 <div className="py-3 py-lg-5">
-                                    <FaQuoteLeft size="76" color={PRIMARY_DARK} />
+                                    <img src="static/quote.png" />
                                 </div>
                                 <div className="py-3 py-lg-5 font-18">
                                     Here at Cubefarms we are making work from home a reality. All you need is laptop, Wi-Fi and sheer dedication towards your job

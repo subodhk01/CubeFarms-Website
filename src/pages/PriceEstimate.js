@@ -1,17 +1,21 @@
 import React from 'react'
 import styled from 'styled-components'
 import Layout from '../components/UI/Layout'
-import { loadFirebase } from '../utils/firebase'
 import SingleArrowButton from '../components/Buttons/SingleArrowButton'
+import TagRadio from '../components/Form/TagRadio'
+import { loadFirebase } from '../utils/firebase'
 import { PRIMARY_DARK } from '../utils/Colors'
 
 const Container = styled.div`
     font-family: "madetommy-light";
 `
 
-export default function Contact() {
+export default function PriceEstimate() {
     const [ name, setName ] = React.useState("")
     const [ email, setEmail ] = React.useState("")
+    const [ phone, setPhone ] = React.useState("")
+    const [ company, setCompany ] = React.useState("")
+    const [ need, setNeed ] = React.useState("")
     const [ message, setMessage ] = React.useState("")
     const [ msg, setMsg ] = React.useState({})
     const [ disabled, setDisabled ] = React.useState(false)
@@ -22,9 +26,11 @@ export default function Contact() {
             success: "Please wait..."
         })
         let firebase = await loadFirebase()
-        firebase.firestore().collection("ContactForm").add({
+        firebase.firestore().collection("PriceEstimateForm").add({
             name: name,
             email: email,
+            phone: phone,
+            company: company,
             message: message
         }).then(doc => {
             setMsg({
@@ -32,6 +38,8 @@ export default function Contact() {
             })
             setName("")
             setEmail("")
+            setPhone("")
+            setCompany("")
             setMessage("")
         }).catch(error =>{
             setDisabled(false)
@@ -48,10 +56,10 @@ export default function Contact() {
                         <div className="col-12 col-lg-5">
                             <div className="font-12">
                                 <h1 className="heading-bold mb-5">
-                                    Contact Us
+                                    See how we turn ideas into real life
                                 </h1>
                                 <p className="mb-4">
-                                    Let'a talk about your idea - fill the form on the right and we will get back to you shortly. We can't wait working with you!
+                                    Let's talk about your needs – fill in the form and we will contact you within 24 hours. We can't wait to start working with you!
                                 </p>
                                 <p>
                                     Or drop us a line at - contact@cubefarms.com
@@ -59,24 +67,43 @@ export default function Contact() {
                             </div>
                         </div>
                         <div className="col-12 col-lg-5">
-                            <h4 className="mb-4">Fill out the form</h4>
+                            <h2 className="mb-5">Fill out the form</h2>
                             <div>
                                 <form onSubmit={(event) => handleSubmit(event)}>
                                     <div className="form-group">
                                         <input type="text" placeholder="Full Name" className="form-control form-input" value={name} onChange={(event) => setName(event.target.value)} required />
                                     </div>
                                     <div className="form-group">
-                                        <input type="text" placeholder="Email Address" className="form-control form-input" value={email} onChange={(event) => setEmail(event.target.value)} required />
+                                        <input type="email" placeholder="Email Address" className="form-control form-input" value={email} onChange={(event) => setEmail(event.target.value)} required />
                                     </div>
                                     <div className="form-group">
-                                        <textarea type="text" placeholder="Message" className="form-control form-input" value={message} onChange={(event) => setMessage(event.target.value)} rows={4} required />
+                                        <input type="text" placeholder="Phone Number" className="form-control form-input" value={phone} onChange={(event) => setPhone(event.target.value)} required />
                                     </div>
-                                    <div>
+                                    <div className="form-group">
+                                        <input type="text" placeholder="Company Name" className="form-control form-input" value={company} onChange={(event) => setCompany(event.target.value)} />
+                                    </div>
+                                    <div className="form-group py-3">
+                                        <h5 className="heading-bold">What do you need?</h5>
+                                        <div className="d-flex align-items-center flex-wrap">
+                                            <TagRadio name="status" id="productDesign" label={`Product Design`} light checked={need === "productDesign"} handleChange={setNeed} />
+                                            <TagRadio name="status" id="marketing" label={`Marketing`} light checked={need === "marketing"} handleChange={setNeed} />
+                                            <TagRadio name="status" id="webDevelopment" label={`Web Development`} light checked={need === "webDevelopment"} handleChange={setNeed} />
+                                            <TagRadio name="status" id="mobileDevelopment" label={`Mobile Development`} light checked={need === "mobileDevelopment"} handleChange={setNeed} />
+                                            <TagRadio name="status" id="advertising" label={`Advertising`} light checked={need === "advertising"} handleChange={setNeed} />
+                                        </div>
+                                    </div>
+                                    <div className="form-group pt-3 pb-1">
+                                        <h5 className="heading-bold">What do you think?</h5>
+                                        <div className="form-group">
+                                            <textarea type="text" placeholder="Your thoughts" className="form-control form-input" value={message} onChange={(event) => setMessage(event.target.value)} rows={4} />
+                                        </div>
+                                    </div>
+                                    <div className="py-2">
                                         {msg && msg.success && <span style={{color: PRIMARY_DARK}}>{msg.success}</span>}
                                         {msg && msg.error && <span className="text-danger">{msg.error}</span>}
                                     </div>
                                     <div className="form-group text-center font-14">
-                                        <SingleArrowButton disabled={disabled}>
+                                        <SingleArrowButton send disabled={disabled}>
                                             Send Message
                                         </SingleArrowButton>
                                     </div>

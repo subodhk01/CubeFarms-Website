@@ -99,6 +99,11 @@ a, a:hover {
 .join-us textarea {
     background-color: rgba(255, 255, 255, 0.06) !important;
     border: 1px solid rgba(255, 255, 255, 0.06) !important;
+    color: white;
+}
+
+.join-us textarea:focus, .join-us textarea:active {
+    color: white;
 }
 
 .form-input {

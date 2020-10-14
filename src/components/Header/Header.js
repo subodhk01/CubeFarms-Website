@@ -79,10 +79,11 @@ const HEADER_ITEMS = [
     },
     {
         title: "Price Estimate",
-        path: "/joinus"
+        path: "/price-estimate"
     },
     {
         title: "We Are Hiring",
+        to: "/joinus",
         button: true
     }
 ]
@@ -291,9 +292,11 @@ export default function Header(props){
                                     }
                                     {item.button &&
                                         <div className="text-center py-4 position-relative" style={{left: "-20px"}}>
-                                            <SingleArrowButton>
-                                                {item.title}
-                                            </SingleArrowButton>
+                                            <a href={item.to}>
+                                                <SingleArrowButton>
+                                                    {item.title}
+                                                </SingleArrowButton>
+                                            </a>
                                         </div>
                                     }
                                 </React.Fragment>
@@ -343,9 +346,11 @@ export default function Header(props){
                             {item.button &&
                                 <div>
                                     <div className="btn btn-arrow ml-3">
-                                        <SingleArrowButton>
-                                            {item.title}
-                                        </SingleArrowButton>
+                                        <a href={item.to}>
+                                            <SingleArrowButton>
+                                                {item.title}
+                                            </SingleArrowButton>
+                                        </a>
                                     </div>
                                 </div>
                             }

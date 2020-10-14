@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { BsArrowRightShort } from 'react-icons/bs'
+import { MdSend } from 'react-icons/md'
 
 const Container = styled.div`
     .text-content {
@@ -24,16 +25,21 @@ const Container = styled.div`
 export default function(props) {
     return (
         <Container>
-            <div className="btn btn-round-blue">
+            <button className="btn btn-round-blue" disabled={props.disabled}>
                 <div className="d-flex align-items-center">
                     <div className="text-content">
                         {props.children}
                     </div>
                     <div className="arrow pl-2">
-                        <BsArrowRightShort color="white" size="24" />
+                        {props.send ?
+                            <MdSend className="pl-1" color="white" size="21" />
+                            :
+                            <BsArrowRightShort color="white" size="24" />
+                        }
+                        
                     </div>
                 </div>
-            </div>
+            </button>
         </Container>
     )
 }
